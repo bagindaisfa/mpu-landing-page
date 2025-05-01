@@ -24,9 +24,9 @@ const Home1 = () => {
       <Counter />
       <Work />
       {/* <Pricing /> */}
-      <LatestWork />
-      <TeamMember />
-      <Testimonial />
+      {/* <LatestWork /> */}
+      {/* <TeamMember /> */}
+      {/* <Testimonial /> */}
       <Blog />
     </>
   );
