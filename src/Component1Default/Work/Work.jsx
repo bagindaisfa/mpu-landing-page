@@ -1,0 +1,106 @@
+/* eslint-disable no-unused-vars */
+import workIcon from '/images/steps_1.png';
+import workIcon2 from '/images/steps_2.png';
+import workIcon3 from '/images/steps_3.png';
+import WorkCard from './WorkCard';
+import { LuMoveRight } from 'react-icons/lu';
+import { Link } from 'react-router-dom';
+
+const WorkData = [
+  {
+    id: 1,
+    workNumber: '01',
+    workIcon: workIcon,
+    workTitle: 'Strategic Work Planning',
+    workDesc:
+      'We begin by identifying your organization’s needs and challenges. Our team designs a strategic action plan based on data and specific goals to ensure targeted and effective solutions.',
+    workUrl: '/service_details',
+    workBtn: <LuMoveRight />,
+  },
+  {
+    id: 2,
+    workNumber: '02',
+    workIcon: workIcon2,
+    workTitle: 'Monitoring and Evaluation',
+    workDesc:
+      'We closely monitor the implementation of each program. Regular evaluations are conducted to measure effectiveness and allow for timely adjustments that optimize outcomes.',
+    workUrl: '/service_details',
+    workBtn: <LuMoveRight />,
+  },
+  {
+    id: 3,
+    workNumber: '03',
+    workIcon: workIcon3,
+    workTitle: 'Completed Works',
+    workDesc:
+      'We deliver a final report along with follow-up recommendations. Our insights aim to support your organization’s continued growth and sustainable transformation.',
+    workUrl: '/service_details',
+    workBtn: <LuMoveRight />,
+  },
+];
+
+const Work = () => {
+  return (
+    <section className="mx-2 xl:mx-5 rounded-t-[40px] pt-28 pb-[120px] bg-BodyBg-0 relative z-10">
+      <div className="Container">
+        <div className="text-center">
+          <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase flex items-center justify-center gap-2 mb-3">
+            OUR WORKING STEPS
+          </h5>
+          <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
+            Our Working Steps
+            <br />
+            to Empower Your {`Team's`} Growth
+          </h1>
+          <p className="font-FiraSans text-TextColor2-0 pt-4">
+            We follow a structured approach to improve employee performance,
+            <br className="hidden md:block" /> build strong leadership, and
+            ensure sustainable organizational development.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-[54px]">
+          {WorkData.map(
+            ({
+              id,
+              workNumber,
+              workIcon,
+              workTitle,
+              workDesc,
+              workUrl,
+              workBtn,
+            }) => {
+              return (
+                <>
+                  <div key={id}>
+                    <WorkCard
+                      workNumber={workNumber}
+                      workIcon={workIcon}
+                      workTitle={workTitle}
+                      workDesc={workDesc}
+                      workUrl={workUrl}
+                      workBtn={workBtn}
+                    />
+                  </div>
+                </>
+              );
+            }
+          )}
+        </div>
+        <div className="text-center mt-9 px-7 mx-auto">
+          <p className="font-FiraSans text-HeadingColor-0 font-medium text-sm">
+            Feel free to reach out to our consulting{' '}
+            <Link
+              to={'/service'}
+              className="text-PrimaryColor-0 underline-offset-4 underline"
+            >
+              Services
+            </Link>{' '}
+            for inquiries and assistance.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Work;
