@@ -1,71 +1,38 @@
-import { Link } from "react-router-dom";
-import footerLogo from "/images/logo.png";
-import { FaAnglesRight, FaPhone } from "react-icons/fa6";
-import { MdLocationPin } from "react-icons/md";
-import { HiOutlineMailOpen } from "react-icons/hi";
+import { Link } from 'react-router-dom';
+import footerLogo from '/images/logo.png';
+import { FaAnglesRight, FaPhone } from 'react-icons/fa6';
+import { MdLocationPin } from 'react-icons/md';
+import { HiOutlineMailOpen } from 'react-icons/hi';
 
 const Footer = () => {
   return (
-    <footer className='bg-BodyBg2-0 relative z-10 pt-28 overflow-hidden'>
-      <div className='Container'>
-        <div className='grid gap-y-7 grid-cols-12'>
-          <div className='col-span-12 md:col-span-6 lg:col-span-4'>
+    <footer className="bg-BodyBg2-0 relative z-10 pt-28 overflow-hidden">
+      <div className="Container">
+        <div className="grid gap-y-7 grid-cols-12">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <Link to={'/'}>
-              <img
-                src={footerLogo}
-                draggable={false}
-              />
+              <img src={footerLogo} draggable={false} />
             </Link>
-            <p className='font-FiraSans text-[15px] text-TextColor-0 opacity-80 mt-7 mb-6'>
-              Continually plagiarize virtual web service{' '}
-              <br className='hidden lg:block xl:hidden' /> pro{' '}
-              <br className='hidden xl:block' /> with planning maximizing action
+            <p className="font-FiraSans text-[15px] text-TextColor-0 opacity-80 mt-7 mb-6">
+              Enabling Agile Teams Development{' '}
+              <br className="hidden lg:block xl:hidden" /> for{' '}
+              <br className="hidden xl:block" /> the Next Era
             </p>
-            <form
-              action='#'
-              method='post'
-              className='relative w-10/12'
-            >
-              <label
-                htmlFor='email'
-                className='relative'
-              >
-                <input
-                  type='email'
-                  name='email'
-                  id='email'
-                  placeholder='Enter E-Mail*'
-                  required
-                  className='w-full h-[56px] outline-none font-FiraSans border-b border-BorderColor2-0 bg-transparent py-4 text-white placeholder:text-white mb-4'
-                />
-              </label>
-              <div className='absolute top-3 right-0'>
-                <button
-                  type='submit'
-                  className='rounded-full border border-PrimaryColor-0 bg-PrimaryColor-0 gap-2 px-6 py-[6px] text-sm text-white font-FiraSans flex items-center justify-center relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:bg-HeadingColor-0 before:-z-10 before:scale-0 before:transition-all before:duration-500 hover:before:scale-100'
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
           </div>
-          <div className='col-span-12 md:col-span-6 lg:col-span-2'>
-            <h4 className='font-FiraSans text-[22px] text-white font-medium mb-[33px]'>
+          <div className="col-span-12 md:col-span-6 lg:col-span-2">
+            <h4 className="font-FiraSans text-[22px] text-white font-medium mb-[33px]">
               Company
             </h4>
-            <ul className='overflow-hidden'>
+            <ul className="overflow-hidden">
               <li>
-                <Link
-                  to={'/'}
-                  className='inline-block'
-                >
-                  <button className='flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4'>
-                    <FaAnglesRight className='text-xs text-white' />
+                <Link to={'/'} className="inline-block">
+                  <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
+                    <FaAnglesRight className="text-xs text-white" />
                     About Us
                   </button>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to={'/'}
                   className='inline-block'
@@ -75,8 +42,8 @@ const Footer = () => {
                     Our Team
                   </button>
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link
                   to={'/'}
                   className='inline-block'
@@ -86,19 +53,16 @@ const Footer = () => {
                     Pricing Plan
                   </button>
                 </Link>
-              </li>
+              </li> */}
               <li>
-                <Link
-                  to={'/'}
-                  className='inline-block'
-                >
-                  <button className='flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4'>
-                    <FaAnglesRight className='text-xs text-white' />
+                <Link to={'/'} className="inline-block">
+                  <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
+                    <FaAnglesRight className="text-xs text-white" />
                     Latest Blog
                   </button>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to={'/'}
                   className='inline-block'
@@ -108,138 +72,125 @@ const Footer = () => {
                     Careers
                   </button>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
-          <div className='col-span-12 md:col-span-6 lg:col-span-3'>
-            <h4 className='font-FiraSans text-[22px] text-white font-medium mb-[33px]'>
+          <div className="col-span-12 md:col-span-6 lg:col-span-3">
+            <h4 className="font-FiraSans text-[22px] text-white font-medium mb-[33px]">
               Services
             </h4>
-            <ul className='overflow-hidden'>
+            <ul className="overflow-hidden">
               <li>
-                <Link
-                  to={'/'}
-                  className='inline-block'
-                >
-                  <button className='flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4'>
-                    <FaAnglesRight className='text-xs text-white' />
-                    IT Solutions
+                <Link to={'/'} className="inline-block">
+                  <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
+                    <FaAnglesRight className="text-xs text-white" />
+                    People development
                   </button>
                 </Link>
               </li>
               <li>
-                <Link
-                  to={'/'}
-                  className='inline-block'
-                >
-                  <button className='flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4'>
-                    <FaAnglesRight className='text-xs text-white' />
-                    Cyber Security
+                <Link to={'/'} className="inline-block">
+                  <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
+                    <FaAnglesRight className="text-xs text-white" />
+                    Talent acquisition
                   </button>
                 </Link>
               </li>
               <li>
-                <Link
-                  to={'/'}
-                  className='inline-block'
-                >
-                  <button className='flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4'>
-                    <FaAnglesRight className='text-xs text-white' />
-                    Digital Marketing
+                <Link to={'/'} className="inline-block">
+                  <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
+                    <FaAnglesRight className="text-xs text-white" />
+                    Employee engagement events
                   </button>
                 </Link>
               </li>
               <li>
-                <Link
-                  to={'/'}
-                  className='inline-block'
-                >
-                  <button className='flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4'>
-                    <FaAnglesRight className='text-xs text-white' />
-                    Brand Identity
+                <Link to={'/'} className="inline-block">
+                  <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
+                    <FaAnglesRight className="text-xs text-white" />
+                    Human Capital Consultancy
                   </button>
                 </Link>
               </li>
               <li>
-                <Link
-                  to={'/'}
-                  className='inline-block'
-                >
-                  <button className='flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1'>
-                    <FaAnglesRight className='text-xs text-white' />
-                    SEO Marketing
+                <Link to={'/'} className="inline-block">
+                  <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
+                    <FaAnglesRight className="text-xs text-white" />
+                    Vetting & background check
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <Link to={'/'} className="inline-block">
+                  <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1">
+                    <FaAnglesRight className="text-xs text-white" />
+                    Organisation Development
                   </button>
                 </Link>
               </li>
             </ul>
           </div>
-          <div className='col-span-12 md:col-span-6 lg:col-span-3'>
-            <h4 className='font-FiraSans text-[22px] text-white font-medium mb-[33px]'>
+          <div className="col-span-12 md:col-span-6 lg:col-span-3">
+            <h4 className="font-FiraSans text-[22px] text-white font-medium mb-[33px]">
               Contact
             </h4>
-            <div className='flex gap-3 pt-1 border-b border-dashed border-BorderColor2-0 pb-3'>
-              <div className='size-[26px] rounded-full bg-PrimaryColor-0 text-white flex items-center justify-center'>
+            <div className="flex gap-3 pt-1 border-b border-dashed border-BorderColor2-0 pb-3">
+              <div className="size-[26px] rounded-full bg-PrimaryColor-0 text-white flex items-center justify-center">
                 <MdLocationPin />
               </div>
-              <div className='flex-1 -mt-1'>
-                <h6 className='font-FiraSans text-[15px] text-white'>
+              <div className="flex-1 -mt-1">
+                <h6 className="font-FiraSans text-[15px] text-white">
                   Our address:
                 </h6>
-                <p className='font-FiraSans text-[15px] text-TextColor-0'>
-                  Old Westbury 256, New York 11201,{' '}
-                  <br className='hidden 2xl:block' /> United States
+                <p className="font-FiraSans text-[15px] text-TextColor-0">
+                  Arkadia Green Park Tower G, 8th Floor
+                  <br className="hidden 2xl:block" /> Jakarta Selatan, DKI
+                  Jakarta 12520
                 </p>
               </div>
             </div>
-            <div className='flex items-center gap-3 pb-3 pt-5'>
-              <div className='size-[26px] rounded-full bg-PrimaryColor-0 text-white flex items-center justify-center'>
+            <div className="flex items-center gap-3 pb-3 pt-5">
+              <div className="size-[26px] rounded-full bg-PrimaryColor-0 text-white flex items-center justify-center">
                 <FaPhone size={'12'} />
               </div>
-              <Link
-                to={'/'}
-                className='flex-1'
-              >
-                <button className='font-FiraSans text-[15px] text-white'>
-                  +880 123 (4567) 890
+              <Link to={'/'} className="flex-1">
+                <button className="font-FiraSans text-[15px] text-white">
+                  +6221 3000 6718
                 </button>
               </Link>
             </div>
-            <div className='flex items-center gap-3 pt-1'>
-              <div className='size-[26px] rounded-full bg-PrimaryColor-0 text-white flex items-center justify-center'>
+            <div className="flex items-center gap-3 pt-1">
+              <div className="size-[26px] rounded-full bg-PrimaryColor-0 text-white flex items-center justify-center">
                 <HiOutlineMailOpen size={'15'} />
               </div>
-              <Link
-                to={'/'}
-                className='flex-1'
-              >
-                <button className='font-FiraSans text-[15px] text-white'>
-                  example@gmail.com
+              <Link to={'/'} className="flex-1">
+                <button className="font-FiraSans text-[15px] text-white">
+                  info@mpupeoplesolution.com
                 </button>
               </Link>
             </div>
           </div>
         </div>
-        <div className='flex flex-col md:flex-row gap-y-7 md: md:col-span-6 justify-between md:items-center py-8 mt-[108px] border-t border-BorderColor2-0'>
+        <div className="flex flex-col md:flex-row gap-y-7 md: md:col-span-6 justify-between md:items-center py-8 mt-[108px] border-t border-BorderColor2-0">
           <div>
-            <p className='font-FiraSans text-[15px] flex items-center text-white'>
-              Copyright &copy; {new Date().getFullYear()} Consalt. Designed &
-              Developed by Dream-IT
+            <p className="font-FiraSans text-[15px] flex items-center text-white">
+              Copyright &copy; {new Date().getFullYear()} Mitra Prabhutva Utama.
             </p>
           </div>
           <div>
-            <ul className='flex gap-3 sm:gap-6'>
+            <ul className="flex gap-3 sm:gap-6">
               <li>
-                <button className='font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase'>
+                <button className="font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase">
                   Facebook
                 </button>
               </li>
               <li>
-                <button className='font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase'>
+                <button className="font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase">
                   Pinterest
                 </button>
               </li>
               <li>
-                <button className='font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase'>
+                <button className="font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase">
                   LinkedIn
                 </button>
               </li>
