@@ -11,7 +11,7 @@ const helmetContext = {}; // Define helmetContext here
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-const isMaintenance = false;
+const isMaintenance = true;
 
 root.render(
   <React.StrictMode>
