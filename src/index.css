@@ -517,3 +517,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::before {
 .team-member:nth-child(2n + 2) {
   margin-top: 30px;
 }
+
+.blog-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}

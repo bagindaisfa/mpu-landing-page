@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import BreadCrumb2 from '../../../Shared/BreadCrumb/BreadCrumb2';
 import {
   FaCheck,
@@ -6,7 +7,8 @@ import {
   FaLinkedinIn,
   FaXTwitter,
 } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import DOMPurify from 'dompurify';
 import Icon from '/images/pagination_icon1.png';
 import Icon2 from '/images/pagination_icon2.png';
 import image from '/images/image.jpg';
@@ -14,13 +16,46 @@ import { BsArrowRight } from 'react-icons/bs';
 import Blog from './Blog/Blog';
 
 const BlogDetails = () => {
+  const { id } = useParams();
+  const [blogContent, setBlogContent] = useState('');
+
+  const getBlogById = async (id) => {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/blogs/${id}`);
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch blog');
+    }
+
+    const data = await response.json();
+    return data;
+  };
+
+  useEffect(() => {
+    if (id) {
+      getBlogById(id)
+        .then((data) => {
+          setBlogContent(data);
+        })
+        .catch((error) => {
+          console.error('Error fetching blog:', error);
+        });
+    }
+  }, [id]);
+
+  const sanitizedContent = DOMPurify.sanitize(blogContent.content);
+
   return (
     <>
-      <BreadCrumb2 />
+      <BreadCrumb2
+        breadCrumbTitle={blogContent.title}
+        breadCrumbImage={blogContent.image_path}
+        breadCrumbCategory={blogContent.category}
+        breadCrumbDate={blogContent.created_at}
+      />
       <section className="pb-[120px]">
         <div className="Container">
           <div className="pt-6 sm:pt-10 lg:pt-[66px] px-4 md:px-10 2xl:px-[110px] relative z-10 sm:-mt-[60px] bg-white rounded-3xl md:mx-10 lg:mx-0 xl:mx-14 2xl:mx-0">
-            <div>
+            {/* <div>
               <p className="font-FiraSans text-TextColor2-0 mt-3">
                 Globally engage cross-media leadership skills before cross-media
                 innovation forward morph flexible whereas process-centric models
@@ -34,119 +69,11 @@ const BlogDetails = () => {
                 Conveniently experiences. formula standards in innovation with
                 wireless
               </p>
-              <p className="font-FiraSans text-TextColor2-0 mt-7">
-                Dramatically harness cross-platform best practices whereas
-                business services. Conveniently standards in innovation with
-                wireless Globally engage leadership best breed to rather than
-                bricks-and-clicks infomediaries monotonectally standards in
-                innovation within wireless vertical intellectual global
-                architectures engage based results main visionary models
-                digitalizations completed
-              </p>
-              <div className="max-w-[860px] mt-11 mb-9">
-                <h4 className="font-FiraSans text-xl text-HeadingColor-0 font-medium sm:pl-20 relative z-10 before:absolute before:left-0 before:top-3 sm:before:w-[70px] before:h-[2px] before:bg-HeadingColor-0">
-                  “Globally engage cross-media leadership skills before
-                  cross-media great oppotunities whereas process-centric models
-                  efficiently ”
-                </h4>
-              </div>
+            </div> */}
+            <div className="blog-content font-FiraSans text-TextColor2-0 mt-3">
+              <div dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
             </div>
             <div className="pt-5">
-              <h2 className="font-FiraSans font-semibold text-2xl sm:text-[36px] text-HeadingColor-0">
-                Sales Benifits
-              </h2>
-              <p className="font-FiraSans text-TextColor2-0 mt-[29px]">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward morph flexible whereas process-centric models
-                predomin Efficiently transform customer directed alignments for
-                front-end meta Dramatically harness cross-platform best
-                practices whereas centric data business services. Conveniently
-                formula standards in innovation with wireless vertical
-                intellectual capital before global architectures technically
-                engage based results with visionary models. Dramatically
-                harness-platform best
-              </p>
-              <div className="grid gap-y-4 sm:grid-cols-2 md:grid-cols-3 mt-11 mb-14 pb-1">
-                <div>
-                  <ul className="space-y-[18px]">
-                    <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
-                      <span className="text-PrimaryColor-0">
-                        <FaCheck size={'18'} />
-                      </span>{' '}
-                      Professional Team Member
-                    </li>
-                    <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
-                      <span className="text-PrimaryColor-0">
-                        <FaCheck size={'18'} />
-                      </span>{' '}
-                      Solutions the Clients Problems
-                    </li>
-                    <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
-                      <span className="text-PrimaryColor-0">
-                        <FaCheck size={'18'} />
-                      </span>{' '}
-                      Extra Facilities Sales Increase
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <ul className="space-y-[18px]">
-                    <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
-                      <span className="text-PrimaryColor-0">
-                        <FaCheck size={'18'} />
-                      </span>{' '}
-                      Any Problem Solving
-                    </li>
-                    <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
-                      <span className="text-PrimaryColor-0">
-                        <FaCheck size={'18'} />
-                      </span>{' '}
-                      24/7 Supports Available
-                    </li>
-                    <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
-                      <span className="text-PrimaryColor-0">
-                        <FaCheck size={'18'} />
-                      </span>{' '}
-                      Free Tools Provides for Clients
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <ul className="space-y-[18px]">
-                    <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
-                      <span className="text-PrimaryColor-0">
-                        <FaCheck size={'18'} />
-                      </span>{' '}
-                      24/7 Supports Available
-                    </li>
-                    <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
-                      <span className="text-PrimaryColor-0">
-                        <FaCheck size={'18'} />
-                      </span>{' '}
-                      Any Problem Solving
-                    </li>
-                    <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
-                      <span className="text-PrimaryColor-0">
-                        <FaCheck size={'18'} />
-                      </span>{' '}
-                      Free Tools Provides for Clients
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <p className="font-FiraSans text-TextColor2-0">
-                {`Interactively create visionary communities vis-a-vis team
-                building e-tailers. Phosfluorescently fashion pandemic
-                leadership via B2B alignments. restore front-end growth
-                strategies via e-business services. Progressively simplify
-                prospective total linkage whereas client-focused platforms.
-                leverage other's open-source outsourcing with market-driven
-                opportunities. Holisticly predominate error-free supply chains
-                via integrated growth Progressively harness enterprise-wide
-                web-readiness after cutting-edge processes. Appropriately
-                develop unique total linkage rather than high leadership.
-                Authoritatively conceptualize resource sucking`}
-              </p>
               <div className="flex items-center gap-7 justify-between flex-wrap mt-14 pt-6">
                 {/* <div>
                   <ul className='flex items-center gap-2'>
@@ -295,24 +222,6 @@ const BlogDetails = () => {
                       className="w-full h-[65px] rounded-md bg-BodyBg4-0 text-HeadingColor-0 font-FiraSans placeholder:text-TextColor2-0 outline-none border border-transparent focus:border-PrimaryColor-0 transition-all duration-500 py-3 px-7"
                     />
                   </div>
-                  <input
-                    type="url"
-                    name="url"
-                    id="url"
-                    placeholder="Website Url"
-                    required
-                    className="w-full h-[65px] rounded-md bg-BodyBg4-0 text-HeadingColor-0 font-FiraSans placeholder:text-TextColor2-0 outline-none border border-transparent focus:border-PrimaryColor-0 transition-all duration-500 py-3 px-7"
-                  />
-                  <label
-                    htmlFor="terms"
-                    className="flex items-center gap-2 cursor-pointer"
-                  >
-                    <input type="checkbox" name="terms" id="terms" />
-                    <p className="font-FiraSans text-TextColor2-0">
-                      Save my iunformation in this browser for the next time I
-                      comment.
-                    </p>
-                  </label>
                   <button
                     type="submit"
                     className="py-5 w-full bg-PrimaryColor-0 font-FiraSans rounded-md text-white flex items-center justify-center gap-2 uppercase relative z-10 group overflow-hidden"
