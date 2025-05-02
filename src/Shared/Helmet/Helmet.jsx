@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 
 const HelmetChanger = ({ title }) => {
   return (
     <Helmet>
-      <title>Consalt - {title}</title>
+      <title>MPU - {title}</title>
     </Helmet>
   );
 };
