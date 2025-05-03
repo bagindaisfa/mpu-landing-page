@@ -176,10 +176,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="offcanvas_title">
-            <p>
-              Business consultation provides expert advice to improve
-              performance.
-            </p>
+            <p>Enabling Agile Teams Development for the Next Era.</p>
           </div>
           <div className="main-menu-mobile lg:none"></div>
           <div className="offcanvas_contact-info">
@@ -189,36 +186,20 @@ const Navbar = () => {
             <ul>
               <li>
                 <MdLocationPin />
-                <Link to={'/'}>Melbone st, Australia, Ny 12099</Link>
+                <Link to={'/'}>
+                  Arkadia Green Park Tower G, 8th Floor. Jakarta Selatan, DKI
+                  Jakarta 12520
+                </Link>
               </li>
               <li>
                 <FaEnvelope />
-                <Link to={'/'}>needhelp@company.com</Link>
+                <Link to={'/'}>info@mpupeoplesolution.com</Link>
               </li>
               <li>
                 <FaPhoneAlt />
-                <Link to={'/'}>+48 555 223 224</Link>
+                <Link to={'/'}>+6221 3000 6718</Link>
               </li>
             </ul>
-          </div>
-          <div className="offcanvas_input">
-            <div className="offcanvas_input-title">
-              <h4>Get Update</h4>
-            </div>
-            <form action="#" method="post">
-              <div className="relative">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter E-Mail"
-                  required
-                />
-                <button type="submit">
-                  <IoMdPaperPlane />
-                </button>
-              </div>
-            </form>
-            <div className="status"></div>
           </div>
           <div className="offcanvas_social">
             <div className="social-icon">

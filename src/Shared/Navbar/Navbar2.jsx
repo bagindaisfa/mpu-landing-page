@@ -165,77 +165,65 @@ const Navbar2 = () => {
 
   return (
     <div data-lenis-prevent>
-      <div className='offcanvas-area'>
-        <div
-          ref={offcanvasRef}
-          className='offcanvas'
-        >
-          <div className='offcanvas_close-btn'>
-            <button
-              ref={closeBtnRef}
-              className='close-btn'
-            >
+      <div className="offcanvas-area">
+        <div ref={offcanvasRef} className="offcanvas">
+          <div className="offcanvas_close-btn">
+            <button ref={closeBtnRef} className="close-btn">
               <FaTimes />
             </button>
           </div>
-          <div className='offcanvas_logo'>
+          <div className="offcanvas_logo">
             <Link to={'/'}>
-              <img
-                src={Logo}
-                draggable='false'
-              />
+              <img src={Logo} draggable="false" />
             </Link>
           </div>
-          <div className='offcanvas_title'>
-            <p>
-              Business consultation provides expert advice to improve
-              performance.
-            </p>
+          <div className="offcanvas_title">
+            <p>Enabling Agile Teams Development for the Next Era.</p>
           </div>
-          <div className='main-menu-mobile lg:none'></div>
-          <div className='offcanvas_contact-info'>
-            <div className='offcanvas_contact-title'>
+          <div className="main-menu-mobile lg:none"></div>
+          <div className="offcanvas_contact-info">
+            <div className="offcanvas_contact-title">
               <h5>Contact Us</h5>
             </div>
             <ul>
               <li>
                 <MdLocationPin />
-                <Link to={'/'}>Melbone st, Australia, Ny 12099</Link>
+                <Link to={'/'}>
+                  Arkadia Green Park Tower G, 8th Floor. Jakarta Selatan, DKI
+                  Jakarta 12520
+                </Link>
               </li>
               <li>
                 <FaEnvelope />
-                <Link to={'/'}>needhelp@company.com</Link>
+                <Link to={'/'}>info@mpupeoplesolution.com</Link>
               </li>
               <li>
                 <FaPhoneAlt />
-                <Link to={'/'}>+48 555 223 224</Link>
+                <Link to={'/'}>+6221 3000 6718</Link>
               </li>
             </ul>
           </div>
-          <div className='offcanvas_input'>
-            <div className='offcanvas_input-title'>
+          <div className="offcanvas_input">
+            <div className="offcanvas_input-title">
               <h4>Get Update</h4>
             </div>
-            <form
-              action='#'
-              method='post'
-            >
-              <div className='relative'>
+            <form action="#" method="post">
+              <div className="relative">
                 <input
-                  type='email'
-                  name='email'
-                  placeholder='Enter E-Mail'
+                  type="email"
+                  name="email"
+                  placeholder="Enter E-Mail"
                   required
                 />
-                <button type='submit'>
+                <button type="submit">
                   <IoMdPaperPlane />
                 </button>
               </div>
             </form>
-            <div className='status'></div>
+            <div className="status"></div>
           </div>
-          <div className='offcanvas_social'>
-            <div className='social-icon'>
+          <div className="offcanvas_social">
+            <div className="social-icon">
               <Link to={'/'}>
                 <FaFacebookF />
               </Link>
@@ -252,46 +240,40 @@ const Navbar2 = () => {
           </div>
         </div>
       </div>
+      <div ref={bodyOverlayRef} className="body-overlay"></div>
       <div
-        ref={bodyOverlayRef}
-        className='body-overlay'
-      ></div>
-      <div
-        id='header-sticky'
-        className='header-area header-sticky header-classic'
+        id="header-sticky"
+        className="header-area header-sticky header-classic"
       >
-        <div className='Container'>
-          <div className='flex items-center justify-between py-4 lg:py-0 lg:grid lg:grid-cols-12'>
-            <div className='col-span-2'>
-              <div className='header-logo'>
+        <div className="Container">
+          <div className="flex items-center justify-between py-4 lg:py-0 lg:grid lg:grid-cols-12">
+            <div className="col-span-2">
+              <div className="header-logo">
                 <Link to={'/'}>
-                  <img
-                    src={Logo}
-                    draggable='false'
-                  />
+                  <img src={Logo} draggable="false" />
                 </Link>
               </div>
             </div>
-            <div className='col-span-8 hidden lg:block'>
-              <div className='header-main-menu text-center'>
-                <nav className='main-menu-content'>
+            <div className="col-span-8 hidden lg:block">
+              <div className="header-main-menu text-center">
+                <nav className="main-menu-content">
                   <ul>
-                    <li className='has-dropdown'>
+                    <li className="has-dropdown">
                       <Link to={'/'}>
                         Home
                         <span>
                           <FaChevronDown />
                         </span>
                       </Link>
-                      <ul className='submenu'>
-                        <li className='has-dropdown'>
+                      <ul className="submenu">
+                        <li className="has-dropdown">
                           <Link to={'/'}>
                             Buseness Consulting 01
                             <span>
                               <FaChevronDown />
                             </span>
                           </Link>
-                          <ul className='submenu !-top-[3px]'>
+                          <ul className="submenu !-top-[3px]">
                             <li>
                               <Link to={'/'}>Buseness Consulting Creative</Link>
                             </li>
@@ -307,14 +289,14 @@ const Navbar2 = () => {
                             </li>
                           </ul>
                         </li>
-                        <li className='has-dropdown'>
+                        <li className="has-dropdown">
                           <Link to={'/home4'}>
                             Finance Consulting
                             <span>
                               <FaChevronDown />
                             </span>
                           </Link>
-                          <ul className='submenu !top-[50px]'>
+                          <ul className="submenu !top-[50px]">
                             <li>
                               <Link to={'/home4'}>
                                 Finance Consulting Creative
@@ -333,14 +315,14 @@ const Navbar2 = () => {
                         <li>
                           <Link to={'/home7'}>IT Consulting</Link>
                         </li>
-                        <li className='has-dropdown'>
+                        <li className="has-dropdown">
                           <Link to={'/home8'}>
                             Buseness Consulting 02
                             <span>
                               <FaChevronDown />
                             </span>
                           </Link>
-                          <ul className='submenu !top-[154px]'>
+                          <ul className="submenu !top-[154px]">
                             <li>
                               <Link to={'/home8'}>
                                 Buseness Consulting Creative
@@ -363,14 +345,14 @@ const Navbar2 = () => {
                     <li>
                       <Link to={'/about'}>About</Link>
                     </li>
-                    <li className='has-dropdown'>
+                    <li className="has-dropdown">
                       <Link to={'/service'}>
                         Service
                         <span>
                           <FaChevronDown />
                         </span>
                       </Link>
-                      <ul className='submenu'>
+                      <ul className="submenu">
                         <li>
                           <Link to={'/service'}>service</Link>
                         </li>
@@ -379,14 +361,14 @@ const Navbar2 = () => {
                         </li>
                       </ul>
                     </li>
-                    <li className='has-dropdown'>
+                    <li className="has-dropdown">
                       <Link to={'/'}>
                         Pages
                         <span>
                           <FaChevronDown />
                         </span>
                       </Link>
-                      <ul className='submenu'>
+                      <ul className="submenu">
                         <li>
                           <Link to={'/about'}>About</Link>
                         </li>
@@ -415,14 +397,14 @@ const Navbar2 = () => {
                         </li>
                       </ul>
                     </li>
-                    <li className='has-dropdown'>
+                    <li className="has-dropdown">
                       <Link to={'/'}>
                         Portfolio
                         <span>
                           <FaChevronDown />
                         </span>
                       </Link>
-                      <ul className='submenu'>
+                      <ul className="submenu">
                         <li>
                           <Link to={'/portfolio'}>Portfolio</Link>
                         </li>
@@ -433,14 +415,14 @@ const Navbar2 = () => {
                         </li>
                       </ul>
                     </li>
-                    <li className='has-dropdown'>
+                    <li className="has-dropdown">
                       <Link to={'/'}>
                         Blog
                         <span>
                           <FaChevronDown />
                         </span>
                       </Link>
-                      <ul className='submenu'>
+                      <ul className="submenu">
                         <li>
                           <Link to={'/blog_grid'}>blog grid</Link>
                         </li>
@@ -456,27 +438,24 @@ const Navbar2 = () => {
                 </nav>
               </div>
             </div>
-            <div className='col-span-2'>
-              <div className='header-right-box flex items-center gap-10 lg:gap-4 2xl:gap-8 justify-end'>
-                <div className='header-btn hidden lg:block'>
+            <div className="col-span-2">
+              <div className="header-right-box flex items-center gap-10 lg:gap-4 2xl:gap-8 justify-end">
+                <div className="header-btn hidden lg:block">
                   <Link to={'/contact'}>
                     get a quote<span></span>
                     <LuMoveRight />
                   </Link>
                 </div>
-                <div className='hidden xl:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[27px] before:h-20 before:w-[1px] before:bg-HeadingColor-0 before:opacity-10'>
+                <div className="hidden xl:block relative before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-[27px] before:h-20 before:w-[1px] before:bg-HeadingColor-0 before:opacity-10">
                   <Link
                     to={'/home3'}
-                    className='text-white flex items-center justify-center size-9 rounded-full bg-white bg-opacity-15'
+                    className="text-white flex items-center justify-center size-9 rounded-full bg-white bg-opacity-15"
                   >
                     <MdLightMode size={'20'} />
                   </Link>
                 </div>
-                <div className='header-bar lg:hidden'>
-                  <button
-                    ref={menuBarRef}
-                    className='menu-bar'
-                  >
+                <div className="header-bar lg:hidden">
+                  <button ref={menuBarRef} className="menu-bar">
                     <span></span>
                     <span></span>
                     <span></span>

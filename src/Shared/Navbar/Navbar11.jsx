@@ -165,77 +165,47 @@ const Navbar11 = () => {
 
   return (
     <div data-lenis-prevent>
-      <div className='offcanvas-area'>
-        <div
-          ref={offcanvasRef}
-          className='offcanvas'
-        >
-          <div className='offcanvas_close-btn'>
-            <button
-              ref={closeBtnRef}
-              className='close-btn'
-            >
+      <div className="offcanvas-area">
+        <div ref={offcanvasRef} className="offcanvas">
+          <div className="offcanvas_close-btn">
+            <button ref={closeBtnRef} className="close-btn">
               <FaTimes />
             </button>
           </div>
-          <div className='offcanvas_logo'>
+          <div className="offcanvas_logo">
             <Link to={'/'}>
-              <img
-                src={Logo2}
-                draggable='false'
-              />
+              <img src={Logo2} draggable="false" />
             </Link>
           </div>
-          <div className='offcanvas_title'>
-            <p>
-              Business consultation provides expert advice to improve
-              performance.
-            </p>
+          <div className="offcanvas_title">
+            <p>Enabling Agile Teams Development for the Next Era.</p>
           </div>
-          <div className='main-menu-mobile lg:none'></div>
-          <div className='offcanvas_contact-info'>
-            <div className='offcanvas_contact-title'>
+          <div className="main-menu-mobile lg:none"></div>
+          <div className="offcanvas_contact-info">
+            <div className="offcanvas_contact-title">
               <h5>Contact Us</h5>
             </div>
             <ul>
               <li>
                 <MdLocationPin />
-                <Link to={'/'}>Melbone st, Australia, Ny 12099</Link>
+                <Link to={'/'}>
+                  Arkadia Green Park Tower G, 8th Floor. Jakarta Selatan, DKI
+                  Jakarta 12520
+                </Link>
               </li>
               <li>
                 <FaEnvelope />
-                <Link to={'/'}>needhelp@company.com</Link>
+                <Link to={'/'}>info@mpupeoplesolution.com</Link>
               </li>
               <li>
                 <FaPhoneAlt />
-                <Link to={'/'}>+48 555 223 224</Link>
+                <Link to={'/'}>+6221 3000 6718</Link>
               </li>
             </ul>
           </div>
-          <div className='offcanvas_input'>
-            <div className='offcanvas_input-title'>
-              <h4>Get Update</h4>
-            </div>
-            <form
-              action='#'
-              method='post'
-            >
-              <div className='relative'>
-                <input
-                  type='email'
-                  name='email'
-                  placeholder='Enter E-Mail'
-                  required
-                />
-                <button type='submit'>
-                  <IoMdPaperPlane />
-                </button>
-              </div>
-            </form>
-            <div className='status'></div>
-          </div>
-          <div className='offcanvas_social'>
-            <div className='social-icon'>
+
+          <div className="offcanvas_social">
+            <div className="social-icon">
               <Link to={'/'}>
                 <FaFacebookF />
               </Link>
@@ -252,37 +222,31 @@ const Navbar11 = () => {
           </div>
         </div>
       </div>
+      <div ref={bodyOverlayRef} className="body-overlay"></div>
       <div
-        ref={bodyOverlayRef}
-        className='body-overlay'
-      ></div>
-      <div
-        id='header-sticky'
-        className='header-area header-sticky style-two style-eight style-eleven'
+        id="header-sticky"
+        className="header-area header-sticky style-two style-eight style-eleven"
       >
-        <div className='bg-transparent rounded-md px-5 py-4 lg:py-0 md:px-10 xl:px-[60px] flex items-center justify-between lg:grid lg:grid-cols-12'>
-          <div className='col-span-2'>
-            <div className='header-logo'>
+        <div className="bg-transparent rounded-md px-5 py-4 lg:py-0 md:px-10 xl:px-[60px] flex items-center justify-between lg:grid lg:grid-cols-12">
+          <div className="col-span-2">
+            <div className="header-logo">
               <Link to={'/'}>
-                <img
-                  src={Logo}
-                  draggable='false'
-                />
+                <img src={Logo} draggable="false" />
               </Link>
             </div>
           </div>
-          <div className='lg:col-span-8 2xl:col-span-7 hidden lg:block'>
-            <div className='header-main-menu text-center'>
-              <nav className='main-menu-content'>
+          <div className="lg:col-span-8 2xl:col-span-7 hidden lg:block">
+            <div className="header-main-menu text-center">
+              <nav className="main-menu-content">
                 <ul>
-                  <li className='has-dropdown'>
+                  <li className="has-dropdown">
                     <Link to={'/'}>
                       Home
                       <span>
                         <FaChevronDown />
                       </span>
                     </Link>
-                    <ul className='submenu'>
+                    {/* <ul className='submenu'>
                       <li className='has-dropdown'>
                         <Link to={'/'}>
                           Buseness Consulting 01
@@ -353,35 +317,35 @@ const Navbar11 = () => {
                           </li>
                         </ul>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
                   <li>
                     <Link to={'/about'}>About</Link>
                   </li>
-                  <li className='has-dropdown'>
+                  <li className="has-dropdown">
                     <Link to={'/service'}>
                       Service
                       <span>
                         <FaChevronDown />
                       </span>
                     </Link>
-                    <ul className='submenu'>
+                    {/* <ul className='submenu'>
                       <li>
                         <Link to={'/service'}>service</Link>
                       </li>
                       <li>
                         <Link to={'/service_details'}>service details</Link>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
-                  <li className='has-dropdown'>
+                  {/* <li className="has-dropdown">
                     <Link to={'/'}>
                       Pages
                       <span>
                         <FaChevronDown />
                       </span>
                     </Link>
-                    <ul className='submenu'>
+                    <ul className="submenu">
                       <li>
                         <Link to={'/about'}>About</Link>
                       </li>
@@ -407,15 +371,15 @@ const Navbar11 = () => {
                         <Link to={'/contact'}>Contact</Link>
                       </li>
                     </ul>
-                  </li>
-                  <li className='has-dropdown'>
+                  </li> */}
+                  {/* <li className="has-dropdown">
                     <Link to={'/'}>
                       Portfolio
                       <span>
                         <FaChevronDown />
                       </span>
                     </Link>
-                    <ul className='submenu'>
+                    <ul className="submenu">
                       <li>
                         <Link to={'/portfolio'}>Portfolio</Link>
                       </li>
@@ -423,22 +387,22 @@ const Navbar11 = () => {
                         <Link to={'/portfolio_details'}>Portfolio details</Link>
                       </li>
                     </ul>
-                  </li>
-                  <li className='has-dropdown'>
-                    <Link to={'/'}>
+                  </li> */}
+                  <li className="has-dropdown">
+                    <Link to={'/blog_grid'}>
                       Blog
                       <span>
                         <FaChevronDown />
                       </span>
                     </Link>
-                    <ul className='submenu'>
+                    {/* <ul className="submenu">
                       <li>
                         <Link to={'/blog_grid'}>blog grid</Link>
                       </li>
                       <li>
                         <Link to={'/blog_details'}>blog details</Link>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
                   <li>
                     <Link to={'/contact'}>Contact</Link>
@@ -447,39 +411,33 @@ const Navbar11 = () => {
               </nav>
             </div>
           </div>
-          <div className='lg:col-span-2 2xl:col-span-3'>
-            <div className='header-right-box flex items-center gap-10 lg:gap-7 justify-end'>
-              <div className='hidden 2xl:block relative'>
+          <div className="lg:col-span-2 2xl:col-span-3">
+            <div className="header-right-box flex items-center gap-10 lg:gap-7 justify-end">
+              <div className="hidden 2xl:block relative">
                 <Link to={'/'}>
-                  <button className='text-HeadingColor-0 relative top-1'>
+                  <button className="text-HeadingColor-0 relative top-1">
                     <BiSearch size={'20'} />
                   </button>
                 </Link>
               </div>
-              <div className='hidden lg:block relative'>
+              <div className="hidden lg:block relative">
                 <Link
                   to={'/contact'}
-                  className='lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[34px] 2xl:py-[17px] rounded-full font-FiraSans font-medium text-white overflow-hidden bg-PrimaryColor-0 flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0'
+                  className="lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[34px] 2xl:py-[17px] rounded-full font-FiraSans font-medium text-white overflow-hidden bg-PrimaryColor-0 flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0"
                 >
                   Get A Quote
                   <LiaLongArrowAltRightSolid size={'18'} />
                 </Link>
               </div>
-              <div className='header-sidebar hidden 2xl:block'>
-                <button
-                  ref={menuSideBarRef}
-                  className='menu-sidebar'
-                >
+              <div className="header-sidebar hidden 2xl:block">
+                <button ref={menuSideBarRef} className="menu-sidebar">
                   <span></span>
                   <span></span>
                   <span></span>
                 </button>
               </div>
-              <div className='header-bar lg:hidden'>
-                <button
-                  ref={menuBarRef}
-                  className='menu-bar'
-                >
+              <div className="header-bar lg:hidden">
+                <button ref={menuBarRef} className="menu-bar">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -489,121 +447,82 @@ const Navbar11 = () => {
           </div>
         </div>
       </div>
-      <div className='sidebar-content'>
-        <div
-          ref={sidebarContentRef}
-          className='sidebar'
-        >
-          <div className='sidebar_close-btn'>
-            <button
-              ref={closeBtn2Ref}
-              className='close-btn2'
-            >
+      <div className="sidebar-content">
+        <div ref={sidebarContentRef} className="sidebar">
+          <div className="sidebar_close-btn">
+            <button ref={closeBtn2Ref} className="close-btn2">
               <FaTimes />
             </button>
           </div>
-          <div className='sidebar_logo'>
+          <div className="sidebar_logo">
             <Link to={'/'}>
-              <img
-                src={Logo2}
-                draggable='false'
-              />
+              <img src={Logo2} draggable="false" />
             </Link>
           </div>
-          <div className='sidebar_title'>
-            <p>
-              Business consultation provides expert advice to improve
-              performance.
-            </p>
+          <div className="sidebar_title">
+            <p>Enabling Agile Teams Development for the Next Era.</p>
           </div>
           <div>
-            <div className='sidebar_service-title'>
+            <div className="sidebar_service-title">
               <h5>What Services We Provide?</h5>
             </div>
-            <ul className='service_list'>
+            <ul className="service_list">
               <li>
                 <Link to={'/'}>
-                  <button>Managed IT Services</button>
+                  <button>People Development</button>
                 </Link>
               </li>
               <li>
                 <Link to={'/'}>
-                  <button>Cloud Services</button>
+                  <button>Talent Acquisition</button>
                 </Link>
               </li>
               <li>
                 <Link to={'/'}>
-                  <button>Cybersecurity Services</button>
+                  <button>Employee Engagement Events</button>
                 </Link>
               </li>
               <li>
                 <Link to={'/'}>
-                  <button>Network Services</button>
+                  <button>Human Capital Consultancy</button>
                 </Link>
               </li>
               <li>
                 <Link to={'/'}>
-                  <button>Data Analytics</button>
+                  <button>Vetting & Background Check</button>
                 </Link>
               </li>
               <li>
                 <Link to={'/'}>
-                  <button>IT Consulting Services</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Backup and Disaster Recovery</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/'}>
-                  <button>Website Development</button>
+                  <button>Organisation Development</button>
                 </Link>
               </li>
             </ul>
           </div>
-          <div className='sidebar_contact-info'>
-            <div className='sidebar_contact-title'>
+          <div className="sidebar_contact-info">
+            <div className="sidebar_contact-title">
               <h5>Have Questions? Contact Our Team!</h5>
             </div>
             <ul>
               <li>
                 <MdLocationPin />
-                <Link to={'/'}>Melbone st, Australia, Ny 12099</Link>
+                <Link to={'/'}>
+                  Arkadia Green Park Tower G, 8th Floor. Jakarta Selatan, DKI
+                  Jakarta 12520
+                </Link>
               </li>
               <li>
                 <FaEnvelope />
-                <Link to={'/'}>needhelp@company.com</Link>
+                <Link to={'/'}>info@mpupeoplesolution.com</Link>
               </li>
               <li>
                 <FaPhoneAlt />
-                <Link to={'/'}>+48 555 223 224</Link>
+                <Link to={'/'}>+6221 3000 6718</Link>
               </li>
             </ul>
           </div>
-          <div className='sidebar_input'>
-            <div className='offcanvas_input-title'>
-              <h4>Get Update</h4>
-            </div>
-            <form
-              action='#'
-              method='post'
-            >
-              <div className='relative'>
-                <input
-                  type='email'
-                  name='email'
-                  placeholder='Enter E-Mail'
-                  required
-                />
-                <button type='submit'>
-                  <IoMdPaperPlane />
-                </button>
-              </div>
-            </form>
-          </div>
-          <ul className='sidebar-social-icon'>
+
+          <ul className="sidebar-social-icon">
             <li>
               <Link to={'/'}>
                 <FaFacebookF />
@@ -627,10 +546,7 @@ const Navbar11 = () => {
           </ul>
         </div>
       </div>
-      <div
-        ref={bodyOverlay2Ref}
-        className='body-overlay2'
-      ></div>
+      <div ref={bodyOverlay2Ref} className="body-overlay2"></div>
     </div>
   );
 };
