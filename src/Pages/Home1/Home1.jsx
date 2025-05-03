@@ -29,6 +29,7 @@ const Home1 = () => {
 
     return response.json();
   };
+
   useEffect(() => {
     const visited = sessionStorage.getItem('visited-home');
 

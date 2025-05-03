@@ -18,6 +18,13 @@ import Blog from './Blog/Blog';
 const BlogDetails = () => {
   const { id } = useParams();
   const [blogContent, setBlogContent] = useState('');
+  const [blogComments, setBlogComments] = useState(null);
+  const [nav, setNav] = useState({ previous: null, next: null });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [comment, setComment] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const getBlogById = async (id) => {
     const response = await fetch(`${import.meta.env.VITE_API_URL}/blogs/${id}`);
@@ -27,7 +34,70 @@ const BlogDetails = () => {
     }
 
     const data = await response.json();
+    fetchNav();
     return data;
+  };
+
+  const fetchNav = async () => {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/blogs/nav/${id}`);
+    const data = await res.json();
+    setNav(data);
+  };
+
+  const getCommentsByBlog = async (id) => {
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/comments/${id}`
+    );
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch comments');
+    }
+
+    const data = await response.json();
+    return data;
+  };
+
+  const addComment = async (name, email, comment, id) => {
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/comments/${id}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, comment }),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error('Failed to submit comment');
+    }
+
+    return response.json();
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    try {
+      await addComment(name, email, comment, id);
+      setName('');
+      setEmail('');
+      setComment('');
+      getCommentsByBlog(id)
+        .then((data) => {
+          setBlogComments(data);
+        })
+        .catch((error) => {
+          console.error('Error fetching comments:', error);
+        });
+    } catch (err) {
+      setError('Failed to submit comment.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -35,6 +105,13 @@ const BlogDetails = () => {
       getBlogById(id)
         .then((data) => {
           setBlogContent(data);
+          getCommentsByBlog(id)
+            .then((data) => {
+              setBlogComments(data);
+            })
+            .catch((error) => {
+              console.error('Error fetching comments:', error);
+            });
         })
         .catch((error) => {
           console.error('Error fetching blog:', error);
@@ -142,67 +219,90 @@ const BlogDetails = () => {
               </div>
               <div className="flex items-center gap-7 justify-between flex-wrap border-y border-BorderColor-0 py-7 mt-12 mb-20">
                 <div>
-                  <Link to={'#'}>
-                    <button className="flex items-center gap-2 font-FiraSans font-medium text-lg text-HeadingColor-0">
-                      <img src={Icon} alt="Icon" draggable="false" /> Previous
-                      Posts
-                    </button>
-                  </Link>
+                  {nav.previous && (
+                    <Link to={`/blog_details/${nav.previous.id}`}>
+                      <button className="flex items-center gap-2 font-FiraSans font-medium text-lg text-HeadingColor-0">
+                        <img src={Icon} alt="Icon" draggable="false" /> Previous
+                        Posts
+                      </button>
+                    </Link>
+                  )}
                 </div>
                 <div>
-                  <Link to={'#'}>
-                    <button className="flex items-center gap-2 font-FiraSans font-medium text-lg text-HeadingColor-0">
-                      Next Posts{' '}
-                      <img src={Icon2} alt="Icon" draggable="false" />
-                    </button>
-                  </Link>
+                  {nav.next && (
+                    <Link to={`/blog_details/${nav.next.id}`}>
+                      <button className="flex items-center gap-2 font-FiraSans font-medium text-lg text-HeadingColor-0">
+                        Next Posts{' '}
+                        <img src={Icon2} alt="Icon" draggable="false" />
+                      </button>
+                    </Link>
+                  )}
                 </div>
               </div>
               <div id="comment" className="pt-4">
                 <h4 className="font-FiraSans text-HeadingColor-0 text-[28px] font-medium">
-                  Comments (1)
+                  Comments ({blogComments ? blogComments.length : 0})
                 </h4>
-                <div className="flex flex-col sm:flex-row gap-5 relative z-10 bg-white shadow-shades px-4 md:px-10 pt-6 md:pt-12 pb-5 md:pb-11 rounded-2xl mt-7">
-                  <div className="w-[66px]">
-                    <img
-                      src={image}
-                      alt="Image"
-                      draggable="false"
-                      className="rounded-full"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h6 className="font-FiraSans text-xl font-medium text-HeadingColor-0">
-                      Jhon D. Alexon
-                    </h6>
-                    <p className="font-FiraSans text-[15px] text-TextColor2-0 mt-1">
-                      24 October, 2024
-                    </p>
-                    <p className="font-FiraSans text-TextColor2-0 2xl:pr-7 mt-6">
-                      Media leadership skills before cross-media innovation
-                      forward morph flexible whereas process-centric models
-                      Efficiently transform customer directed alignments for
-                      front-end meta Dramatically harness
-                    </p>
-                    <div className="absolute top-12 right-10">
-                      <button className="font-FiraSans text-TextColor2-0 px-5 py-2 rounded-full bg-BodyBg4-0 text-sm uppercase font-medium transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100">
-                        Reply
-                      </button>
+
+                {blogComments && blogComments.length > 0 ? (
+                  blogComments.map((comment) => (
+                    <div
+                      key={comment.id}
+                      className="flex flex-col sm:flex-row gap-5 relative z-10 bg-white shadow-shades px-4 md:px-10 pt-6 md:pt-12 pb-5 md:pb-11 rounded-2xl mt-7"
+                    >
+                      {/* Optional avatar */}
+                      {/* <div className="w-[66px]">
+                        <img
+                          src={image}
+                          alt="Avatar"
+                          draggable="false"
+                          className="rounded-full"
+                        />
+                      </div> */}
+
+                      <div className="flex-1">
+                        <h6 className="font-FiraSans text-xl font-medium text-HeadingColor-0">
+                          {comment.name}
+                        </h6>
+                        <p className="font-FiraSans text-[15px] text-TextColor2-0 mt-1">
+                          {new Date(comment.created_at).toLocaleDateString(
+                            'en-US',
+                            {
+                              day: '2-digit',
+                              month: 'long',
+                              year: 'numeric',
+                            }
+                          )}
+                        </p>
+                        <p className="font-FiraSans text-TextColor2-0 2xl:pr-7 mt-6">
+                          {comment.comment}
+                        </p>
+                        {/* <div className="absolute top-12 right-10">
+                          <button className="font-FiraSans text-TextColor2-0 px-5 py-2 rounded-full bg-BodyBg4-0 text-sm uppercase font-medium transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100">
+                            Reply
+                          </button>
+                        </div> */}
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  ))
+                ) : (
+                  <p className="mt-4 text-TextColor2-0">No comments yet.</p>
+                )}
               </div>
+
               <div>
                 <h4 className="font-FiraSans text-HeadingColor-0 text-[28px] font-medium mt-20 pt-2 mb-2">
                   Post A Comment
                 </h4>
                 <p className="font-FiraSans text-TextColor2-0">{`Your E-Mail address will not be published.So, don't worry.`}</p>
-                <form action="#" method="post" className="space-y-[30px] mt-8">
+                <form onSubmit={handleSubmit} className="space-y-[30px] mt-8">
                   <textarea
                     name="meassage"
                     id="meassage"
                     placeholder="Write Meassage..."
                     className="w-full h-[194px] rounded-md bg-BodyBg4-0 text-HeadingColor-0 font-FiraSans placeholder:text-TextColor2-0 outline-none border border-transparent focus:border-PrimaryColor-0 transition-all duration-500 py-3 px-7 resize-none -mb-[6px]"
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
                   ></textarea>
                   <div className="flex flex-col sm:flex-row gap-[30px]">
                     <input
@@ -212,6 +312,8 @@ const BlogDetails = () => {
                       placeholder="Enter Name*"
                       required
                       className="w-full h-[65px] rounded-md bg-BodyBg4-0 text-HeadingColor-0 font-FiraSans placeholder:text-TextColor2-0 outline-none border border-transparent focus:border-PrimaryColor-0 transition-all duration-500 py-3 px-7"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                     <input
                       type="email"
@@ -220,14 +322,17 @@ const BlogDetails = () => {
                       placeholder="Enter E-Mail*"
                       required
                       className="w-full h-[65px] rounded-md bg-BodyBg4-0 text-HeadingColor-0 font-FiraSans placeholder:text-TextColor2-0 outline-none border border-transparent focus:border-PrimaryColor-0 transition-all duration-500 py-3 px-7"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <button
                     type="submit"
+                    disabled={loading}
                     className="py-5 w-full bg-PrimaryColor-0 font-FiraSans rounded-md text-white flex items-center justify-center gap-2 uppercase relative z-10 group overflow-hidden"
                   >
-                    Submit Comments{' '}
-                    <span className="">
+                    {loading ? 'Submitting...' : 'Submit Comments'}
+                    <span>
                       <BsArrowRight size={'20'} />
                     </span>
                     <span className="absolute bg-HeadingColor-0 left-[12.5%] top-0 h-full w-0 transition-all duration-500 -z-10 group-hover:w-[25%] group-hover:left-0"></span>
@@ -235,6 +340,7 @@ const BlogDetails = () => {
                     <span className="absolute bg-HeadingColor-0 left-[62.5%] top-0 h-full w-0 transition-all duration-500 -z-10 group-hover:w-[25%] group-hover:left-1/2"></span>
                     <span className="absolute bg-HeadingColor-0 left-[87.5%] top-0 h-full w-0 transition-all duration-500 -z-10 group-hover:w-[25%] group-hover:left-[75%]"></span>
                   </button>
+                  {error && <p className="text-red-500">{error}</p>}
                 </form>
               </div>
             </div>

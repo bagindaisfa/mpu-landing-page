@@ -1,63 +1,99 @@
 /* eslint-disable no-unused-vars */
-import { FaCircle } from "react-icons/fa6";
-import blogThumb from "/images/blog_01.png";
-import blogThumb2 from "/images/blog_02.png";
-import blogThumb3 from "/images/blog_03.png";
-import BlogCard from "./BlogCard";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
-import { BsArrowRight } from "react-icons/bs";
+import { useEffect, useState } from 'react';
+import { FaCircle } from 'react-icons/fa6';
+import blogThumb from '/images/blog_01.png';
+import blogThumb2 from '/images/blog_02.png';
+import blogThumb3 from '/images/blog_03.png';
+import BlogCard from './BlogCard';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+import { BsArrowRight } from 'react-icons/bs';
 
 const BlogData = [
   {
     id: 1,
     blogThumb: blogThumb,
     blogDateIcon: <FaCircle />,
-    blogDate: "04 Mar, 2024",
-    blogPostBy: "TECHNOLOGY",
-    blogUrl: "/blog_details",
-    blogTitle: "Globally disintermediate exten services Planning",
-    blogBtn: "Read More",
+    blogDate: '04 Mar, 2024',
+    blogPostBy: 'TECHNOLOGY',
+    blogUrl: '/blog_details',
+    blogTitle: 'Globally disintermediate exten services Planning',
+    blogBtn: 'Read More',
     blogBtnIcon: <BsArrowRight />,
   },
   {
     id: 2,
     blogThumb: blogThumb2,
     blogDateIcon: <FaCircle />,
-    blogDate: "14 Mar, 2024",
-    blogPostBy: "Business",
-    blogUrl: "/blog_details",
-    blogTitle: "Sustainability Consulting for Business Planning",
-    blogBtn: "Read More",
+    blogDate: '14 Mar, 2024',
+    blogPostBy: 'Business',
+    blogUrl: '/blog_details',
+    blogTitle: 'Sustainability Consulting for Business Planning',
+    blogBtn: 'Read More',
     blogBtnIcon: <BsArrowRight />,
   },
   {
     id: 3,
     blogThumb: blogThumb3,
-    blogDate: "24 Mar, 2024",
+    blogDate: '24 Mar, 2024',
     blogDateIcon: <FaCircle />,
-    blogPostBy: "Consulting",
-    blogUrl: "/blog_details",
-    blogTitle: "Consulting Industry changing Business Landscape",
-    blogBtn: "Read More",
+    blogPostBy: 'Consulting',
+    blogUrl: '/blog_details',
+    blogTitle: 'Consulting Industry changing Business Landscape',
+    blogBtn: 'Read More',
     blogBtnIcon: <BsArrowRight />,
   },
   {
     id: 4,
     blogThumb: blogThumb2,
-    blogDate: "24 Mar, 2024",
+    blogDate: '24 Mar, 2024',
     blogDateIcon: <FaCircle />,
-    blogPostBy: "Consulting",
-    blogUrl: "/blog_details",
-    blogTitle: "Consulting Industry changing Business Landscape",
-    blogBtn: "Read More",
+    blogPostBy: 'Consulting',
+    blogUrl: '/blog_details',
+    blogTitle: 'Consulting Industry changing Business Landscape',
+    blogBtn: 'Read More',
     blogBtnIcon: <BsArrowRight />,
   },
 ];
 
 const Blog = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/blogs`);
+
+        if (!res.ok) {
+          throw new Error('Failed to fetch blog');
+        }
+        const data = await res.json();
+        const formattedBlogs = data.map((item) => ({
+          id: item.id,
+          blogThumb: item.image_path,
+          blogDateIcon: <FaCircle />,
+          blogDate: new Date(item.created_at).toLocaleDateString('en-US', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric',
+          }),
+          blogPostBy: item.category || 'Uncategorized',
+          blogUrl: `/blog_details/${item.id}`,
+          blogTitle: item.title,
+          blogBtn: 'Read More',
+          blogBtnIcon: <BsArrowRight />,
+        }));
+        setBlogs(formattedBlogs);
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
   const settings = {
     loop: true,
     spaceBetween: 30,
@@ -102,7 +138,7 @@ const Blog = () => {
         </div>
         <div className="mt-[56px]">
           <Swiper {...settings} pagination={pagination} modules={[Pagination]}>
-            {BlogData.map(
+            {blogs.map(
               ({
                 id,
                 blogThumb,
