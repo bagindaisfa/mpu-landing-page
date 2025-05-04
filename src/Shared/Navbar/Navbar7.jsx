@@ -256,7 +256,7 @@ const Navbar7 = () => {
                 to={'/'}
                 className="font-FiraSans text-[15px] text-white transition-all duration-500 hover:text-white"
               >
-                example@gmail.com
+                info@mpupeoplesolution.com
               </Link>
             </div>
             <div className=" md:flex items-center gap-2 hidden">

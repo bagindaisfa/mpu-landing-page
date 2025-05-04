@@ -254,7 +254,7 @@ const Navbar6 = () => {
                 to={'/'}
                 className="font-FiraSans text-[15px] text-TextColor2-0 transition-all duration-500 hover:text-PrimaryColor-0"
               >
-                example@gmail.com
+                info@mpupeoplesolution.com
               </Link>
             </div>
             <div className=" md:flex items-center gap-2 hidden">

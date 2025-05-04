@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { FaAngleRight, FaArrowRightLong, FaCircle } from 'react-icons/fa6';
 import blogGridThumb from '/images/blog1.png';
 import blogGridThumb2 from '/images/blog2.png';
@@ -9,87 +10,64 @@ import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
 import BlogGridCard from './BlogGridCard';
 import { BsArrowRight } from 'react-icons/bs';
 
-const BlogData = [
-  {
-    id: 1,
-    blogGridThumb: blogGridThumb,
-    blogGridDateIcon: <FaCircle />,
-    blogGridDate: '04 Mar, 2024',
-    blogGridPostBy: 'TECHNOLOGY',
-    blogGridUrl: '/blog_details',
-    blogGridTitle: 'Globally disintermediate exten services Planning',
-    blogGridBtn: 'Read More',
-    blogGridBtnIcon: <BsArrowRight />,
-  },
-  {
-    id: 2,
-    blogGridThumb: blogGridThumb2,
-    blogGridDateIcon: <FaCircle />,
-    blogGridDate: '14 Mar, 2024',
-    blogGridPostBy: 'Business',
-    blogGridUrl: '/blog_details',
-    blogGridTitle: 'Sustainability Consulting for Business Planning',
-    blogGridBtn: 'Read More',
-    blogGridBtnIcon: <BsArrowRight />,
-  },
-  {
-    id: 3,
-    blogGridThumb: blogGridThumb3,
-    blogGridDate: '24 Mar, 2024',
-    blogGridDateIcon: <FaCircle />,
-    blogGridPostBy: 'Consulting',
-    blogGridUrl: '/blog_details',
-    blogGridTitle: 'Consulting Industry changing Business Landscape',
-    blogGridBtn: 'Read More',
-    blogGridBtnIcon: <BsArrowRight />,
-  },
-  {
-    id: 4,
-    blogGridThumb: blogGridThumb4,
-    blogGridDate: '17 May, 2024',
-    blogGridDateIcon: <FaCircle />,
-    blogGridPostBy: 'Consulting',
-    blogGridUrl: '/blog_details',
-    blogGridTitle: 'Consulting Industry changing Business Landscape',
-    blogGridBtn: 'Read More',
-    blogGridBtnIcon: <BsArrowRight />,
-  },
-  {
-    id: 5,
-    blogGridThumb: blogGridThumb5,
-    blogGridDate: '24 Jun, 2024',
-    blogGridDateIcon: <FaCircle />,
-    blogGridPostBy: 'Advising',
-    blogGridUrl: '/blog_details',
-    blogGridTitle: 'Globally disintermediate exten services Planning',
-    blogGridBtn: 'Read More',
-    blogGridBtnIcon: <BsArrowRight />,
-  },
-  {
-    id: 6,
-    blogGridThumb: blogGridThumb6,
-    blogGridDate: '24 May, 2024',
-    blogGridDateIcon: <FaCircle />,
-    blogGridPostBy: 'IT Solution',
-    blogGridUrl: '/blog_details',
-    blogGridTitle: 'Consulting Industry changing Business Landscape',
-    blogGridBtn: 'Read More',
-    blogGridBtnIcon: <BsArrowRight />,
-  },
-];
-
 const BlogGrid = () => {
+  const [blogs, setBlogs] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const blogsPerPage = 6;
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/blogs`);
+
+        if (!res.ok) {
+          throw new Error('Failed to fetch blog');
+        }
+        const data = await res.json();
+
+        const formattedBlogs = data.map((item) => ({
+          id: item.id,
+          blogGridThumb: item.image_path,
+          blogGridDateIcon: <FaCircle />,
+          blogGridDate: new Date(item.created_at).toLocaleDateString('en-US', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric',
+          }),
+          blogGridPostBy: item.category || 'Uncategorized',
+          blogGridUrl: `/blog_details/${item.id}`,
+          blogGridTitle: item.title,
+          blogGridBtn: 'Read More',
+          blogGridBtnIcon: <BsArrowRight />,
+        }));
+        setBlogs(formattedBlogs);
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  const totalPages = Math.ceil(blogs.length / blogsPerPage);
+
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <>
       <BreadCrumb
-        breadCrumbTitle={'Blog Grid'}
+        breadCrumbTitle={'Our Blogs'}
         breadCrumbIcon={<FaArrowRightLong />}
-        breadCrumbLink={'Blog Grid'}
+        breadCrumbLink={'Our Blogs'}
       />
-      <section className='pt-28'>
-        <div className='Container'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7'>
-            {BlogData.map(
+      <section className="pt-28">
+        <div className="Container">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            {blogs.map(
               ({
                 id,
                 blogGridThumb,
@@ -120,29 +98,49 @@ const BlogGrid = () => {
           </div>
         </div>
       </section>
-      <div>
-        <ul className='flex items-center gap-2 justify-center pb-[120px] pt-[80px]'>
-          <li>
-            <button className='h-[50px] w-[50px] font-FiraSans rounded-full border-BorderColor2-0 border bg-BodyBg-0 flex justify-center items-center text-white transition-all duration-500 hover:text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-100 hover:before:scale-100'>
-              01
-            </button>
-          </li>
-          <li>
-            <button className='h-[50px] w-[50px] font-FiraSans rounded-full border-BorderColor2-0 border bg-BodyBg-0 flex justify-center items-center text-HeadingColor-0 transition-all duration-500 hover:text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100'>
-              02
-            </button>
-          </li>
-          <li>
-            <button className='h-[50px] w-[50px] font-FiraSans rounded-full border-BorderColor2-0 border bg-BodyBg-0 flex justify-center items-center text-HeadingColor-0 transition-all duration-500 hover:text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100'>
-              03
-            </button>
-          </li>
-          <li>
-            <button className='h-[50px] w-[50px] font-FiraSans rounded-full border-BorderColor2-0 border bg-BodyBg-0 flex justify-center items-center text-HeadingColor-0 transition-all duration-500 hover:text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100'>
-              <FaAngleRight />
-            </button>
-          </li>
-        </ul>
+      {/* Pagination */}
+      <div className="flex items-center gap-2 justify-center pb-[90px] pt-[80px]">
+        {totalPages > 1 && (
+          <>
+            {/* Previous button */}
+            {currentPage > 1 && (
+              <button
+                onClick={() => paginate(currentPage - 1)}
+                className="h-[50px] w-[50px] rounded-full border border-BorderColor2-0 flex justify-center items-center text-HeadingColor-0 hover:text-white hover:bg-PrimaryColor-0 transition-all"
+              >
+                <FaAngleLeft />
+              </button>
+            )}
+
+            {/* Numbered buttons */}
+            {[...Array(totalPages)].map((_, i) => {
+              const page = i + 1;
+              return (
+                <button
+                  key={page}
+                  onClick={() => paginate(page)}
+                  className={`h-[50px] w-[50px] rounded-full border border-BorderColor2-0 flex justify-center items-center transition-all ${
+                    currentPage === page
+                      ? 'bg-PrimaryColor-0 text-white'
+                      : 'bg-BodyBg-0 text-HeadingColor-0 hover:bg-PrimaryColor-0 hover:text-white'
+                  }`}
+                >
+                  {page.toString().padStart(2, '0')}
+                </button>
+              );
+            })}
+
+            {/* Next button */}
+            {currentPage < totalPages && (
+              <button
+                onClick={() => paginate(currentPage + 1)}
+                className="h-[50px] w-[50px] rounded-full border border-BorderColor2-0 flex justify-center items-center text-HeadingColor-0 hover:text-white hover:bg-PrimaryColor-0 transition-all"
+              >
+                <FaAngleRight />
+              </button>
+            )}
+          </>
+        )}
       </div>
     </>
   );

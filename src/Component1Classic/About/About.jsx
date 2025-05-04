@@ -1,7 +1,7 @@
-import aboutThumb from "/images/about2-image.png";
-import { Link } from "react-router-dom";
-import { FaCheck } from "react-icons/fa6";
-import { FaEnvelopeOpen } from "react-icons/fa";
+import aboutThumb from '/images/about2-image.png';
+import { Link } from 'react-router-dom';
+import { FaCheck } from 'react-icons/fa6';
+import { FaEnvelopeOpen } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -12,7 +12,11 @@ const About = () => {
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 lg:gap-10 2xl:gap-28 items-center">
           <div className="relative z-10">
-            <img src={aboutThumb} draggable="false" className="w-full 2xl:w-[inherit]"/>
+            <img
+              src={aboutThumb}
+              draggable="false"
+              className="w-full 2xl:w-[inherit]"
+            />
             <div className="absolute top-6 right-0 2xl:right-[36px] size-[74px] sm:size-[142px] lg:size-[120px] xl:size-[142px] bg-PrimaryColor-0 rounded-full flex items-center justify-center">
               <div className="text-inner size-14 sm:size-24 lg:size-20 xl:size-24 animate-rotational relative before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:size-[15px] before:rounded-full before:bg-white">
                 <svg
@@ -58,26 +62,26 @@ const About = () => {
             </p>
             <ul className="mt-5">
               <li className="flex items-center gap-4 font-FiraSans font-medium text-lg text-HeadingColor-0">
-                <FaCheck size={"22"} className="text-PrimaryColor-0" />
+                <FaCheck size={'22'} className="text-PrimaryColor-0" />
                 Professional Team Member
               </li>
               <li className="flex items-center gap-4 font-FiraSans font-medium text-lg text-HeadingColor-0 mt-3">
-                <FaCheck size={"22"} className="text-PrimaryColor-0" />
+                <FaCheck size={'22'} className="text-PrimaryColor-0" />
                 Any Problem Solving
               </li>
               <li className="flex items-center gap-4 font-FiraSans font-medium text-lg text-HeadingColor-0 mt-3">
-                <FaCheck size={"22"} className="text-PrimaryColor-0" />
+                <FaCheck size={'22'} className="text-PrimaryColor-0" />
                 Implement Business
               </li>
             </ul>
             <div className="flex flex-col md:flex-row lg:flex-col 2xl:flex-row md:items-center lg:items-start 2xl:items-center gap-7 mt-9">
-              <Link to={"/about"}>
+              <Link to={'/about'}>
                 <button className="primary-btn">{`Discover More`}</button>
               </Link>
-              <Link to={"/"}>
+              <Link to={'/'}>
                 <button className="flex items-center gap-2 font-FiraSans font-medium text-HeadingColor-0">
                   <FaEnvelopeOpen />
-                  example@gmail.com
+                  info@mpupeoplesolution.com
                 </button>
               </Link>
             </div>
