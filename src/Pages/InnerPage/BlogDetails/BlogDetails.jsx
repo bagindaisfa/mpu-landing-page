@@ -347,7 +347,7 @@ const BlogDetails = () => {
           </div>
         </div>
       </section>
-      <Blog />
+      <Blog id={id} />
     </>
   );
 };
