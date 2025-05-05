@@ -2,28 +2,15 @@ import { createBrowserRouter } from 'react-router-dom';
 import Main from '../Main/Main';
 import Home1 from '../Pages/Home1/Home1';
 import ErrorPage from '../Shared/ErrorPage/ErrorPage';
-import Home7 from '../Pages/Home7/Home7';
-import Home4 from '../Pages/Home4/Home4';
-import Home5 from '../Pages/Home5/Home5';
-import Main4 from '../Main/Main4';
-import Main5 from '../Main/Main5';
-import Main7 from '../Main/Main7';
-import Home6 from '../Pages/Home6/Home6';
-import Main6 from '../Main/Main6';
-import Home8 from '../Pages/Home8/Home8';
-import Main8 from '../Main/Main8';
-import Home9 from '../Pages/Home9/Home9';
-import Main9 from '../Main/Main9';
-import Home10 from '../Pages/Home10/Home10';
-import Main10 from '../Main/Main10';
-import Main2 from '../Main/Main2';
-import Home2 from '../Pages/Home2/Home2';
-import Home3 from '../Pages/Home3/Home3';
-import Main3 from '../Main/Main3';
 import Main11 from '../Main/Main11';
 import AboutInner from '../Pages/InnerPage/AboutInner/AboutInner';
 import ServiceInner from '../Pages/InnerPage/ServiceInner/ServiceInner';
-import ServiceDetails from '../Pages/InnerPage/ServiceDetails/ServiceDetails';
+import ServiceDetailsPD from '../Pages/InnerPage/ServiceDetails/ServiceDetailsPD';
+import ServiceDetailsTA from '../Pages/InnerPage/ServiceDetails/ServiceDetailsTA';
+import ServiceDetailsEE from '../Pages/InnerPage/ServiceDetails/ServiceDetailsEE';
+import ServiceDetailsHCC from '../Pages/InnerPage/ServiceDetails/ServiceDetailsHCC';
+import ServiceDetailsVBC from '../Pages/InnerPage/ServiceDetails/ServiceDetailsVBC';
+import ServiceDetailsOD from '../Pages/InnerPage/ServiceDetails/ServiceDetailsOD';
 import PortfolioDetails from '../Pages/InnerPage/PortfolioDetails/PortfolioDetails';
 import BlogDetails from '../Pages/InnerPage/BlogDetails/BlogDetails';
 import TeamInner from '../Pages/InnerPage/TeamInner/TeamInner';
@@ -31,9 +18,6 @@ import PricingInner from '../Pages/InnerPage/PricingInner/PricingInner';
 import ContactInner from '../Pages/InnerPage/ContactInner/ContactInner';
 import PortfolioInner from '../Pages/InnerPage/PortfolioInner/PortfolioInner';
 import BlogGrid from '../Pages/InnerPage/BlogGrid/BlogGrid';
-import SolutionDetails1 from '../Pages/InnerPage/SolutionDetails/SolutionDetails1';
-import SolutionDetails2 from '../Pages/InnerPage/SolutionDetails/SolutionDetails2';
-import SolutionDetails3 from '../Pages/InnerPage/SolutionDetails/SolutionDetails3';
 
 const router = createBrowserRouter([
   {
@@ -149,22 +133,44 @@ const router = createBrowserRouter([
         path: '/service',
         element: <ServiceInner />,
       },
+
       {
-        path: '/service_details',
-        element: <ServiceDetails />,
+        path: '/service/people-development',
+        element: <ServiceDetailsPD />,
       },
       {
-        path: '/solution_details_1',
-        element: <SolutionDetails1 />,
+        path: '/service/talent-acquisition',
+        element: <ServiceDetailsTA />,
       },
       {
-        path: '/solution_details_2',
-        element: <SolutionDetails2 />,
+        path: '/service/employee-engagement',
+        element: <ServiceDetailsEE />,
       },
       {
-        path: '/solution_details_3',
-        element: <SolutionDetails3 />,
+        path: '/service/human-capital-consultancy',
+        element: <ServiceDetailsHCC />,
       },
+      {
+        path: '/service/vetting-background-check',
+        element: <ServiceDetailsVBC />,
+      },
+      {
+        path: '/service/organisation-development',
+        element: <ServiceDetailsOD />,
+      },
+
+      // {
+      //   path: '/solution_details_1',
+      //   element: <SolutionDetails1 />,
+      // },
+      // {
+      //   path: '/solution_details_2',
+      //   element: <SolutionDetails2 />,
+      // },
+      // {
+      //   path: '/solution_details_3',
+      //   element: <SolutionDetails3 />,
+      // },
       {
         path: '/portfolio_details',
         element: <PortfolioDetails />,

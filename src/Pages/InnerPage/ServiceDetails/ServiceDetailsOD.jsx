@@ -8,15 +8,16 @@ import { Link } from 'react-router-dom';
 import Counter from './Counter/Counter';
 import Accordion from './Accordion/Accordion';
 
-const ServiceDetails = () => {
+const ServiceDetailsOD = () => {
   return (
     <>
       <BreadCrumb
-        breadCrumbTitle={'Website Development'}
+        breadCrumbTitle={'Organisation Development'}
         breadCrumbIcon={<FaArrowRightLong />}
         breadCrumbIcon2={<FaArrowRightLong />}
+        url={'/service'}
         breadCrumbLink={'Service'}
-        breadCrumbLink2={'Website Development'}
+        breadCrumbLink2={'Organisation Development'}
       />
       <Feature />
       <section className="py-[120px] bg-BodyBg4-0">
@@ -133,4 +134,4 @@ const ServiceDetails = () => {
   );
 };
 
-export default ServiceDetails;
+export default ServiceDetailsOD;
