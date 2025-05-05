@@ -1,7 +1,7 @@
-import { FaRegThumbsUp } from "react-icons/fa";
-import { LuPhone } from "react-icons/lu";
-import { Link } from "react-router-dom";
-import callShape from "/images/call_shape.png";
+import { FaRegThumbsUp } from 'react-icons/fa';
+import { LuPhone } from 'react-icons/lu';
+import { Link } from 'react-router-dom';
+import callShape from '/images/call_shape.png';
 
 const CallTo = () => {
   return (
@@ -16,28 +16,28 @@ const CallTo = () => {
               CALL TO ACTION
             </h5>
             <h1 className="font-FiraSans font-semibold text-white text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[32px] lg:leading-[42px] mb-4">
-              Get A Free Finance Consultant
+              Get A HR Consultant
             </h1>
           </div>
           <div className="col-span-6 xl:col-span-5">
             <div className="flex flex-col gap-8 sm:gap-0 sm:flex-row sm:justify-between sm:items-center relative before:absolute before:left-[56%] before:top-1/2 before:-translate-y-1/2 before:hidden 2xl:before:block before:w-[2px] before:h-12 before:bg-BorderColor2-0">
               <div className="flex items-center gap-5">
                 <div className="size-[58px] rounded-full border-2 border-white flex items-center justify-center text-white">
-                  <LuPhone size={"24"} />
+                  <LuPhone size={'24'} />
                 </div>
                 <div className="flex-1">
                   <h6 className="font-FiraSans text-white text-opacity-70 text-[15px]">
                     CALL US ANYTIME
                   </h6>
-                  <Link to={"/"}>
+                  <Link to={'/'}>
                     <button className="font-FiraSans font-medium text-left text-lg 2xl:text-xl text-white">
-                      +980 123 (4567) 890
+                      +6221 3000 6718
                     </button>
                   </Link>
                 </div>
               </div>
               <div className="">
-                <Link to={"/contact"}>
+                <Link to={'/contact'}>
                   <button className="primary-btn2 !border-2 !border-BorderColor2-0">
                     <FaRegThumbsUp />
                     {`Contact Us`}

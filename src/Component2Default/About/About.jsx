@@ -1,11 +1,11 @@
-import aboutThumb from "/images/about_2.png";
-import aboutShape from "/images/about_shape2.png";
-import aboutIcon from "/images/about_icon1.png";
-import aboutIcon2 from "/images/about_icon2.png";
-import thumb from "/images/like.png";
-import { Link } from "react-router-dom";
-import { FaRegThumbsUp } from "react-icons/fa";
-import { GoArrowUpRight } from "react-icons/go";
+import aboutThumb from '/images/about_2.png';
+import aboutShape from '/images/about_shape2.png';
+import aboutIcon from '/images/people.png';
+import aboutIcon2 from '/images/famous.png';
+import thumb from '/images/like.png';
+import { Link } from 'react-router-dom';
+import { FaRegThumbsUp } from 'react-icons/fa';
+import { GoArrowUpRight } from 'react-icons/go';
 
 const About = () => {
   return (
@@ -37,7 +37,7 @@ const About = () => {
                       startOffset="0%"
                       className="fill-HeadingColor-0"
                     >
-                      * Business Const. * Agency 2024 * Finance Consult
+                      * Leadership * HR Strategy * Growth * Culture
                     </textPath>
                   </text>
                 </svg>
@@ -49,51 +49,59 @@ const About = () => {
           </div>
           <div className="relative">
             <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3">
-              FINANCE CONSULTING
+              HR CONSULTING
             </h5>
-            <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] mb-4">
-              The Best Finance Consulting <br /> In Town Since 2007
+            <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[18px] leading-[26px] sm:text-[18px] sm:leading-[35px] md:text-[18px] md:leading-[40px] lg:text-[20px] lg:leading-[44px] xl:text-[25px] xl:leading-[50px] 2xl:text-[30px] 2xl:leading-[52px] mb-4">
+              Empowering Teams, Elevating Leaders <br /> HR Consulting
+              Excellence Since 2024
             </h1>
             <p className="font-FiraSans text-TextColor2-0">
-              Globally engage cross-media leadership skills before cross-media
-              innovation develop standardized platforms without robust
-              applications. Conveniently go forward collaboration and
-              idea-sharing
+              We specialize in boosting employee performance, developing future
+              leaders, and aligning talent with business goals. Our proven
+              approach drives measurable results in every organization we serve.
             </p>
             <div className="grid items-center grid-cols-1 gap-7 sm:grid-cols-2 border-b border-BorderColor-0 mt-9 pb-7 mb-9">
               <div className="flex items-center gap-5">
                 <div className="relative z-10 pl-4 pt-4 before:absolute before:top-0 before:left-0 before:size-[50px] before:rounded-md before:bg-BodyBg4-0 before:-z-10">
-                  <img src={aboutIcon} draggable="false" />
+                  <img
+                    src={aboutIcon}
+                    draggable="false"
+                    style={{ height: 46 }}
+                  />
                 </div>
                 <div className="flex-1">
                   <h5 className="font-FiraSans font-medium text-HeadingColor-0 text-lg md:text-xl lg:text-sm xl:text-lg 2xl:text-xl">
-                    Business Planning & Technologist
+                    Performance Coaching & Development
                   </h5>
                 </div>
               </div>
               <div className="flex items-center gap-5">
                 <div className="relative z-10 pl-4 pt-4 before:absolute before:top-0 before:left-0 before:size-[50px] before:rounded-md before:bg-BodyBg4-0 before:-z-10">
-                  <img src={aboutIcon2} draggable="false" />
+                  <img
+                    src={aboutIcon2}
+                    draggable="false"
+                    style={{ height: 46 }}
+                  />
                 </div>
                 <div className="flex-1">
                   <h5 className="font-FiraSans font-medium text-HeadingColor-0 text-lg md:text-xl lg:text-sm xl:text-lg 2xl:text-xl">
-                    Human Services and Consulting
+                    Leadership Training Programs
                   </h5>
                 </div>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-8">
-              <Link to={"/contact"}>
+              <Link to={'/contact'}>
                 <button className="primary-btn2">
                   <FaRegThumbsUp />
-                  {`Get Started now`}
+                  Book a Consultation
                 </button>
               </Link>
-              <Link to={"/contact"}>
+              <Link to={'/contact'}>
                 <button className="flex items-center gap-2 text-HeadingColor-0 font-FiraSans font-medium group">
                   Our Services
                   <GoArrowUpRight
-                    size={"20"}
+                    size={'20'}
                     className="text-PrimaryColor-0 transition-all duration-500 group-hover:rotate-45"
                   />
                 </button>
