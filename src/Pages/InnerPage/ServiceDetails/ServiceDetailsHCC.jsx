@@ -1,12 +1,33 @@
 import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
 import serviceDetailsThumb from '/images/service_img.png';
 import { FaArrowRightLong, FaCheck } from 'react-icons/fa6';
-import Feature from './Feature/Feature';
 import Icon from '/images/service-icon1.png';
 import Icon2 from '/images/service-icon2.png';
 import { Link } from 'react-router-dom';
-import Counter from './Counter/Counter';
 import Accordion from './Accordion/Accordion';
+
+const Accordions = [
+  {
+    title: 'What is Human Capital Consultancy?',
+    text: 'Human Capital Consultancy involves strategic advisory services that help organizations maximize the value and effectiveness of their workforce. It covers areas such as talent management, leadership development, and organizational design.',
+    active: true,
+  },
+  {
+    title: 'Why is it important for organizations?',
+    text: 'A strong human capital strategy enables organizations to attract, retain, and develop top talent, align workforce capabilities with business goals, and drive long-term performance and resilience.',
+    active: false,
+  },
+  {
+    title: 'What services do we provide?',
+    text: 'We offer workforce assessments, leadership development programs, organizational structure analysis, HR process improvement, succession planning, and talent strategy consulting.',
+    active: false,
+  },
+  {
+    title: 'How do we work with clients?',
+    text: 'We begin with a diagnostic assessment to understand your needs, followed by tailored solution design, implementation support, and ongoing advisory to ensure sustainable impact.',
+    active: false,
+  },
+];
 
 const ServiceDetailsHCC = () => {
   return (
@@ -19,7 +40,6 @@ const ServiceDetailsHCC = () => {
         breadCrumbLink={'Service'}
         breadCrumbLink2={'Human Capital Consultancy'}
       />
-      <Feature />
       <section className="py-[120px] bg-BodyBg4-0">
         <div className="Container">
           <div>
@@ -32,32 +52,33 @@ const ServiceDetailsHCC = () => {
           <div className="grid grid-cols-3 mt-[62px]">
             <div className="col-span-3 lg:col-span-2 lg:mr-7 2xl:mr-[84px]">
               <h2 className="font-FiraSans font-semibold text-2xl sm:text-[42px] text-HeadingColor-0">
-                Website Development
+                Human Capital Consultancy
               </h2>
               <p className="font-FiraSans text-TextColor2-0 mt-[26px]">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward morph flexible whereas process-centric
-                models. Efficiently transform customer directed alignments for
-                front-end meta Dramatically harness cross-platform best
-                practices whereas business services. Conveniently formula
-                standards in innovation with wireless vertical intellectual
-                capital before global architectures engage based results with
-                visionary models.
+                We help organizations optimize their human capital potential
+                through strategic planning, leadership development, and
+                performance improvement initiatives. Our consultancy services
+                are grounded in deep industry insight, research-based
+                frameworks, and proven implementation strategies.
               </p>
               <p className="font-FiraSans text-TextColor2-0 mt-7 mb-7">
-                Dramatically harness cross-platform best practices whereas
-                business services. Conveniently formula standards in innovation
-                with wireless Globally engage cross-media leadership best breed
-                experience rather than bricks-and-clicks infomediaries
-                monotonectally
+                Whether your organization is undergoing transformation, scaling
+                for growth, or addressing talent retention challenges, we bring
+                tailored solutions that align with your goals. We collaborate
+                with HR leaders to shape and execute people strategies that
+                deliver measurable business impact.
               </p>
               <p className="font-FiraSans text-TextColor2-0">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward morph whereas process-centric models.
-                Efficiently transform customer directed alignments
+                From leadership coaching to workforce planning and culture
+                transformation, our consultancy services are designed to empower
+                your workforce and enhance organizational performance at all
+                levels.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
-                <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5">
+                <div
+                  className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
+                  style={{ minHeight: 108 }}
+                >
                   <div className="size-[76px] flex items-center justify-center rounded-full bg-BodyBg-0">
                     <img src={Icon} alt="Icon" draggable="false" />
                   </div>
@@ -66,11 +87,17 @@ const ServiceDetailsHCC = () => {
                       Strategic Work Planning
                     </h5>
                     <p className="font-FiraSans text-TextColor2-0 mt-2">
-                      Completely implement globals turn markets in conveniently
+                      We assist in aligning your workforce capabilities with
+                      business goals by designing and implementing strategic
+                      work plans that drive productivity, efficiency, and future
+                      readiness.
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5">
+                <div
+                  className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
+                  style={{ minHeight: 108 }}
+                >
                   <div className="size-[76px] flex items-center justify-center rounded-full bg-BodyBg-0">
                     <img src={Icon2} alt="Icon" draggable="false" />
                   </div>
@@ -79,7 +106,10 @@ const ServiceDetailsHCC = () => {
                       Business Solutions
                     </h5>
                     <p className="font-FiraSans text-TextColor2-0 mt-2">
-                      Completely implement globals turn markets in conveniently
+                      Our tailored business solutions focus on improving
+                      organizational structure, leadership effectiveness, and HR
+                      operations to unlock human capital value across all
+                      levels.
                     </p>
                   </div>
                 </div>
@@ -88,36 +118,36 @@ const ServiceDetailsHCC = () => {
             <div className="col-span-3 lg:col-span-1 mt-8 lg:mt-0">
               <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px] md:pb-[60px]">
                 <h4 className="font-FiraSans font-medium text-[22px] sm:text-[26px] lg:text-2xl xl:text-[26px] text-HeadingColor-0">
-                  Benifit’s the Services
+                  Benefits of the Service
                 </h4>
                 <p className="font-FiraSans text-TextColor2-0 mt-2">
-                  Leadership skill before media innovation customer directed
-                  alignments
+                  Partnering with us brings tangible value to your organization
+                  by transforming human capital into a competitive advantage.
                 </p>
                 <ul className="space-y-3 mt-5 mb-12">
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Professional Team Member
+                    Customized HR Strategies
                   </li>
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Any Problem Solving
+                    Enhanced Leadership Capability
                   </li>
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Implement Business
+                    Measurable Workforce Impact
                   </li>
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Business Ideas
+                    Scalable Talent Solutions
                   </li>
                 </ul>
                 <Link to={'/contact'}>
@@ -128,8 +158,7 @@ const ServiceDetailsHCC = () => {
           </div>
         </div>
       </section>
-      {/* <Counter /> */}
-      <Accordion />
+      <Accordion accordions={Accordions} title={'Human Capital Consultancy'} />
     </>
   );
 };

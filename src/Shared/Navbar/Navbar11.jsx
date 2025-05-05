@@ -468,32 +468,32 @@ const Navbar11 = () => {
             </div>
             <ul className="service_list">
               <li>
-                <Link to={'/'}>
+                <Link to={'/service/people-development'}>
                   <button>People Development</button>
                 </Link>
               </li>
               <li>
-                <Link to={'/'}>
+                <Link to={'/service/talent-acquisition'}>
                   <button>Talent Acquisition</button>
                 </Link>
               </li>
               <li>
-                <Link to={'/'}>
+                <Link to={'/service/employee-engagement'}>
                   <button>Employee Engagement Events</button>
                 </Link>
               </li>
               <li>
-                <Link to={'/'}>
+                <Link to={'/service/human-capital-consultancy'}>
                   <button>Human Capital Consultancy</button>
                 </Link>
               </li>
               <li>
-                <Link to={'/'}>
+                <Link to={'/service/vetting-background-check'}>
                   <button>Vetting & Background Check</button>
                 </Link>
               </li>
               <li>
-                <Link to={'/'}>
+                <Link to={'/service/organisation-development'}>
                   <button>Organisation Development</button>
                 </Link>
               </li>

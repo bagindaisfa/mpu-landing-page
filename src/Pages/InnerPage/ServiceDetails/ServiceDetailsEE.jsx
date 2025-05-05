@@ -1,12 +1,33 @@
 import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
 import serviceDetailsThumb from '/images/service_img.png';
 import { FaArrowRightLong, FaCheck } from 'react-icons/fa6';
-import Feature from './Feature/Feature';
 import Icon from '/images/service-icon1.png';
 import Icon2 from '/images/service-icon2.png';
 import { Link } from 'react-router-dom';
-import Counter from './Counter/Counter';
 import Accordion from './Accordion/Accordion';
+
+const Accordions = [
+  {
+    title: 'What is Employee Engagement?',
+    text: 'Employee Engagement is the level of involvement, commitment, and motivation of employees towards their work and the company they work for. High engagement drives productivity and retention.',
+    active: true,
+  },
+  {
+    title: 'What are the benefits of Employee Engagement for companies?',
+    text: 'Benefits include increased productivity, employee loyalty, reduced turnover, increased customer satisfaction, and strengthening a healthy work culture.',
+    active: false,
+  },
+  {
+    title: 'What services do we offer?',
+    text: 'We offer engagement surveys, training workshops, team leader training, work culture consulting, and ongoing employee development programs.',
+    active: false,
+  },
+  {
+    title: 'How does the implementation process work?',
+    text: 'We start with an initial assessment, followed by designing a program that fits your needs, implementing interventions, and evaluating results periodically.',
+    active: false,
+  },
+];
 
 const ServiceDetailsEE = () => {
   return (
@@ -19,7 +40,6 @@ const ServiceDetailsEE = () => {
         breadCrumbLink={'Service'}
         breadCrumbLink2={'Employee Engagement'}
       />
-      <Feature />
       <section className="py-[120px] bg-BodyBg4-0">
         <div className="Container">
           <div>
@@ -31,55 +51,59 @@ const ServiceDetailsEE = () => {
           </div>
           <div className="grid grid-cols-3 mt-[62px]">
             <div className="col-span-3 lg:col-span-2 lg:mr-7 2xl:mr-[84px]">
-              <h2 className="font-FiraSans font-semibold text-2xl sm:text-[42px] text-HeadingColor-0">
-                Website Development
+              <h2 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
+                Employee Engagement
               </h2>
               <p className="font-FiraSans text-TextColor2-0 mt-[26px]">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward morph flexible whereas process-centric
-                models. Efficiently transform customer directed alignments for
-                front-end meta Dramatically harness cross-platform best
-                practices whereas business services. Conveniently formula
-                standards in innovation with wireless vertical intellectual
-                capital before global architectures engage based results with
-                visionary models.
+                Employee Engagement is a strategic approach that focuses on
+                creating optimal conditions for employees to contribute fully to
+                the success of the organization. This program aims to build
+                emotional involvement and commitment between employees and the
+                company.
               </p>
               <p className="font-FiraSans text-TextColor2-0 mt-7 mb-7">
-                Dramatically harness cross-platform best practices whereas
-                business services. Conveniently formula standards in innovation
-                with wireless Globally engage cross-media leadership best breed
-                experience rather than bricks-and-clicks infomediaries
-                monotonectally
+                Through initiatives such as engagement surveys, leadership
+                training, and developing a positive work culture, we help
+                companies improve employee retention, productivity, and job
+                satisfaction.
               </p>
               <p className="font-FiraSans text-TextColor2-0">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward morph whereas process-centric models.
-                Efficiently transform customer directed alignments
+                Investing in Employee Engagement has been proven to reduce
+                turnover rates, increase employee loyalty, and build a
+                collaborative and innovative work environment.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
-                <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5">
+                <div
+                  className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
+                  style={{ minHeight: 108 }}
+                >
                   <div className="size-[76px] flex items-center justify-center rounded-full bg-BodyBg-0">
                     <img src={Icon} alt="Icon" draggable="false" />
                   </div>
                   <div className="flex-1">
                     <h5 className="font-FiraSans font-medium text-xl text-HeadingColor-0">
-                      Strategic Work Planning
+                      Employee Engagement Survey
                     </h5>
                     <p className="font-FiraSans text-TextColor2-0 mt-2">
-                      Completely implement globals turn markets in conveniently
+                      Identifying the overall level of employee satisfaction and
+                      engagement for decision making purposes.
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5">
+                <div
+                  className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
+                  style={{ minHeight: 108 }}
+                >
                   <div className="size-[76px] flex items-center justify-center rounded-full bg-BodyBg-0">
                     <img src={Icon2} alt="Icon" draggable="false" />
                   </div>
                   <div className="flex-1">
                     <h5 className="font-FiraSans font-medium text-xl text-HeadingColor-0">
-                      Business Solutions
+                      Cultural Development Program
                     </h5>
                     <p className="font-FiraSans text-TextColor2-0 mt-2">
-                      Completely implement globals turn markets in conveniently
+                      Forming a positive work culture that increases employee
+                      motivation and loyalty to the company.
                     </p>
                   </div>
                 </div>
@@ -88,7 +112,7 @@ const ServiceDetailsEE = () => {
             <div className="col-span-3 lg:col-span-1 mt-8 lg:mt-0">
               <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px] md:pb-[60px]">
                 <h4 className="font-FiraSans font-medium text-[22px] sm:text-[26px] lg:text-2xl xl:text-[26px] text-HeadingColor-0">
-                  Benifit’s the Services
+                  Service Benefits
                 </h4>
                 <p className="font-FiraSans text-TextColor2-0 mt-2">
                   Leadership skill before media innovation customer directed
@@ -99,25 +123,25 @@ const ServiceDetailsEE = () => {
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Professional Team Member
+                    Improving Employee Retention
                   </li>
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Any Problem Solving
+                    Better Team Productivity
                   </li>
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Implement Business
+                    Positive Work Culture
                   </li>
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Business Ideas
+                    Loyalty and Job Satisfaction
                   </li>
                 </ul>
                 <Link to={'/contact'}>
@@ -128,8 +152,7 @@ const ServiceDetailsEE = () => {
           </div>
         </div>
       </section>
-      {/* <Counter /> */}
-      <Accordion />
+      <Accordion accordions={Accordions} title={'Employee Engagement'} />
     </>
   );
 };

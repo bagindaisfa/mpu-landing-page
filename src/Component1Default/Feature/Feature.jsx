@@ -12,7 +12,7 @@ const featureData = [
     featureTitle: 'People Development',
     featureDesc:
       'Empower individuals and teams through structured training, coaching, and skill-building initiatives.',
-    featureUrl: '/',
+    featureUrl: '/service/people-development',
     featureNumber: '01',
   },
   {
@@ -21,7 +21,7 @@ const featureData = [
     featureTitle: 'Talent Acquisition',
     featureDesc:
       'Attract and recruit the right talent through strategic sourcing, screening, and selection processes.',
-    featureUrl: '/',
+    featureUrl: '/service/talent-acquisition',
     featureNumber: '02',
   },
   {
@@ -30,7 +30,7 @@ const featureData = [
     featureTitle: 'Employee Engagement Events',
     featureDesc:
       'Foster a positive work environment with creative and meaningful engagement programs and activities.',
-    featureUrl: '/',
+    featureUrl: '/service/employee-engagement',
     featureNumber: '03',
   },
   {
@@ -39,7 +39,7 @@ const featureData = [
     featureTitle: 'Human Capital Consultancy',
     featureDesc:
       'Deliver expert advisory services to optimize human capital strategy, policy, and implementation.',
-    featureUrl: '/',
+    featureUrl: '/service/human-capital-consultancy',
     featureNumber: '04',
   },
   {
@@ -48,7 +48,7 @@ const featureData = [
     featureTitle: 'Vetting & Background Check',
     featureDesc:
       'Ensure reliable hiring through comprehensive verification of candidate history and credentials.',
-    featureUrl: '/',
+    featureUrl: '/service/vetting-background-check',
     featureNumber: '05',
   },
   {
@@ -57,7 +57,7 @@ const featureData = [
     featureTitle: 'Organisation Development',
     featureDesc:
       'Support long-term growth by aligning structure, processes, and culture with business objectives.',
-    featureUrl: '/',
+    featureUrl: '/service/organisation-development',
     featureNumber: '06',
   },
 ];

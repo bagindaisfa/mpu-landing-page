@@ -1,12 +1,33 @@
 import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
 import serviceDetailsThumb from '/images/service_img.png';
 import { FaArrowRightLong, FaCheck } from 'react-icons/fa6';
-import Feature from './Feature/Feature';
 import Icon from '/images/service-icon1.png';
 import Icon2 from '/images/service-icon2.png';
 import { Link } from 'react-router-dom';
-import Counter from './Counter/Counter';
 import Accordion from './Accordion/Accordion';
+
+const Accordions = [
+  {
+    title: 'What is Vetting & Background Check?',
+    text: 'It is a process of verifying an individual’s credentials, criminal records, education, work history, and other relevant background information before employment or partnership.',
+    active: true,
+  },
+  {
+    title: 'Why is background checking important?',
+    text: 'It reduces the risk of fraud, protects workplace safety, ensures compliance, and helps organizations make informed hiring decisions.',
+    active: false,
+  },
+  {
+    title: 'What areas do we check?',
+    text: 'We check criminal records, employment history, education verification, reference checks, and social media screening based on the client’s needs.',
+    active: false,
+  },
+  {
+    title: 'How fast can we deliver the report?',
+    text: 'Depending on the complexity and type of checks, most reports can be delivered within 3–5 business days.',
+    active: false,
+  },
+];
 
 const ServiceDetailsVBC = () => {
   return (
@@ -19,7 +40,6 @@ const ServiceDetailsVBC = () => {
         breadCrumbLink={'Service'}
         breadCrumbLink2={'Vetting & Background Check'}
       />
-      <Feature />
       <section className="py-[120px] bg-BodyBg4-0">
         <div className="Container">
           <div>
@@ -32,54 +52,57 @@ const ServiceDetailsVBC = () => {
           <div className="grid grid-cols-3 mt-[62px]">
             <div className="col-span-3 lg:col-span-2 lg:mr-7 2xl:mr-[84px]">
               <h2 className="font-FiraSans font-semibold text-2xl sm:text-[42px] text-HeadingColor-0">
-                Website Development
+                Vetting & Background Check
               </h2>
               <p className="font-FiraSans text-TextColor2-0 mt-[26px]">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward morph flexible whereas process-centric
-                models. Efficiently transform customer directed alignments for
-                front-end meta Dramatically harness cross-platform best
-                practices whereas business services. Conveniently formula
-                standards in innovation with wireless vertical intellectual
-                capital before global architectures engage based results with
-                visionary models.
+                Our vetting and background check services help organizations
+                ensure the integrity and trustworthiness of individuals before
+                making hiring or partnership decisions. We conduct thorough
+                verifications tailored to each role and industry requirement.
               </p>
               <p className="font-FiraSans text-TextColor2-0 mt-7 mb-7">
-                Dramatically harness cross-platform best practices whereas
-                business services. Conveniently formula standards in innovation
-                with wireless Globally engage cross-media leadership best breed
-                experience rather than bricks-and-clicks infomediaries
-                monotonectally
+                With a proven process and advanced tools, we verify identities,
+                education, employment history, criminal records, and more. Our
+                team is trained to deliver accurate, discreet, and timely
+                reports that support confident decision-making.
               </p>
               <p className="font-FiraSans text-TextColor2-0">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward morph whereas process-centric models.
-                Efficiently transform customer directed alignments
+                Let us help reduce risk and enhance compliance in your
+                recruitment and onboarding process through comprehensive
+                background screening.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
-                <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5">
+                <div
+                  className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
+                  style={{ minHeight: 108 }}
+                >
                   <div className="size-[76px] flex items-center justify-center rounded-full bg-BodyBg-0">
                     <img src={Icon} alt="Icon" draggable="false" />
                   </div>
                   <div className="flex-1">
                     <h5 className="font-FiraSans font-medium text-xl text-HeadingColor-0">
-                      Strategic Work Planning
+                      Trusted Methodology
                     </h5>
                     <p className="font-FiraSans text-TextColor2-0 mt-2">
-                      Completely implement globals turn markets in conveniently
+                      Standardized and compliant screening processes that ensure
+                      fairness and accuracy.
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5">
+                <div
+                  className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
+                  style={{ minHeight: 108 }}
+                >
                   <div className="size-[76px] flex items-center justify-center rounded-full bg-BodyBg-0">
                     <img src={Icon2} alt="Icon" draggable="false" />
                   </div>
                   <div className="flex-1">
                     <h5 className="font-FiraSans font-medium text-xl text-HeadingColor-0">
-                      Business Solutions
+                      Fast & Reliable
                     </h5>
                     <p className="font-FiraSans text-TextColor2-0 mt-2">
-                      Completely implement globals turn markets in conveniently
+                      Reports delivered in a timely manner to support quick
+                      decision making.
                     </p>
                   </div>
                 </div>
@@ -88,36 +111,35 @@ const ServiceDetailsVBC = () => {
             <div className="col-span-3 lg:col-span-1 mt-8 lg:mt-0">
               <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px] md:pb-[60px]">
                 <h4 className="font-FiraSans font-medium text-[22px] sm:text-[26px] lg:text-2xl xl:text-[26px] text-HeadingColor-0">
-                  Benifit’s the Services
+                  Benefits of Vetting Services
                 </h4>
                 <p className="font-FiraSans text-TextColor2-0 mt-2">
-                  Leadership skill before media innovation customer directed
-                  alignments
+                  Empower your hiring with reliable insights and reduced risks.
                 </p>
                 <ul className="space-y-3 mt-5 mb-12">
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Professional Team Member
+                    Verified Candidate Background
                   </li>
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Any Problem Solving
+                    Enhanced Hiring Confidence
                   </li>
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Implement Business
+                    Reduced Legal & Compliance Risks
                   </li>
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
                     <span className="text-PrimaryColor-0">
                       <FaCheck size={'18'} />
                     </span>{' '}
-                    Business Ideas
+                    Secure Workplace Culture
                   </li>
                 </ul>
                 <Link to={'/contact'}>
@@ -128,8 +150,7 @@ const ServiceDetailsVBC = () => {
           </div>
         </div>
       </section>
-      {/* <Counter /> */}
-      <Accordion />
+      <Accordion accordions={Accordions} title={'Vetting & Background Check'} />
     </>
   );
 };

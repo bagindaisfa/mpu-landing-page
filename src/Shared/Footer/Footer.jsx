@@ -81,7 +81,10 @@ const Footer = () => {
             </h4>
             <ul className="overflow-hidden">
               <li>
-                <Link to={'/'} className="inline-block">
+                <Link
+                  to={'/service/people-development'}
+                  className="inline-block"
+                >
                   <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
                     <FaAnglesRight className="text-xs text-white" />
                     People development
@@ -89,7 +92,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={'/'} className="inline-block">
+                <Link
+                  to={'/service/talent-acquisition'}
+                  className="inline-block"
+                >
                   <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
                     <FaAnglesRight className="text-xs text-white" />
                     Talent acquisition
@@ -97,7 +103,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={'/'} className="inline-block">
+                <Link
+                  to={'/service/employee-engagement'}
+                  className="inline-block"
+                >
                   <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
                     <FaAnglesRight className="text-xs text-white" />
                     Employee engagement events
@@ -105,7 +114,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={'/'} className="inline-block">
+                <Link
+                  to={'/service/human-capital-consultancy'}
+                  className="inline-block"
+                >
                   <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
                     <FaAnglesRight className="text-xs text-white" />
                     Human Capital Consultancy
@@ -113,7 +125,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={'/'} className="inline-block">
+                <Link
+                  to={'/service/vetting-background-check'}
+                  className="inline-block"
+                >
                   <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
                     <FaAnglesRight className="text-xs text-white" />
                     Vetting & background check
@@ -121,7 +136,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={'/'} className="inline-block">
+                <Link
+                  to={'/service/organisation-development'}
+                  className="inline-block"
+                >
                   <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1">
                     <FaAnglesRight className="text-xs text-white" />
                     Organisation Development
