@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import footerShape2 from '/images/footer_shape.png';
-import footerLogo from '/images/logo.png';
+import footerLogo from '/images/logo-new.png';
 import footerShape from '/images/choose_rotete.png';
 import footerImg from '/images/footer_1.png';
 import footerImg2 from '/images/footer_2.png';

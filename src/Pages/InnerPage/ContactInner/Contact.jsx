@@ -42,7 +42,7 @@ const Contact = () => {
                   </h6>
                   <Link to={'/'}>
                     <button className="font-FiraSans text-xl text-HeadingColor-0 font-medium mt-1">
-                      +6221 3000 6718
+                      +6221 8428 3681
                     </button>
                   </Link>
                 </div>

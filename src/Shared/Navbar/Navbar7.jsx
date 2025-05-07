@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import Logo from '/images/logo_2.png';
-import Logo2 from '/images/logo.png';
+import Logo from '/images/logo-new.png';
+import Logo2 from '/images/logo-new.png';
 import './navbar.css';
 import { useEffect, useRef } from 'react';
 import {
@@ -203,7 +203,7 @@ const Navbar7 = () => {
               </li>
               <li>
                 <FaPhoneAlt />
-                <Link to={'/'}>+6221 3000 6718</Link>
+                <Link to={'/'}>+6221 8428 3681</Link>
               </li>
             </ul>
           </div>
@@ -626,7 +626,7 @@ const Navbar7 = () => {
               </li>
               <li>
                 <FaPhoneAlt />
-                <Link to={'/'}>+6221 3000 6718</Link>
+                <Link to={'/'}>+6221 8428 3681</Link>
               </li>
             </ul>
           </div>

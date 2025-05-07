@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo from '/images/logo.png';
+import Logo from '/images/logo-new.png';
 import './navbar.css';
 import { useEffect, useRef } from 'react';
 import {
@@ -198,7 +198,7 @@ const Navbar4 = () => {
               </li>
               <li>
                 <FaPhoneAlt />
-                <Link to={'/'}>+6221 3000 6718</Link>
+                <Link to={'/'}>+6221 8428 3681</Link>
               </li>
             </ul>
           </div>

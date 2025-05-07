@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import footerLogo from '/images/logo.png';
+import footerLogo from '/images/logo-new.png';
 import { FaAnglesRight, FaPhone } from 'react-icons/fa6';
 import { MdLocationPin } from 'react-icons/md';
 import { HiOutlineMailOpen } from 'react-icons/hi';
@@ -173,7 +173,7 @@ const Footer = () => {
               </div>
               <Link to={'/'} className="flex-1">
                 <button className="font-FiraSans text-[15px] text-white">
-                  +6221 3000 6718
+                  +6221 8428 3681
                 </button>
               </Link>
             </div>

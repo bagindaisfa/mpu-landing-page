@@ -8,10 +8,11 @@ import {
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { MdCall } from 'react-icons/md';
 import border from '/images/hero_border.png';
-import appoinmentShape from '/images/contact_shape.png';
+import { useNavigate } from 'react-router-dom';
 import serviceShape3 from '/images/service_shpe2.png';
 
 const Assessment = () => {
+  const navigate = useNavigate();
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
   const [showUserInfoForm, setShowUserInfoForm] = useState(false);
@@ -19,8 +20,7 @@ const Assessment = () => {
     name: '',
     email: '',
     phone: '',
-    company: '',
-    message: '',
+    company_name: '',
   });
 
   useEffect(() => {
@@ -53,38 +53,75 @@ const Assessment = () => {
     return { yes, no };
   };
 
-  const handleInitialSubmit = () => {
+  const handleInitialSubmit = (event) => {
+    event.preventDefault();
     const { yes, no } = countYesNo();
-    if (yes >= no) {
+    if (yes > no) {
       setShowUserInfoForm(true);
     } else {
-      submitAssessment({ answers }); // langsung kirim
+      submitAssessment(false);
     }
   };
 
-  const submitAssessment = async (data) => {
+  const submitAssessment = async (isUserInfo, event) => {
+    if (event) event.preventDefault();
     try {
-      await fetch(
+      if (isUserInfo) {
+        handleUserInfoSubmit();
+      } else {
+        if (answers === undefined || Object.keys(answers).length === 0) {
+          return alert('Complete your answer first.');
+        }
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/assessments/answare/submit`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ answers: answers, user_info: {} }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error('Failed to record visitor');
+        }
+
+        alert('Assessment submitted successfully.');
+        navigate('/');
+      }
+    } catch (err) {
+      console.error('Failed to record submission', err);
+      alert('Submission failed.');
+    }
+  };
+
+  const handleUserInfoSubmit = async () => {
+    try {
+      if (!userInfo.name || !userInfo.email || !userInfo.phone) {
+        return alert('Complete your answer first.');
+      }
+      const response = await fetch(
         `${import.meta.env.VITE_API_URL}/assessments/answare/submit`,
         {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ data }),
+          body: JSON.stringify({ answers: answers, user_info: userInfo }),
         }
       );
+
+      if (!response.ok) {
+        throw new Error('Failed to record visitor');
+      }
+
       alert('Assessment submitted successfully.');
+      navigate('/');
     } catch (err) {
+      console.error('Failed to record submission', err);
       alert('Submission failed.');
     }
-  };
-
-  const handleUserInfoSubmit = () => {
-    if (!userInfo.name || !userInfo.email || !userInfo.phone) {
-      return alert('Lengkapi semua data terlebih dahulu.');
-    }
-    submitAssessment({ answers, user_info: userInfo });
   };
 
   return (
@@ -138,25 +175,31 @@ const Assessment = () => {
               </div>
             ))}
             {!showUserInfoForm ? (
-              <form className="flex justify-right gap-y-5 pt-5 pb-[60px]">
-                <button
-                  onClick={handleInitialSubmit}
-                  className="primary-btn2 !py-[15px]"
-                >
+              <form
+                className="flex justify-right gap-y-5 pt-5 pb-[60px]"
+                onSubmit={handleInitialSubmit}
+              >
+                <button type="submit" className="primary-btn2 !py-[15px]">
                   Submit Assessment
                 </button>
               </form>
             ) : (
-              <form className="flex flex-col gap-y-5 pt-11 pb-[60px]">
+              <form
+                className="flex flex-col gap-y-5 pt-11 pb-[60px]"
+                onSubmit={(event) => submitAssessment(true, event)}
+              >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="relative inline-block">
                     <input
+                      className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
                       type="text"
                       name="name"
                       id="name"
-                      placeholder="Enter Name*"
+                      placeholder="Enter Name"
+                      onChange={(e) =>
+                        setUserInfo({ ...userInfo, name: e.target.value })
+                      }
                       required
-                      className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
                     />
                     <FaUser
                       size={'14'}
@@ -171,6 +214,9 @@ const Assessment = () => {
                       placeholder="Enter E-Mail*"
                       required
                       className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                      onChange={(e) =>
+                        setUserInfo({ ...userInfo, email: e.target.value })
+                      }
                     />
                     <HiOutlineMailOpen
                       size={'16'}
@@ -187,6 +233,9 @@ const Assessment = () => {
                       placeholder="Enter Number*"
                       required
                       className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                      onChange={(e) =>
+                        setUserInfo({ ...userInfo, phone: e.target.value })
+                      }
                     />
                     <MdCall
                       size={'16'}
@@ -201,6 +250,12 @@ const Assessment = () => {
                       placeholder="Enter Your Company Name*"
                       required
                       className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                      onChange={(e) =>
+                        setUserInfo({
+                          ...userInfo,
+                          company_name: e.target.value,
+                        })
+                      }
                     />
                     <FaBuilding
                       size={'14'}
@@ -209,7 +264,11 @@ const Assessment = () => {
                   </div>
                 </div>
                 <div className="flex justify-right gap-2 mt-4">
-                  <button id="saveBtn" className="primary-btn2 !py-[15px]">
+                  <button
+                    id="saveBtn"
+                    type="submit"
+                    className="primary-btn2 !py-[15px]"
+                  >
                     <FaRegThumbsUp />
                     {`Submit Now`}
                   </button>

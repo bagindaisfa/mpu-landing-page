@@ -31,7 +31,7 @@ const CallTo = () => {
                   </h6>
                   <Link to={'/'}>
                     <button className="font-FiraSans font-medium text-left text-lg 2xl:text-xl text-white">
-                      +6221 3000 6718
+                      +6221 8428 3681
                     </button>
                   </Link>
                 </div>

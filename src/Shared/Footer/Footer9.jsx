@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import footerLogo from '/images/logo.png';
+import footerLogo from '/images/logo-new.png';
 import { FaAnglesRight, FaPhone } from 'react-icons/fa6';
 import { MdLocationPin } from 'react-icons/md';
 import { HiOutlineMailOpen } from 'react-icons/hi';
