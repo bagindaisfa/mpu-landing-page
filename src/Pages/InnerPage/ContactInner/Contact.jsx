@@ -22,15 +22,13 @@ const Contact = () => {
                 GET IN TOUCH
               </h5>
               <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
-                Trusted By the Genius
+                Trusted by Experts
                 <br />
-                People with Consalt
+                Driven by Solutions
               </h1>
               <p className="font-FiraSans text-TextColor2-0 pt-4">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward
-                <br className="hidden md:block" /> develope standardized
-                platforms without robust
+                Helping organizations drive change through smart solutions and
+                expert guidance.
               </p>
             </div>
             <div className="bg-BodyBg4-0 rounded-xl p-10 mt-11">
@@ -173,13 +171,7 @@ const Contact = () => {
                   placeholder="Write a short meassage..."
                   className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[120px] w-full focus:outline-PrimaryColor-0 resize-none"
                 ></textarea>
-                <label
-                  htmlFor="terms"
-                  className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2 cursor-pointer"
-                >
-                  <input type="checkbox" name="terms" id="terms" />I accept all
-                  terms & conditions.
-                </label>
+
                 <div className="inline-block mt-2">
                   <button className="primary-btn2 !py-[15px]">
                     <FaRegThumbsUp />

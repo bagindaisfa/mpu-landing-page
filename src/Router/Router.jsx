@@ -18,6 +18,7 @@ import PricingInner from '../Pages/InnerPage/PricingInner/PricingInner';
 import ContactInner from '../Pages/InnerPage/ContactInner/ContactInner';
 import PortfolioInner from '../Pages/InnerPage/PortfolioInner/PortfolioInner';
 import BlogGrid from '../Pages/InnerPage/BlogGrid/BlogGrid';
+import Assessment from '../Pages/InnerPage/Assessment/Assessment';
 
 const router = createBrowserRouter([
   {
@@ -198,6 +199,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <ContactInner />,
+      },
+      {
+        path: '/assessment',
+        element: <Assessment />,
       },
     ],
   },

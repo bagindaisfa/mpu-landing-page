@@ -25,7 +25,7 @@ const Footer = () => {
             </h4>
             <ul className="overflow-hidden">
               <li>
-                <Link to={'/'} className="inline-block">
+                <Link to={'/about'} className="inline-block">
                   <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
                     <FaAnglesRight className="text-xs text-white" />
                     About Us
@@ -55,7 +55,7 @@ const Footer = () => {
                 </Link>
               </li> */}
               <li>
-                <Link to={'/'} className="inline-block">
+                <Link to={'/blog_grid'} className="inline-block">
                   <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
                     <FaAnglesRight className="text-xs text-white" />
                     Latest Blog

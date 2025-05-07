@@ -413,13 +413,6 @@ const Navbar11 = () => {
           </div>
           <div className="lg:col-span-2 2xl:col-span-3">
             <div className="header-right-box flex items-center gap-10 lg:gap-7 justify-end">
-              <div className="hidden 2xl:block relative">
-                <Link to={'/'}>
-                  <button className="text-HeadingColor-0 relative top-1">
-                    <BiSearch size={'20'} />
-                  </button>
-                </Link>
-              </div>
               <div className="hidden lg:block relative">
                 <Link
                   to={'/contact'}
