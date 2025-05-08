@@ -37,6 +37,30 @@ const Contact = () => {
         throw new Error('Failed to send email');
       }
       alert('Email sent successfully!');
+      saveContact(e);
+    } catch (error) {
+      alert('Failed to send email');
+      console.error('Failed to send email', error);
+    }
+  };
+
+  const saveContact = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/user-contact/contact`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error('Failed to save contact');
+      }
       setFormData({
         name: '',
         email: '',
@@ -45,8 +69,8 @@ const Contact = () => {
         message: '',
       });
     } catch (error) {
-      alert('Failed to send email');
-      console.error('Failed to send email', error);
+      alert('Failed to save contact');
+      console.error('Failed to save contact', error);
     }
   };
 
