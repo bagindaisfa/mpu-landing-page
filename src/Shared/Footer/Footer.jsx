@@ -6,12 +6,19 @@ import { HiOutlineMailOpen } from 'react-icons/hi';
 
 const Footer = () => {
   return (
-    <footer className="bg-BodyBg2-0 relative z-10 pt-28 overflow-hidden">
+    <footer
+      className="relative z-10 pt-28 overflow-hidden"
+      style={{ backgroundColor: 'rgb(4 55 55)' }}
+    >
       <div className="Container">
         <div className="grid gap-y-7 grid-cols-12">
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <Link to={'/'}>
-              <img src={footerLogo} draggable={false} />
+              <img
+                src={footerLogo}
+                draggable={false}
+                style={{ maxWidth: 160 }}
+              />
             </Link>
             <p className="font-FiraSans text-[15px] text-TextColor-0 opacity-80 mt-7 mb-6">
               Enabling Agile Teams Development{' '}

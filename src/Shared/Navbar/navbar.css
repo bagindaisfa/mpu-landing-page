@@ -368,9 +368,9 @@
   margin: 0;
 }
 
-.header-creative.is-sticky .header-logo img {
+/* .header-creative.is-sticky .header-logo img {
   filter: brightness(0);
-}
+} */
 
 .header-creative.is-sticky .header-btn {
   margin: 0;

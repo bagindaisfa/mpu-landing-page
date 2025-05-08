@@ -314,14 +314,7 @@ const Navbar = () => {
                     <LuMoveRight />
                   </Link>
                 </div>
-                <div className="light-btn hidden xl:block relative top-3">
-                  <Link
-                    to={'/home3'}
-                    className="text-white flex items-center justify-center size-9 rounded-full bg-white bg-opacity-15"
-                  >
-                    <MdLightMode size={'20'} />
-                  </Link>
-                </div>
+                <div className="light-btn hidden xl:block relative top-3"></div>
                 <div className="header-bar lg:hidden">
                   <button ref={menuBarRef} className="menu-bar">
                     <span></span>
