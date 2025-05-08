@@ -1,27 +1,27 @@
-import { Link } from "react-router-dom";
-import CounterCard from "./CounterCard";
-import counterShape from "/images/star_icon.png";
+import { Link } from 'react-router-dom';
+import CounterCard from './CounterCard';
+import counterShape from '/images/star_icon.png';
 
 const counterData = [
   {
     id: 1,
     counterShape: counterShape,
     counterNumber: 12,
-    counterDesc: "Total Projects Complated",
-    counterSuffex: "K+",
+    counterDesc: 'Total Projects Complated',
+    counterSuffex: 'K+',
   },
   {
     id: 2,
     counterShape: counterShape,
     counterNumber: 950,
-    counterDesc: "SATIFIED ACTIVE CUSTOMERS",
-    counterSuffex: "+",
+    counterDesc: 'SATIFIED ACTIVE CUSTOMERS',
+    counterSuffex: '+',
   },
   {
     id: 3,
     counterNumber: 4,
-    counterDesc: "AVERAGE CLIENTS RATINGS",
-    counterSuffex: ".7*",
+    counterDesc: 'AVERAGE CLIENTS RATINGS',
+    counterSuffex: '.7*',
   },
 ];
 
@@ -35,7 +35,7 @@ const Counter = () => {
               Get The Latest Achivement <br /> for Business Consult
             </h1>
           </div>
-          <Link to={"/about"} className="flex lg:justify-end">
+          <Link to={'/assessment'} className="flex lg:justify-end">
             <button className="primary-btn !bg-BodyBg-0 !text-PrimaryColor-0">{`Get Started Now`}</button>
           </Link>
         </div>

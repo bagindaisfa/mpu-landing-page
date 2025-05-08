@@ -1,11 +1,11 @@
-import aboutThumb from "/images/about_2.png";
-import aboutShape from "/images/about_shape2.png";
-import aboutIcon from "/images/about_icon1.png";
-import aboutIcon2 from "/images/about_icon2.png";
-import thumb from "/images/like.png";
-import { Link } from "react-router-dom";
-import { FaRegThumbsUp } from "react-icons/fa";
-import { GoArrowUpRight } from "react-icons/go";
+import aboutThumb from '/images/about_2.png';
+import aboutShape from '/images/about_shape2.png';
+import aboutIcon from '/images/about_icon1.png';
+import aboutIcon2 from '/images/about_icon2.png';
+import thumb from '/images/like.png';
+import { Link } from 'react-router-dom';
+import { FaRegThumbsUp } from 'react-icons/fa';
+import { GoArrowUpRight } from 'react-icons/go';
 
 const About = () => {
   return (
@@ -83,17 +83,17 @@ const About = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-8">
-              <Link to={"/contact"}>
+              <Link to={'/assessment'}>
                 <button className="primary-btn2">
                   <FaRegThumbsUp />
                   {`Get Started now`}
                 </button>
               </Link>
-              <Link to={"/contact"}>
+              <Link to={'/contact'}>
                 <button className="flex items-center gap-2 text-HeadingColor-0 font-FiraSans font-medium group">
                   Our Services
                   <GoArrowUpRight
-                    size={"20"}
+                    size={'20'}
                     className="text-PrimaryColor-0 transition-all duration-500 group-hover:rotate-45"
                   />
                 </button>

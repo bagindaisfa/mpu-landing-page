@@ -36,7 +36,7 @@ const Counter = () => {
               We’re Ready <br /> to Help You Grow
             </h1>
           </div>
-          <Link to={'/about'} className="flex lg:justify-end">
+          <Link to={'/assessment'} className="flex lg:justify-end">
             <button className="primary-btn !bg-BodyBg-0 !text-PrimaryColor-0">{`Get Started Now`}</button>
           </Link>
         </div>

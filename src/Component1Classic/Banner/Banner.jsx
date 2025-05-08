@@ -25,13 +25,13 @@ const Banner = () => {
               action items. Globally build front-end
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-8">
-              <Link to={'/contact'}>
+              <Link to={'/assessment'}>
                 <button className="primary-btn">{`Get Started now`}</button>
               </Link>
               <Link to={'/about'}>
                 <button className="flex items-center gap-3 text-white font-FiraSans font-medium">
                   <FaPhoneAlt />
-                  {`CALL : +123 (45678) 000`}
+                  {`CALL : +6221 8428 3681`}
                 </button>
               </Link>
             </div>

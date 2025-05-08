@@ -80,7 +80,7 @@ const About = () => {
               </li>
             </ul>
             <div className="flex flex-col md:flex-row lg:flex-col 2xl:flex-row md:items-center lg:items-start 2xl:items-center gap-7 mt-9">
-              <Link to={'/about'}>
+              <Link to={'/assessment'}>
                 <button className="primary-btn">{`Let us know you`}</button>
               </Link>
               <Link to={'/'}>

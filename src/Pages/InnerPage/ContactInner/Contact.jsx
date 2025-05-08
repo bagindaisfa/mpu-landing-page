@@ -1,4 +1,5 @@
-import { FaPhoneAlt, FaRegThumbsUp, FaUser } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaPhoneAlt, FaRegThumbsUp, FaUser, FaPencilAlt } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { MdCall } from 'react-icons/md';
 import border from '/images/hero_border.png';
@@ -9,6 +10,46 @@ import { FaRegEnvelopeOpen } from 'react-icons/fa6';
 import { IoLocationOutline } from 'react-icons/io5';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    number: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+      alert('Email sent successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        number: '',
+        message: '',
+      });
+    } catch (error) {
+      alert('Failed to send email');
+      console.error('Failed to send email', error);
+    }
+  };
+
   return (
     <section className="py-28 relative">
       <div className="absolute -z-10 right-48 bottom-10 hidden 2xl:block animate-rotate">
@@ -100,6 +141,7 @@ const Contact = () => {
                 action="#"
                 method="post"
                 className="flex flex-col gap-y-5 pt-11 pb-[60px]"
+                onSubmit={handleSubmit}
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="relative inline-block">
@@ -110,6 +152,8 @@ const Contact = () => {
                       placeholder="Enter Name*"
                       required
                       className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                      value={formData.name}
+                      onChange={handleChange}
                     />
                     <FaUser
                       size={'14'}
@@ -124,6 +168,8 @@ const Contact = () => {
                       placeholder="Enter E-Mail*"
                       required
                       className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                      value={formData.email}
+                      onChange={handleChange}
                     />
                     <HiOutlineMailOpen
                       size={'16'}
@@ -132,24 +178,22 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <select
-                    name="select"
-                    id="select"
-                    className="font-FiraSans text-TextColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                  >
-                    <option value="subject" className="text-TextColor-0">
-                      Your Subject
-                    </option>
-                    <option value="subject2" className="text-TextColor-0">
-                      Bangla
-                    </option>
-                    <option value="subject3" className="text-TextColor-0">
-                      Arabic
-                    </option>
-                    <option value="subject4" className="text-TextColor-0">
-                      China
-                    </option>
-                  </select>
+                  <div className="relative inline-block">
+                    <input
+                      type="text"
+                      name="subject"
+                      id="subject"
+                      placeholder="Enter Subject*"
+                      required
+                      className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                      value={formData.subject}
+                      onChange={handleChange}
+                    />
+                    <FaPencilAlt
+                      size={'14'}
+                      className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                    />
+                  </div>
                   <div className="relative inline-block">
                     <input
                       type="text"
@@ -158,6 +202,8 @@ const Contact = () => {
                       placeholder="Enter Number*"
                       required
                       className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                      value={formData.number}
+                      onChange={handleChange}
                     />
                     <MdCall
                       size={'16'}
@@ -170,10 +216,12 @@ const Contact = () => {
                   id="message"
                   placeholder="Write a short meassage..."
                   className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[120px] w-full focus:outline-PrimaryColor-0 resize-none"
+                  value={formData.message}
+                  onChange={handleChange}
                 ></textarea>
 
                 <div className="inline-block mt-2">
-                  <button className="primary-btn2 !py-[15px]">
+                  <button type="submit" className="primary-btn2 !py-[15px]">
                     <FaRegThumbsUp />
                     {`Submit Now`}
                   </button>
