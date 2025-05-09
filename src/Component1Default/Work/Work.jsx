@@ -70,18 +70,16 @@ const Work = () => {
               workBtn,
             }) => {
               return (
-                <>
-                  <div key={id}>
-                    <WorkCard
-                      workNumber={workNumber}
-                      workIcon={workIcon}
-                      workTitle={workTitle}
-                      workDesc={workDesc}
-                      workUrl={workUrl}
-                      workBtn={workBtn}
-                    />
-                  </div>
-                </>
+                <div key={id}>
+                  <WorkCard
+                    workNumber={workNumber}
+                    workIcon={workIcon}
+                    workTitle={workTitle}
+                    workDesc={workDesc}
+                    workUrl={workUrl}
+                    workBtn={workBtn}
+                  />
+                </div>
               );
             }
           )}
