@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '/images/logo-new.png';
 import Logo2 from '/images/logo-new.png';
 import './navbar.css';
@@ -18,6 +18,7 @@ import { BiSearch } from 'react-icons/bi';
 import { LiaLongArrowAltRightSolid } from 'react-icons/lia';
 
 const Navbar11 = () => {
+  const location = useLocation();
   //sticky
 
   useEffect(() => {
@@ -413,15 +414,17 @@ const Navbar11 = () => {
           </div>
           <div className="lg:col-span-2 2xl:col-span-3">
             <div className="header-right-box flex items-center gap-10 lg:gap-7 justify-end">
-              <div className="hidden lg:block relative">
-                <Link
-                  to={'/contact'}
-                  className="lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[34px] 2xl:py-[17px] rounded-full font-FiraSans font-medium text-white overflow-hidden bg-PrimaryColor-0 flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0"
-                >
-                  Get A Quote
-                  <LiaLongArrowAltRightSolid size={'18'} />
-                </Link>
-              </div>
+              {location.pathname !== '/contact' && (
+                <div className="hidden lg:block relative">
+                  <Link
+                    to={'/contact'}
+                    className="lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[34px] 2xl:py-[17px] rounded-full font-FiraSans font-medium text-white overflow-hidden bg-PrimaryColor-0 flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0"
+                  >
+                    Get A Quote
+                    <LiaLongArrowAltRightSolid size={'18'} />
+                  </Link>
+                </div>
+              )}
               <div className="header-sidebar hidden 2xl:block">
                 <button ref={menuSideBarRef} className="menu-sidebar">
                   <span></span>

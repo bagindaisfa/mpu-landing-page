@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer
       className="relative z-10 pt-28 overflow-hidden"
-      style={{ backgroundColor: 'rgb(4 55 55)' }}
+      style={{ backgroundColor: 'rgb(13 82 82)' }}
     >
       <div className="Container">
         <div className="grid gap-y-7 grid-cols-12">

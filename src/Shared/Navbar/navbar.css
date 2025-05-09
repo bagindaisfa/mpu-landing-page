@@ -18,7 +18,7 @@
 }
 
 .body-overlay:hover {
-  cursor: url(/public/images/cross.png), pointer;
+  cursor: url(/images/cross.png), pointer;
 }
 
 .menu-bar {
@@ -1244,7 +1244,7 @@ li.has-dropdown a button span {
 }
 
 .body-overlay2:hover {
-  cursor: url(/public/images/cross.png), pointer;
+  cursor: url(/images/cross.png), pointer;
 }
 
 .menu-sidebar {
@@ -1300,7 +1300,7 @@ li.has-dropdown a button span {
 }
 
 .body-overlay2:hover {
-  cursor: url(/public/images/cross.png), pointer;
+  cursor: url(/images/cross.png), pointer;
 }
 
 .sidebar {
