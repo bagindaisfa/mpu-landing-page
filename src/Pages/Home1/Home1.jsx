@@ -58,7 +58,7 @@ const Home1 = () => {
       {/* <Pricing /> */}
       {/* <LatestWork /> */}
       {/* <TeamMember /> */}
-      {/* <Testimonial /> */}
+      <Testimonial />
       <Blog />
     </>
   );

@@ -11,7 +11,7 @@ const featureData = [
     featureIcon: featureIcon,
     featureTitle: 'People Development',
     featureDesc:
-      'Empower individuals and teams through structured training, coaching, and skill-building initiatives.',
+      'Tailored learning, leadership development, and coaching programs to build future-ready capabilities.',
     featureUrl: '/service/people-development',
     featureNumber: '01',
   },
@@ -20,7 +20,7 @@ const featureData = [
     featureIcon: featureIcon2,
     featureTitle: 'Talent Acquisition',
     featureDesc:
-      'Attract and recruit the right talent through strategic sourcing, screening, and selection processes.',
+      'Strategic sourcing and recruitment to attract top talent aligned with your organizational goals.',
     featureUrl: '/service/talent-acquisition',
     featureNumber: '02',
   },
@@ -29,7 +29,7 @@ const featureData = [
     featureIcon: featureIcon3,
     featureTitle: 'Employee Engagement Events',
     featureDesc:
-      'Foster a positive work environment with creative and meaningful engagement programs and activities.',
+      'Creative, high-impact experiences that boost morale, teamwork, and organizational connection.',
     featureUrl: '/service/employee-engagement',
     featureNumber: '03',
   },
@@ -38,7 +38,7 @@ const featureData = [
     featureIcon: featureIcon4,
     featureTitle: 'Human Capital Consultancy',
     featureDesc:
-      'Deliver expert advisory services to optimize human capital strategy, policy, and implementation.',
+      'Advisory support to optimize HR strategy, workforce planning, and organizational design.',
     featureUrl: '/service/human-capital-consultancy',
     featureNumber: '04',
   },
@@ -47,7 +47,7 @@ const featureData = [
     featureIcon: featureIcon, // ganti dengan icon kelima jika tersedia
     featureTitle: 'Vetting & Background Check',
     featureDesc:
-      'Ensure reliable hiring through comprehensive verification of candidate history and credentials.',
+      'Comprehensive screening services to support compliant, secure, and trustworthy hiring decisions.',
     featureUrl: '/service/vetting-background-check',
     featureNumber: '05',
   },
@@ -56,7 +56,7 @@ const featureData = [
     featureIcon: featureIcon2, // ganti dengan icon keenam jika tersedia
     featureTitle: 'Organisation Development',
     featureDesc:
-      'Support long-term growth by aligning structure, processes, and culture with business objectives.',
+      'Process and performance improvement to enhance operational efficiency and business agility.',
     featureUrl: '/service/organisation-development',
     featureNumber: '06',
   },
@@ -75,9 +75,9 @@ const Feature = () => {
             Featured Service
           </h5>
           <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
-            Maximizing People & Performance with
+            Empowering Growth through People,
             <br className="hidden sm:block" />
-            Strategic Consulting Services
+            Culture, and Performance.
           </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-12">

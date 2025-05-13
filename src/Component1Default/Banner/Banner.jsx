@@ -23,9 +23,9 @@ const Banner = () => {
               </span>
             </h1>
             <p className="font-FiraSans text-TextColor-0 mb-[38px] mt-[22px]">
-              Developing Competent Leaders.{' '}
+              Your Trusted Partner in{' '}
               <br className="hidden xl:block 2xl:hidden" />
-              Building Agile Teams.
+              Operational Leadership Development.
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-8">
               <Link to={'/assessment'}>
