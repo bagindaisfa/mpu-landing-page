@@ -175,7 +175,11 @@ const Navbar11 = () => {
           </div>
           <div className="offcanvas_logo">
             <Link to={'/'}>
-              <img src={Logo2} draggable="false" />
+              <img
+                src={Logo2}
+                draggable="false"
+                style={{ width: 250, height: 80 }}
+              />
             </Link>
           </div>
           <div className="offcanvas_title">
@@ -232,7 +236,11 @@ const Navbar11 = () => {
           <div className="col-span-2">
             <div className="header-logo">
               <Link to={'/'}>
-                <img src={Logo} draggable="false" />
+                <img
+                  src={Logo}
+                  draggable="false"
+                  style={{ width: 250, height: 80 }}
+                />
               </Link>
             </div>
           </div>
