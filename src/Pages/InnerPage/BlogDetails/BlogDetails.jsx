@@ -119,7 +119,10 @@ const BlogDetails = () => {
     }
   }, [id]);
 
-  const sanitizedContent = DOMPurify.sanitize(blogContent.content);
+  const sanitizedContent = DOMPurify.sanitize(blogContent.content, {
+    ADD_TAGS: ['iframe'], // Izinkan tag iframe
+    ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'src'], // Izinkan atribut iframe
+  });
 
   return (
     <>
@@ -132,54 +135,11 @@ const BlogDetails = () => {
       <section className="pb-[120px]">
         <div className="Container">
           <div className="pt-6 sm:pt-10 lg:pt-[66px] px-4 md:px-10 2xl:px-[110px] relative z-10 sm:-mt-[60px] bg-white rounded-3xl md:mx-10 lg:mx-0 xl:mx-14 2xl:mx-0">
-            {/* <div>
-              <p className="font-FiraSans text-TextColor2-0 mt-3">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward morph flexible whereas process-centric models
-                predomin Efficiently transform customer directed alignments for
-                front-end meta Dramatically harness cross-platform best
-                practices whereas centric data business services. Conveniently
-                formula standards in innovation with wireless vertical
-                intellectual capital before global architectures technically
-                engage based results with visionary models. Dramatically
-                harness-platform best practices whereas business services.
-                Conveniently experiences. formula standards in innovation with
-                wireless
-              </p>
-            </div> */}
             <div className="blog-content font-FiraSans text-TextColor2-0 mt-3">
               <div dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
             </div>
             <div className="pt-5">
               <div className="flex items-center gap-7 justify-between flex-wrap mt-14 pt-6">
-                {/* <div>
-                  <ul className='flex items-center gap-2'>
-                    <li>
-                      <Link
-                        to={'/'}
-                        className='font-FiraSans text-sm font-medium uppercase py-[10px] px-6 bg-BodyBg4-0 rounded-full flex items-center justify-center text-TextColor2-0 transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100'
-                      >
-                        Technology
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to={'/'}
-                        className='font-FiraSans text-sm font-medium uppercase py-[10px] px-6 bg-BodyBg4-0 rounded-full flex items-center justify-center text-TextColor2-0 transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100'
-                      >
-                        Business
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to={'/'}
-                        className='font-FiraSans text-sm font-medium uppercase py-[10px] px-6 bg-BodyBg4-0 rounded-full flex items-center justify-center text-TextColor2-0 transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100'
-                      >
-                        IT Solution
-                      </Link>
-                    </li>
-                  </ul>
-                </div> */}
                 <div>
                   <ul className="flex items-center gap-4">
                     <li>
@@ -250,16 +210,6 @@ const BlogDetails = () => {
                       key={comment.id}
                       className="flex flex-col sm:flex-row gap-5 relative z-10 bg-white shadow-shades px-4 md:px-10 pt-6 md:pt-12 pb-5 md:pb-11 rounded-2xl mt-7"
                     >
-                      {/* Optional avatar */}
-                      {/* <div className="w-[66px]">
-                        <img
-                          src={image}
-                          alt="Avatar"
-                          draggable="false"
-                          className="rounded-full"
-                        />
-                      </div> */}
-
                       <div className="flex-1">
                         <h6 className="font-FiraSans text-xl font-medium text-HeadingColor-0">
                           {comment.name}
@@ -277,11 +227,6 @@ const BlogDetails = () => {
                         <p className="font-FiraSans text-TextColor2-0 2xl:pr-7 mt-6">
                           {comment.comment}
                         </p>
-                        {/* <div className="absolute top-12 right-10">
-                          <button className="font-FiraSans text-TextColor2-0 px-5 py-2 rounded-full bg-BodyBg4-0 text-sm uppercase font-medium transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100">
-                            Reply
-                          </button>
-                        </div> */}
                       </div>
                     </div>
                   ))
