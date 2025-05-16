@@ -175,14 +175,23 @@ const Assessment = () => {
               </div>
             ))}
             {!showUserInfoForm ? (
-              <form
-                className="flex justify-right gap-y-5 pt-5 pb-[60px]"
-                onSubmit={handleInitialSubmit}
-              >
-                <button type="submit" className="primary-btn2 !py-[15px]">
-                  Submit Assessment
-                </button>
-              </form>
+              <div>
+                <label
+                  className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2"
+                  style={{ marginTop: 10 }}
+                >
+                  Your data will be kept confidential and used solely for the
+                  related project purposes.
+                </label>
+                <form
+                  className="flex justify-right gap-y-5 pt-5 pb-[60px]"
+                  onSubmit={handleInitialSubmit}
+                >
+                  <button type="submit" className="primary-btn2 !py-[15px]">
+                    Submit Assessment
+                  </button>
+                </form>
+              </div>
             ) : (
               <form
                 className="flex flex-col gap-y-5 pt-11 pb-[60px]"
@@ -262,6 +271,12 @@ const Assessment = () => {
                       className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
                     />
                   </div>
+                </div>
+                <div>
+                  <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
+                    Your data will be kept confidential and used solely for the
+                    related project purposes.
+                  </label>
                 </div>
                 <div className="flex justify-right gap-2 mt-4">
                   <button

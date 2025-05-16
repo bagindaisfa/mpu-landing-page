@@ -8,6 +8,7 @@ import serviceShape3 from '/images/service_shpe2.png';
 import { Link } from 'react-router-dom';
 import { FaRegEnvelopeOpen } from 'react-icons/fa6';
 import { IoLocationOutline } from 'react-icons/io5';
+import ModalSchedule from '../ModalSchedule/ModalSchedule';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,6 +18,10 @@ const Contact = () => {
     number: '',
     message: '',
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -91,12 +96,15 @@ const Contact = () => {
                 <br />
                 Driven by Solutions
               </h1>
-              <p className="font-FiraSans text-TextColor2-0 pt-4">
+              {/* <p className="font-FiraSans text-TextColor2-0 pt-4">
                 Helping organizations drive change through smart solutions and
                 expert guidance.
-              </p>
+              </p> */}
             </div>
-            <div className="bg-BodyBg4-0 rounded-xl p-10 mt-11">
+            <div
+              className="bg-BodyBg4-0 rounded-xl mt-5"
+              style={{ padding: '1rem 2.5rem 0.5rem' }}
+            >
               <div className="flex items-center gap-5 group border-b border-dashed border-HeadingColor-0 border-opacity-40 pb-5">
                 <div className="size-[70px] bg-white rounded-full flex items-center justify-center text-PrimaryColor-0 transition-all duration-500 group-hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 before:rounded-full group-hover:before:scale-100">
                   <FaPhoneAlt size={'20'} />
@@ -138,6 +146,15 @@ const Contact = () => {
                     Selatan, DKI Jakarta 12520
                   </p>
                 </div>
+              </div>
+              <div
+                className="inline-block"
+                style={{ marginTop: 25, marginBottom: 25 }}
+              >
+                <button className="primary-btn2 !py-[15px]" onClick={openModal}>
+                  <FaRegThumbsUp />
+                  {`Schedule a Consultation`}
+                </button>
               </div>
             </div>
           </div>
@@ -243,7 +260,10 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                 ></textarea>
-
+                <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
+                  Your data will be kept confidential and used solely for the
+                  related project purposes.
+                </label>
                 <div className="inline-block mt-2">
                   <button type="submit" className="primary-btn2 !py-[15px]">
                     <FaRegThumbsUp />
@@ -255,6 +275,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ModalSchedule isOpen={isModalOpen} onClose={closeModal} />
     </section>
   );
 };

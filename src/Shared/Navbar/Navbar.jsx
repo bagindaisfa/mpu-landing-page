@@ -314,7 +314,7 @@ const Navbar = () => {
               <div className="header-right-box flex items-center gap-10 lg:gap-4 2xl:gap-8 justify-end">
                 <div className="header-btn hidden lg:block">
                   <Link to={'/contact'}>
-                    get a quote<span></span>
+                    Get Consultation<span></span>
                     <LuMoveRight />
                   </Link>
                 </div>
