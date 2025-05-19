@@ -29,7 +29,7 @@ const Footer6 = () => {
                 </h6>
                 <Link to={'/'}>
                   <button className="font-FiraSans text-xl text-HeadingColor-0 font-medium">
-                    info@mpupeoplesolution.com
+                    admin@mpupeoplesolution.com
                   </button>
                 </Link>
               </div>

@@ -128,7 +128,7 @@ const Contact = () => {
                   <h6 className="font-FiraSans text-TextColor2-0">E-Mail us</h6>
                   <Link to={'/'}>
                     <button className="font-FiraSans text-xl text-HeadingColor-0 font-medium mt-1">
-                      info@mpupeoplesolution.com
+                      admin@mpupeoplesolution.com
                     </button>
                   </Link>
                 </div>
@@ -143,7 +143,7 @@ const Contact = () => {
                   </h6>
                   <p className="font-FiraSans text-HeadingColor-0 mt-2">
                     Arkadia Green Park Tower G, 8th Floor <br /> Jakarta
-                    Selatan, DKI Jakarta 12520
+                    Selatan, DKI Jakarta, Indonesia 12520
                   </p>
                 </div>
               </div>

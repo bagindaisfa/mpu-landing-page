@@ -101,7 +101,7 @@ const WhyChoose = () => {
                 </span>
                 <FsLightbox
                   toggler={toggler}
-                  sources={['https://youtu.be/NKJ-6zCSk2E?si=VRPrxnY6DI0NY9II']}
+                  sources={['https://youtu.be/gBEtq2duudY']}
                 />
               </div>
             </div>

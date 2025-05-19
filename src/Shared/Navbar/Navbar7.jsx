@@ -194,12 +194,12 @@ const Navbar7 = () => {
                 <MdLocationPin />
                 <Link to={'/'}>
                   Arkadia Green Park Tower G, 8th Floor. Jakarta Selatan, DKI
-                  Jakarta 12520
+                  Jakarta, Indonesia 12520
                 </Link>
               </li>
               <li>
                 <FaEnvelope />
-                <Link to={'/'}>info@mpupeoplesolution.com</Link>
+                <Link to={'/'}>admin@mpupeoplesolution.com</Link>
               </li>
               <li>
                 <FaPhoneAlt />
@@ -256,7 +256,7 @@ const Navbar7 = () => {
                 to={'/'}
                 className="font-FiraSans text-[15px] text-white transition-all duration-500 hover:text-white"
               >
-                info@mpupeoplesolution.com
+                admin@mpupeoplesolution.com
               </Link>
             </div>
             <div className=" md:flex items-center gap-2 hidden">
@@ -617,12 +617,12 @@ const Navbar7 = () => {
                 <MdLocationPin />
                 <Link to={'/'}>
                   Arkadia Green Park Tower G, 8th Floor. Jakarta Selatan, DKI
-                  Jakarta 12520
+                  Jakarta, Indonesia 12520
                 </Link>
               </li>
               <li>
                 <FaEnvelope />
-                <Link to={'/'}>info@mpupeoplesolution.com</Link>
+                <Link to={'/'}>admin@mpupeoplesolution.com</Link>
               </li>
               <li>
                 <FaPhoneAlt />

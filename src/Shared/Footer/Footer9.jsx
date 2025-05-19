@@ -167,7 +167,7 @@ const Footer9 = () => {
               </div>
               <Link to={'/'} className="flex-1">
                 <button className="font-FiraSans text-[15px] text-white">
-                  info@mpupeoplesolution.com
+                  admin@mpupeoplesolution.com
                 </button>
               </Link>
             </div>

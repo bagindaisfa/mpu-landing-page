@@ -170,7 +170,7 @@ const Footer = () => {
                 <p className="font-FiraSans text-[15px] text-TextColor-0">
                   Arkadia Green Park Tower G, 8th Floor
                   <br className="hidden 2xl:block" /> Jakarta Selatan, DKI
-                  Jakarta 12520
+                  Jakarta, Indonesia 12520
                 </p>
               </div>
             </div>
@@ -190,7 +190,7 @@ const Footer = () => {
               </div>
               <Link to={'/'} className="flex-1">
                 <button className="font-FiraSans text-[15px] text-white">
-                  info@mpupeoplesolution.com
+                  admin@mpupeoplesolution.com
                 </button>
               </Link>
             </div>

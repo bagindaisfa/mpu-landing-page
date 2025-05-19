@@ -81,7 +81,7 @@ const About = () => {
               <Link to={'/'}>
                 <button className="flex items-center gap-2 font-FiraSans font-medium text-HeadingColor-0">
                   <FaEnvelopeOpen />
-                  info@mpupeoplesolution.com
+                  admin@mpupeoplesolution.com
                 </button>
               </Link>
             </div>
