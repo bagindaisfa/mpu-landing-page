@@ -41,7 +41,7 @@ const Service = () => {
             SOLUTION APPROACH
           </h5>
           <h1 className="font-FiraSans font-semibold text-white text-sm leading-[24px] sm:text-2xl sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
-            Human Capital & Leadership Consulting
+            Human Resource & Leadership Consulting
             <br />
             for Sustainable Growth
           </h1>

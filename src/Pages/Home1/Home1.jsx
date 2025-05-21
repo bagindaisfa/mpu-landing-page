@@ -50,9 +50,9 @@ const Home1 = () => {
       <Banner />
       {/* <Brand /> */}
       <Feature />
-      <Service />
-      <ContentSlider />
+      {/* <Service /> */}
       <About />
+      <ContentSlider />
       <Counter />
       <Work />
       {/* <Pricing /> */}

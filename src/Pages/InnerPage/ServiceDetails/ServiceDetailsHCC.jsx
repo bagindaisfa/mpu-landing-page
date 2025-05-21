@@ -8,13 +8,13 @@ import Accordion from './Accordion/Accordion';
 
 const Accordions = [
   {
-    title: 'What is Human Capital Consultancy?',
-    text: 'Human Capital Consultancy involves strategic advisory services that help organizations maximize the value and effectiveness of their workforce. It covers areas such as talent management, leadership development, and organizational design.',
+    title: 'What is Human Resource Consultancy?',
+    text: 'Human Resource Consultancy involves strategic advisory services that help organizations maximize the value and effectiveness of their workforce. It covers areas such as talent management, leadership development, and organizational design.',
     active: true,
   },
   {
     title: 'Why is it important for organizations?',
-    text: 'A strong human capital strategy enables organizations to attract, retain, and develop top talent, align workforce capabilities with business goals, and drive long-term performance and resilience.',
+    text: 'A strong human resource strategy enables organizations to attract, retain, and develop top talent, align workforce capabilities with business goals, and drive long-term performance and resilience.',
     active: false,
   },
   {
@@ -33,12 +33,12 @@ const ServiceDetailsHCC = () => {
   return (
     <>
       <BreadCrumb
-        breadCrumbTitle={'Human Capital Consultancy'}
+        breadCrumbTitle={'Human Resource Consultancy'}
         breadCrumbIcon={<FaArrowRightLong />}
         breadCrumbIcon2={<FaArrowRightLong />}
         url={'/service'}
         breadCrumbLink={'Service'}
-        breadCrumbLink2={'Human Capital Consultancy'}
+        breadCrumbLink2={'Human Resource Consultancy'}
       />
       <section className="py-[120px] bg-BodyBg4-0">
         <div className="Container">
@@ -52,10 +52,10 @@ const ServiceDetailsHCC = () => {
           <div className="grid grid-cols-3 mt-[62px]">
             <div className="col-span-3 lg:col-span-2 lg:mr-7 2xl:mr-[84px]">
               <h2 className="font-FiraSans font-semibold text-2xl sm:text-[42px] text-HeadingColor-0">
-                Human Capital Consultancy
+                Human Resource Consultancy
               </h2>
               <p className="font-FiraSans text-TextColor2-0 mt-[26px]">
-                We help organizations optimize their human capital potential
+                We help organizations optimize their human resource potential
                 through strategic planning, leadership development, and
                 performance improvement initiatives. Our consultancy services
                 are grounded in deep industry insight, research-based
@@ -108,7 +108,7 @@ const ServiceDetailsHCC = () => {
                     <p className="font-FiraSans text-TextColor2-0 mt-2">
                       Our tailored business solutions focus on improving
                       organizational structure, leadership effectiveness, and HR
-                      operations to unlock human capital value across all
+                      operations to unlock human resource value across all
                       levels.
                     </p>
                   </div>
@@ -122,7 +122,7 @@ const ServiceDetailsHCC = () => {
                 </h4>
                 <p className="font-FiraSans text-TextColor2-0 mt-2">
                   Partnering with us brings tangible value to your organization
-                  by transforming human capital into a competitive advantage.
+                  by transforming human resource into a competitive advantage.
                 </p>
                 <ul className="space-y-3 mt-5 mb-12">
                   <li className="font-FiraSans text-HeadingColor-0 flex items-center gap-2">
@@ -158,7 +158,7 @@ const ServiceDetailsHCC = () => {
           </div>
         </div>
       </section>
-      <Accordion accordions={Accordions} title={'Human Capital Consultancy'} />
+      <Accordion accordions={Accordions} title={'Human Resource Consultancy'} />
     </>
   );
 };

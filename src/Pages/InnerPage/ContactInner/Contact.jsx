@@ -11,6 +11,7 @@ import { IoLocationOutline } from 'react-icons/io5';
 import ModalSchedule from '../ModalSchedule/ModalSchedule';
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,12 +20,25 @@ const Contact = () => {
     message: '',
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formDataSchedule, setFormDataSchedule] = useState({
+    name: '',
+    email: '',
+    date: '',
+    time: '',
+  });
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleChangeShecdule = (e) => {
+    setFormDataSchedule({
+      ...formDataSchedule,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -46,6 +60,38 @@ const Contact = () => {
     } catch (error) {
       alert('Failed to send email');
       console.error('Failed to send email', error);
+    }
+  };
+
+  const handleSubmitSchedule = async (e) => {
+    e.preventDefault();
+    try {
+      setLoading(true);
+      const { name, email, date, time } = formDataSchedule;
+      const [hours, minutes] = time.split(':');
+      const datetime = dayjs(date)
+        .set('hour', parseInt(hours))
+        .set('minute', parseInt(minutes))
+        .toISOString();
+
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/schedule`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, datetime }),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to schedule consultation');
+      }
+      alert('Consultation successfully scheduled!');
+    } catch (error) {
+      alert('Failed to schedule consultation.');
+      console.error('Failed to schedule consultation', error);
+    } finally {
+      setLoading(false);
+      setFormDataSchedule({ name: '', email: '', date: '', time: '' });
+      onClose();
     }
   };
 
@@ -96,10 +142,6 @@ const Contact = () => {
                 <br />
                 Driven by Solutions
               </h1>
-              {/* <p className="font-FiraSans text-TextColor2-0 pt-4">
-                Helping organizations drive change through smart solutions and
-                expert guidance.
-              </p> */}
             </div>
             <div
               className="bg-BodyBg4-0 rounded-xl mt-5"
@@ -147,15 +189,6 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              <div
-                className="inline-block"
-                style={{ marginTop: 25, marginBottom: 25 }}
-              >
-                <button className="primary-btn2 !py-[15px]" onClick={openModal}>
-                  <FaRegThumbsUp />
-                  {`Schedule a Consultation`}
-                </button>
-              </div>
             </div>
           </div>
           <div className="relative">
@@ -170,7 +203,7 @@ const Contact = () => {
                   CONTACT US
                 </h5>
                 <h1 className="font-FiraSans font-semibold text-HeadingColor-0 inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[30px] lg:leading-[44px] xl:text-[32px] xl:leading-[44px] 2xl:text-[34px] 2xl:leading-[44px] relative pb-4">
-                  Get In Touch With MPU
+                  Schedule a Consultation
                   <img
                     src={border}
                     draggable="false"
@@ -182,7 +215,7 @@ const Contact = () => {
                 action="#"
                 method="post"
                 className="flex flex-col gap-y-5 pt-11 pb-[60px]"
-                onSubmit={handleSubmit}
+                onSubmit={handleSubmitSchedule}
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="relative inline-block">
@@ -193,8 +226,8 @@ const Contact = () => {
                       placeholder="Enter Name*"
                       required
                       className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                      value={formData.name}
-                      onChange={handleChange}
+                      value={formDataSchedule.name}
+                      onChange={handleChangeShecdule}
                     />
                     <FaUser
                       size={'14'}
@@ -209,8 +242,8 @@ const Contact = () => {
                       placeholder="Enter E-Mail*"
                       required
                       className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                      value={formData.email}
-                      onChange={handleChange}
+                      value={formDataSchedule.email}
+                      onChange={handleChangeShecdule}
                     />
                     <HiOutlineMailOpen
                       size={'16'}
@@ -221,45 +254,27 @@ const Contact = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="relative inline-block">
                     <input
-                      type="text"
-                      name="subject"
-                      id="subject"
-                      placeholder="Enter Subject*"
+                      type="date"
+                      name="date"
+                      id="date"
                       required
                       className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                      value={formData.subject}
-                      onChange={handleChange}
-                    />
-                    <FaPencilAlt
-                      size={'14'}
-                      className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                      value={formDataSchedule.date}
+                      onChange={handleChangeShecdule}
                     />
                   </div>
                   <div className="relative inline-block">
                     <input
-                      type="text"
-                      name="number"
-                      id="number"
-                      placeholder="Enter Number*"
+                      type="time"
+                      name="time"
+                      id="time"
                       required
                       className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                      value={formData.number}
-                      onChange={handleChange}
-                    />
-                    <MdCall
-                      size={'16'}
-                      className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                      value={formDataSchedule.time}
+                      onChange={handleChangeShecdule}
                     />
                   </div>
                 </div>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Write a short meassage..."
-                  className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[120px] w-full focus:outline-PrimaryColor-0 resize-none"
-                  value={formData.message}
-                  onChange={handleChange}
-                ></textarea>
                 <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
                   Your data will be kept confidential and used solely for the
                   related project purposes.
@@ -267,7 +282,7 @@ const Contact = () => {
                 <div className="inline-block mt-2">
                   <button type="submit" className="primary-btn2 !py-[15px]">
                     <FaRegThumbsUp />
-                    {`Submit Now`}
+                    {loading ? 'Sending...' : 'Submit'}
                   </button>
                 </div>
               </form>

@@ -61,7 +61,7 @@ const ServiceData = [
   {
     id: 4,
     serviceSubTitle: 'Consulting',
-    serviceTitle: 'Human Capital Consultancy',
+    serviceTitle: 'Human Resource Consultancy',
     serviceDesc:
       'Tailored HR solutions to align people strategy with business goals.',
     serviceUrl: '/service/human-capital-consultancy',

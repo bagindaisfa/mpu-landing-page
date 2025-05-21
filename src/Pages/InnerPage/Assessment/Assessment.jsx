@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import {
-  FaUser,
-  FaRegThumbsUp,
-  FaRegThumbsDown,
-  FaBuilding,
-} from 'react-icons/fa';
+import { FaUser, FaRegThumbsUp, FaPencilAlt } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { MdCall } from 'react-icons/md';
 import border from '/images/hero_border.png';
 import { useNavigate } from 'react-router-dom';
 import serviceShape3 from '/images/service_shpe2.png';
+import Select from 'react-select';
 
 const Assessment = () => {
   const navigate = useNavigate();
-  const [questions, setQuestions] = useState([]);
-  const [answers, setAnswers] = useState({});
-  const [showUserInfoForm, setShowUserInfoForm] = useState(false);
-  const [userInfo, setUserInfo] = useState({
+  const [questions, setQuestions] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    company_name: '',
+    subject: '',
+    number: '',
+    company: '',
+    issues: [], // array of selected options
+    message: '',
   });
 
   useEffect(() => {
@@ -29,13 +27,17 @@ const Assessment = () => {
         const res = await fetch(
           `${import.meta.env.VITE_API_URL}/assessments/compro`
         );
-
         if (!res.ok) {
           throw new Error('Failed to fetch blog');
         }
 
         const data = await res.json();
-        setQuestions(data);
+        const issueOptions = data.map((issue) => ({
+          value: issue.question_text,
+          label: issue.question_text,
+        }));
+
+        setQuestions(issueOptions);
       } catch (error) {
         console.error('Error fetching questions:', error);
       }
@@ -43,84 +45,78 @@ const Assessment = () => {
     fetchQuestions();
   }, []);
 
-  const handleAnswerChange = (id, value) => {
-    setAnswers({ ...answers, [id]: value });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const countYesNo = () => {
-    const yes = Object.values(answers).filter((a) => a === 'yes').length;
-    const no = Object.values(answers).filter((a) => a === 'no').length;
-    return { yes, no };
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
 
-  const handleInitialSubmit = (event) => {
-    event.preventDefault();
-    const { yes, no } = countYesNo();
-    if (yes > no) {
-      setShowUserInfoForm(true);
-    } else {
-      submitAssessment(false);
+    try {
+      const payload = {
+        ...formData,
+        issues: formData.issues.map((issue) => issue.value), // hanya ambil nilai string
+      };
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        setLoading(false);
+        throw new Error('Failed to send email');
+      }
+      alert('Email sent successfully!');
+      saveContact(e);
+    } catch (error) {
+      alert('Failed to send email');
+      console.error('Failed to send email', error);
+      setLoading(false);
     }
   };
 
-  const submitAssessment = async (isUserInfo, event) => {
-    if (event) event.preventDefault();
+  const saveContact = async (e) => {
+    e.preventDefault();
     try {
-      if (isUserInfo) {
-        handleUserInfoSubmit();
-      } else {
-        if (answers === undefined || Object.keys(answers).length === 0) {
-          return alert('Complete your answer first.');
-        }
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/assessments/answare/submit`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ answers: answers, user_info: {} }),
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error('Failed to record visitor');
-        }
-
-        alert('Assessment submitted successfully.');
-        navigate('/');
-      }
-    } catch (err) {
-      console.error('Failed to record submission', err);
-      alert('Submission failed.');
-    }
-  };
-
-  const handleUserInfoSubmit = async () => {
-    try {
-      if (!userInfo.name || !userInfo.email || !userInfo.phone) {
-        return alert('Complete your answer first.');
-      }
+      const payload = {
+        ...formData,
+        issues: formData.issues.map((issue) => issue.value), // hanya ambil nilai string
+      };
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/assessments/answare/submit`,
+        `${import.meta.env.VITE_API_URL}/user-contact/contact`,
         {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ answers: answers, user_info: userInfo }),
+          body: JSON.stringify(payload),
         }
       );
 
       if (!response.ok) {
-        throw new Error('Failed to record visitor');
+        setLoading(false);
+        throw new Error('Failed to save contact');
       }
-
-      alert('Assessment submitted successfully.');
-      navigate('/');
-    } catch (err) {
-      console.error('Failed to record submission', err);
-      alert('Submission failed.');
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        number: '',
+        message: '',
+      });
+      setLoading(false);
+    } catch (error) {
+      alert('Failed to save contact');
+      console.error('Failed to save contact', error);
+      setLoading(false);
     }
   };
 
@@ -131,11 +127,11 @@ const Assessment = () => {
           <img src={serviceShape3} draggable="false" />
         </div>
         <div className="text-center">
-          <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase flex items-center justify-center gap-2 mb-3">
+          {/* <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase flex items-center justify-center gap-2 mb-3">
             ASSESSMENT REQUEST
-          </h5>
+          </h5> */}
           <h1 className="font-FiraSans font-semibold text-HeadingColor-0 inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[30px] lg:leading-[44px] xl:text-[32px] xl:leading-[44px] 2xl:text-[34px] 2xl:leading-[44px] relative pb-4">
-            Let Us Help You Assess Your Team
+            Let Us Help You to Understand Your People Chalanges
             <img
               src={border}
               draggable="false"
@@ -145,159 +141,136 @@ const Assessment = () => {
         </div>
         <div className="w-full mx-auto max-w-[850px] mt-12">
           <div>
-            {questions.map((q) => (
-              <div key={q.id}>
-                <p className="font-FiraSans text-TextColor2-0 pt-4">
-                  {q.question_text}
-                </p>
-                <div className="flex gap-4 pt-2">
-                  <button
-                    onClick={() => handleAnswerChange(q.id, 'yes')}
-                    className={`px-4 !py-[15px] rounded ${
-                      answers[q.id] === 'yes'
-                        ? 'bg-PrimaryColor-0 text-white'
-                        : 'bg-gray-200'
-                    }`}
-                  >
-                    <p className="font-FiraSans text-white">Yes</p>
-                  </button>
-                  <button
-                    onClick={() => handleAnswerChange(q.id, 'no')}
-                    className={`px-4 !py-[15px] rounded ${
-                      answers[q.id] === 'no'
-                        ? 'bg-red-500 text-white'
-                        : 'bg-gray-200'
-                    }`}
-                  >
-                    <p className="font-FiraSans text-white">No</p>
-                  </button>
+            <form
+              action="#"
+              method="post"
+              className="flex flex-col gap-y-5 pt-11 pb-[60px]"
+              onSubmit={handleSubmit}
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="relative inline-block">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter Name*"
+                    required
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                  <FaUser
+                    size={'14'}
+                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                  />
+                </div>
+                <div className="relative inline-block">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter E-Mail*"
+                    required
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  <HiOutlineMailOpen
+                    size={'16'}
+                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                  />
                 </div>
               </div>
-            ))}
-            {!showUserInfoForm ? (
-              <div>
-                <label
-                  className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2"
-                  style={{ marginTop: 10 }}
-                >
-                  Your data will be kept confidential and used solely for the
-                  related project purposes.
-                </label>
-                <form
-                  className="flex justify-right gap-y-5 pt-5 pb-[60px]"
-                  onSubmit={handleInitialSubmit}
-                >
-                  <button type="submit" className="primary-btn2 !py-[15px]">
-                    Submit Assessment
-                  </button>
-                </form>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="relative inline-block">
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    placeholder="Enter Subject*"
+                    required
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                    value={formData.subject}
+                    onChange={handleChange}
+                  />
+                  <FaPencilAlt
+                    size={'14'}
+                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                  />
+                </div>
+                <div className="relative inline-block">
+                  <input
+                    type="text"
+                    name="number"
+                    id="number"
+                    placeholder="Enter Number*"
+                    required
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                    value={formData.number}
+                    onChange={handleChange}
+                  />
+                  <MdCall
+                    size={'16'}
+                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                  />
+                </div>
               </div>
-            ) : (
-              <form
-                className="flex flex-col gap-y-5 pt-11 pb-[60px]"
-                onSubmit={(event) => submitAssessment(true, event)}
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="relative inline-block">
-                    <input
-                      className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Enter Name"
-                      onChange={(e) =>
-                        setUserInfo({ ...userInfo, name: e.target.value })
-                      }
-                      required
-                    />
-                    <FaUser
-                      size={'14'}
-                      className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                    />
-                  </div>
-                  <div className="relative inline-block">
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="Enter E-Mail*"
-                      required
-                      className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                      onChange={(e) =>
-                        setUserInfo({ ...userInfo, email: e.target.value })
-                      }
-                    />
-                    <HiOutlineMailOpen
-                      size={'16'}
-                      className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                    />
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="relative inline-block">
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    placeholder="Enter Company Name*"
+                    required
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                    value={formData.company}
+                    onChange={handleChange}
+                  />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="relative inline-block">
-                    <input
-                      type="text"
-                      name="number"
-                      id="number"
-                      placeholder="Enter Number*"
-                      required
-                      className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                      onChange={(e) =>
-                        setUserInfo({ ...userInfo, phone: e.target.value })
-                      }
-                    />
-                    <MdCall
-                      size={'16'}
-                      className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                    />
-                  </div>
-                  <div className="relative inline-block">
-                    <input
-                      type="text"
-                      name="company_name"
-                      id="company_name"
-                      placeholder="Enter Your Company Name*"
-                      required
-                      className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                      onChange={(e) =>
-                        setUserInfo({
-                          ...userInfo,
-                          company_name: e.target.value,
-                        })
-                      }
-                    />
-                    <FaBuilding
-                      size={'14'}
-                      className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                    />
-                  </div>
+
+                <div className="relative inline-block">
+                  <Select
+                    isMulti
+                    name="issues"
+                    options={questions}
+                    className="react-select-container"
+                    classNamePrefix="react-select"
+                    placeholder="Select Issues..."
+                    value={formData.issues}
+                    onChange={(selectedOptions) =>
+                      setFormData((prevData) => ({
+                        ...prevData,
+                        issues: selectedOptions,
+                      }))
+                    }
+                  />
                 </div>
-                <div>
-                  <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
-                    Your data will be kept confidential and used solely for the
-                    related project purposes.
-                  </label>
-                </div>
-                <div className="flex justify-right gap-2 mt-4">
-                  <button
-                    id="saveBtn"
-                    type="submit"
-                    className="primary-btn2 !py-[15px]"
-                  >
-                    <FaRegThumbsUp />
-                    {`Submit Now`}
-                  </button>
-                  <button
-                    id="cancelBtn"
-                    className="primary-btn2 !py-[15px]"
-                    onClick={() => setShowUserInfoForm(false)}
-                  >
-                    <FaRegThumbsDown />
-                    {`Cancel`}
-                  </button>
-                </div>
-              </form>
-            )}
+              </div>
+
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Write a short meassage..."
+                className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[120px] w-full focus:outline-PrimaryColor-0 resize-none"
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
+              <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
+                Your data will be kept confidential and used solely for the
+                related project purposes.
+              </label>
+              <div className="inline-block mt-2">
+                <button
+                  type="submit"
+                  className="primary-btn2 !py-[15px]"
+                  disabled={loading}
+                >
+                  <FaRegThumbsUp />
+                  {loading ? 'Sending...' : 'Submit'}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

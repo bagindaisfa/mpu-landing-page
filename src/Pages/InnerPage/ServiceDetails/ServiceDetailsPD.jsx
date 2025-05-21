@@ -53,7 +53,7 @@ const ServiceDetailsPD = () => {
           <div className="grid grid-cols-3 mt-[62px]">
             <div className="col-span-3 lg:col-span-2 lg:mr-7 2xl:mr-[84px]">
               <h2 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
-                Empowering Human Capital Through People Development
+                Empowering Human Resource Through People Development
               </h2>
               <p className="font-FiraSans text-TextColor2-0 mt-[26px]">
                 We believe that people are the core of every organization’s

@@ -21,9 +21,9 @@ const Footer = () => {
               />
             </Link>
             <p className="font-FiraSans text-[15px] text-TextColor-0 opacity-80 mt-7 mb-6">
-              Enabling Agile Teams Development{' '}
-              <br className="hidden lg:block xl:hidden" /> for{' '}
-              <br className="hidden xl:block" /> the Next Era
+              Developing Agile Operation Talent{' '}
+              <br className="hidden lg:block xl:hidden" /> to{' '}
+              <br className="hidden xl:block" /> Drive Sustainable Growth.
             </p>
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-2">
@@ -127,7 +127,7 @@ const Footer = () => {
                 >
                   <button className="flex items-center gap-2 font-FiraSans -ml-5 hover:ml-0 text-[15px] text-TextColor-0 transition-all duration-500 hover:text-white hover:gap-1 mb-4">
                     <FaAnglesRight className="text-xs text-white" />
-                    Human Capital Consultancy
+                    Human Resource Consultancy
                   </button>
                 </Link>
               </li>

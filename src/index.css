@@ -590,3 +590,33 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::before {
   padding-left: 1.5rem;
 }
 
+.react-select__control {
+  height: 54px !important;
+  min-height: 54px !important;
+  border-radius: 0.375rem; /* rounded-md (Tailwind default) */
+  border-color: rgb(11 75 75); /* sama dengan border-Secondarycolor-0 border-opacity-20 */
+  padding: 0 0.75rem; /* px-6 */
+  font-size: 0.875rem; /* text-sm */
+  background-color: transparent;
+}
+
+.react-select__placeholder,
+.react-select__single-value,
+.react-select__multi-value__label {
+  color: #2d2d2d; /* Tailwind's text-HeadingColor-0 */
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.react-select__indicator-separator {
+  display: none;
+}
+
+.react-select__control--is-focused {
+  border-color: rgb(6 50 50 ) !important;
+  box-shadow: none !important;
+}
+
+.react-select__option--is-focused {
+  background-color: rgb(6 50 50 ) !important;
+  color: white !important;
+}

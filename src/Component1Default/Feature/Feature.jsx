@@ -36,7 +36,7 @@ const featureData = [
   {
     id: 4,
     featureIcon: featureIcon4,
-    featureTitle: 'Human Capital Consultancy',
+    featureTitle: 'Human Resource Consultancy',
     featureDesc:
       'Advisory support to optimize HR strategy, workforce planning, and organizational design.',
     featureUrl: '/service/human-capital-consultancy',
