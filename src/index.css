@@ -591,7 +591,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::before {
 }
 
 .react-select__control {
-  height: 54px !important;
   min-height: 54px !important;
   border-radius: 0.375rem; /* rounded-md (Tailwind default) */
   border-color: rgb(11 75 75); /* sama dengan border-Secondarycolor-0 border-opacity-20 */
