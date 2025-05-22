@@ -7,9 +7,9 @@ const ContactInner = () => {
   return (
     <>
       <BreadCrumb
-        breadCrumbTitle={'Contact Us'}
+        breadCrumbTitle={'Schedule With Us'}
         breadCrumbIcon={<FaArrowRightLong />}
-        breadCrumbLink={'Contact Us'}
+        breadCrumbLink={'Schedule With Us'}
       />
       <Contact />
       <Map />
