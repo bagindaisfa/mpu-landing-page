@@ -198,11 +198,8 @@ const Contact = () => {
               draggable="false"
               className="absolute top-0 right-6 animate-movebtn"
             />
-            <div className="relative z-20 bg-white shadow-shades pt-16 px-4 sm:px-6 md:px-[50px] lg:px-4 xl:px-10 2xl:px-[50px] rounded-md">
+            <div className="relative z-20 bg-white shadow-shades pt-16 pb-9 px-4 sm:px-6 md:px-[50px] lg:px-4 xl:px-10 2xl:px-[50px] rounded-md">
               <div className="text-center">
-                <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3">
-                  CONTACT US
-                </h5>
                 <h1 className="font-FiraSans font-semibold text-HeadingColor-0 inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[30px] lg:leading-[44px] xl:text-[32px] xl:leading-[44px] 2xl:text-[34px] 2xl:leading-[44px] relative pb-4">
                   Schedule a Consultation
                   <img

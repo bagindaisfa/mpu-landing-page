@@ -97,7 +97,7 @@ const About = () => {
                   Book a Consultation
                 </button>
               </Link>
-              <Link to={'/contact'}>
+              <Link to={'/service'}>
                 <button className="flex items-center gap-2 text-HeadingColor-0 font-FiraSans font-medium group">
                   Our Services
                   <GoArrowUpRight

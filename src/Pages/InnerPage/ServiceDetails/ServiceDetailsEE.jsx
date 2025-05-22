@@ -19,7 +19,7 @@ const Accordions = [
   },
   {
     title: 'What services do we offer?',
-    text: 'We offer engagement surveys, training workshops, team leader training, work culture consulting, and ongoing employee development programs.',
+    text: 'We offer People Development & Growth Programs, Recognition & Appreciation Programs, Wellness & Work-Life Balance Initiatives, Culture & Values Activation, Employee Voice & Participation, Team Engagement Activities and Onboarding & Offboarding Experience',
     active: false,
   },
   {
@@ -62,17 +62,18 @@ const ServiceDetailsEE = () => {
                 company.
               </p>
               <p className="font-FiraSans text-TextColor2-0 mt-7 mb-7">
-                Through initiatives such as engagement surveys, leadership
-                training, and developing a positive work culture, we help
-                companies improve employee retention, productivity, and job
-                satisfaction.
+                Through initiatives such as People Development & Growth
+                Programs, Recognition & Appreciation Programs, Wellness &
+                Work-Life Balance Initiatives, Culture & Values Activation,
+                Employee Voice & Participation, Team Engagement Activities and
+                Onboarding & Offboarding Experience.
               </p>
               <p className="font-FiraSans text-TextColor2-0">
                 Investing in Employee Engagement has been proven to reduce
                 turnover rates, increase employee loyalty, and build a
                 collaborative and innovative work environment.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
                 <div
                   className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
                   style={{ minHeight: 108 }}
@@ -107,12 +108,12 @@ const ServiceDetailsEE = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="col-span-3 lg:col-span-1 mt-8 lg:mt-0">
-              <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px] md:pb-[60px]">
+              <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px]">
                 <h4 className="font-FiraSans font-medium text-[22px] sm:text-[26px] lg:text-2xl xl:text-[26px] text-HeadingColor-0">
-                  Service Benefits
+                  Benefits of Our Services
                 </h4>
                 <p className="font-FiraSans text-TextColor2-0 mt-2">
                   Leadership skill before media innovation customer directed
@@ -144,9 +145,6 @@ const ServiceDetailsEE = () => {
                     Loyalty and Job Satisfaction
                   </li>
                 </ul>
-                <Link to={'/contact'}>
-                  <button className="primary-btn">{`Contact With Us`}</button>
-                </Link>
               </div>
             </div>
           </div>

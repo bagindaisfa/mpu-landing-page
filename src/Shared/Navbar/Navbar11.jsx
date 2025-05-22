@@ -416,7 +416,7 @@ const Navbar11 = () => {
                     </ul> */}
                   </li>
                   <li>
-                    <Link to={'/contact'}>Contact</Link>
+                    <Link to={'/assessment'}>Contact</Link>
                   </li>
                 </ul>
               </nav>

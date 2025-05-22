@@ -49,16 +49,17 @@ const Home1 = () => {
     <>
       <Banner />
       {/* <Brand /> */}
-      <Feature />
-      {/* <Service /> */}
       <About />
       <ContentSlider />
+      <Feature />
       <Counter />
+
+      {/* <Service /> */}
       <Work />
       {/* <Pricing /> */}
       {/* <LatestWork /> */}
       {/* <TeamMember /> */}
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Blog />
     </>
   );

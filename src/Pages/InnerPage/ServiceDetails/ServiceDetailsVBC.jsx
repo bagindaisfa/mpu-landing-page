@@ -24,7 +24,7 @@ const Accordions = [
   },
   {
     title: 'How fast can we deliver the report?',
-    text: 'Depending on the complexity and type of checks, most reports can be delivered within 3–5 business days.',
+    text: 'Depending on the complexity and type of checks, most reports can be delivered within 5–10 business days.',
     active: false,
   },
 ];
@@ -71,7 +71,7 @@ const ServiceDetailsVBC = () => {
                 recruitment and onboarding process through comprehensive
                 background screening.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
                 <div
                   className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
                   style={{ minHeight: 108 }}
@@ -106,12 +106,12 @@ const ServiceDetailsVBC = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="col-span-3 lg:col-span-1 mt-8 lg:mt-0">
-              <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px] md:pb-[60px]">
+              <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px]">
                 <h4 className="font-FiraSans font-medium text-[22px] sm:text-[26px] lg:text-2xl xl:text-[26px] text-HeadingColor-0">
-                  Benefits of Vetting Services
+                  Benefits of Our Services
                 </h4>
                 <p className="font-FiraSans text-TextColor2-0 mt-2">
                   Empower your hiring with reliable insights and reduced risks.
@@ -142,9 +142,6 @@ const ServiceDetailsVBC = () => {
                     Secure Workplace Culture
                   </li>
                 </ul>
-                <Link to={'/contact'}>
-                  <button className="primary-btn">{`Contact With Us`}</button>
-                </Link>
               </div>
             </div>
           </div>

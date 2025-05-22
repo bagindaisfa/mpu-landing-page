@@ -64,7 +64,7 @@ const featureData = [
 
 const Feature = () => {
   return (
-    <section className="mx-2 xl:mx-5 my-5 pt-28 pb-[120px] lg:pb-[196px] bg-[url(/images/feature_bg.png)] bg-cover bg-no-repeat bg-left lg:bg-bottom rounded-[40px] relative z-10">
+    <section className="mx-2 xl:mx-5 my-5 pt-28 pb-[120px] lg:pb-[140px] bg-[url(/images/feature_bg.png)] bg-cover bg-no-repeat bg-left lg:bg-bottom rounded-[40px] relative z-10">
       <div className="Container relative">
         <img
           src={featureShape}
@@ -75,9 +75,9 @@ const Feature = () => {
             Featured Service
           </h5>
           <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
-            Empowering Growth through People,
+            Empowering Operational Excellence through People,{' '}
             <br className="hidden sm:block" />
-            Culture, and Performance.
+            Performance and Sustainability.
           </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-12">

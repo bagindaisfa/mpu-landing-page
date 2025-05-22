@@ -3,19 +3,13 @@ import { CheckCircle } from 'lucide-react';
 
 export default function VisionMission() {
   const visionPoints = [
-    'To be a trusted and innovative consulting firm in HR and leadership development, known for delivering practical and effective solutions that drive operational excellence and sustainable growth.',
-    'To create an inclusive and collaborative work environment where employees are valued, respected, and empowered to reach their full potential.',
-    'To uphold the highest standards of ethics and integrity in all aspects of business, building trust with clients, partners, and the community.',
+    'To be a trusted and innovative HR and leadership partner that empowers people and organizations through practical solutions to support operational excellence for sustainable growth.',
   ];
 
   const missionPoints = [
-    'To offer comprehensive HR consulting and development services tailored to client needs, including recruitment, background checks, training and development, performance management, compensation and benefits, and succession planning.',
-    'To design and deliver transformative leadership training programs focused on practical skills, effectiveness, and developing competent leaders.',
-    'To integrate innovative technologies and methodologies into HR and leadership solutions to enhance efficiency, productivity, and business impact.',
-    'To build and maintain a high-quality team with deep expertise, relevant experience, and a commitment to excellent service.',
-    'To evaluate the effectiveness of delivered solutions using data and feedback for continuous service improvement and optimal results.',
-    'To contribute positively to society through CSR initiatives aligned with company values and sustainability goals.',
-    'To establish strategic partnerships with other organizations to expand reach, enhance capabilities, grow networks, and add value to clients.',
+    'Deliver tailored and practical HR & leadership solutions',
+    'Empower people and strengthen organizational capability',
+    'Promote operational excellence and long-term sustainability',
   ];
 
   return (

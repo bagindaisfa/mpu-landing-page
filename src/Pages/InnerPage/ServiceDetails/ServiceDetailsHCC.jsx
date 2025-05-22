@@ -74,7 +74,7 @@ const ServiceDetailsHCC = () => {
                 your workforce and enhance organizational performance at all
                 levels.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
                 <div
                   className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
                   style={{ minHeight: 108 }}
@@ -113,12 +113,12 @@ const ServiceDetailsHCC = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="col-span-3 lg:col-span-1 mt-8 lg:mt-0">
-              <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px] md:pb-[60px]">
+              <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px]">
                 <h4 className="font-FiraSans font-medium text-[22px] sm:text-[26px] lg:text-2xl xl:text-[26px] text-HeadingColor-0">
-                  Benefits of the Service
+                  Benefits of Our Services
                 </h4>
                 <p className="font-FiraSans text-TextColor2-0 mt-2">
                   Partnering with us brings tangible value to your organization
@@ -150,9 +150,6 @@ const ServiceDetailsHCC = () => {
                     Scalable Talent Solutions
                   </li>
                 </ul>
-                <Link to={'/contact'}>
-                  <button className="primary-btn">{`Contact With Us`}</button>
-                </Link>
               </div>
             </div>
           </div>

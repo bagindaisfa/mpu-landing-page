@@ -21,7 +21,7 @@ const counterData = [
     id: 3,
     counterShape: counterShape,
     counterNumber: 1,
-    counterDesc: 'GOAL: YOUR TEAM’S GROWTH',
+    counterDesc: 'PEOPLE PERFORMANCE SUSTAINABILITY',
     counterSuffex: ' MISSION',
   },
 ];
@@ -33,12 +33,12 @@ const Counter = () => {
         <div className="grid lg:grid-cols-2 lg:items-center gap-8 lg:gap-0 pb-7">
           <div>
             <h1 className="font-FiraSans font-semibold text-white text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
-              We’re Ready <br /> to Help You Grow
+              We are Excited to Partner With You
             </h1>
           </div>
-          <Link to={'/assessment'} className="flex lg:justify-end">
+          {/* <Link to={'/assessment'} className="flex lg:justify-end">
             <button className="primary-btn !bg-BodyBg-0 !text-PrimaryColor-0">{`Get Started Now`}</button>
-          </Link>
+          </Link> */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-7 xl:gap-10 lg:grid-cols-3 items-center justify-center border-t-[2px] border-BorderColor2-0 pt-4">
           {counterData.map(

@@ -79,17 +79,14 @@ const About = () => {
                 Measurable Performance Results
               </li>
             </ul>
-            <div className="flex flex-col md:flex-row lg:flex-col 2xl:flex-row md:items-center lg:items-start 2xl:items-center gap-7 mt-9">
+            {/* <div className="flex flex-col md:flex-row lg:flex-col 2xl:flex-row md:items-center lg:items-start 2xl:items-center gap-7 mt-9">
               <Link to={'/assessment'}>
-                <button className="primary-btn">{`Let us know you`}</button>
-              </Link>
-              <Link to={'/'}>
                 <button className="flex items-center gap-2 font-FiraSans font-medium text-HeadingColor-0">
                   <FaEnvelopeOpen />
                   admin@mpupeoplesolution.com
                 </button>
               </Link>
-            </div>
+            </div> */}
             <img
               src={aboutShape}
               draggable="false"

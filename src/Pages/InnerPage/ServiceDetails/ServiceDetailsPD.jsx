@@ -53,7 +53,7 @@ const ServiceDetailsPD = () => {
           <div className="grid grid-cols-3 mt-[62px]">
             <div className="col-span-3 lg:col-span-2 lg:mr-7 2xl:mr-[84px]">
               <h2 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
-                Empowering Human Resource Through People Development
+                People Development
               </h2>
               <p className="font-FiraSans text-TextColor2-0 mt-[26px]">
                 We believe that people are the core of every organization’s
@@ -63,17 +63,17 @@ const ServiceDetailsPD = () => {
                 and coaching frameworks.
               </p>
               <p className="font-FiraSans text-TextColor2-0 mt-7 mb-7">
-                From leadership training to competency-based development
-                programs, we help individuals and teams unlock their full
-                potential. Our tailored approach ensures alignment with your
-                organization’s values and long-term goals.
+                From operational leadership training to competency-based
+                development programs, we help individuals and teams unlock their
+                full potential. Our tailored approach ensures alignment with
+                your organization’s values and long-term goals.
               </p>
               <p className="font-FiraSans text-TextColor2-0">
                 Investing in your people is investing in your future. With our
                 solutions, your workforce will be equipped to adapt, lead, and
                 thrive in today’s dynamic business environment.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
                 <div
                   className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
                   style={{ minHeight: 108 }}
@@ -108,12 +108,12 @@ const ServiceDetailsPD = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="col-span-3 lg:col-span-1 mt-8 lg:mt-0">
-              <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px] md:pb-[60px]">
+              <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px]">
                 <h4 className="font-FiraSans font-medium text-[22px] sm:text-[26px] lg:text-2xl xl:text-[26px] text-HeadingColor-0">
-                  Service Benefits
+                  Benefits of Our Services
                 </h4>
                 <p className="font-FiraSans text-TextColor2-0 mt-2">
                   Develop people-centric strategies that enhance capability,
@@ -145,9 +145,6 @@ const ServiceDetailsPD = () => {
                     Ongoing Post-Training Support
                   </li>
                 </ul>
-                <Link to={'/contact'}>
-                  <button className="primary-btn">{`Contact With Us`}</button>
-                </Link>
               </div>
             </div>
           </div>

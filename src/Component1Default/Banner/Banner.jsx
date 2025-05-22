@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import bannerThumb from '/images/banner-thumb.png';
 import bannerShape from '/images/hero_shape.png';
-import { FaPhoneAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelopeOpen } from 'react-icons/fa';
 import { useState } from 'react';
 import FsLightbox from 'fslightbox-react';
 import { IoPlayOutline } from 'react-icons/io5';
@@ -27,9 +27,13 @@ const Banner = () => {
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-8">
               <Link to={'/assessment'}>
-                <button className="primary-btn">{`Get Started now`}</button>
+                <button className="flex items-center gap-3 text-white font-FiraSans font-medium">
+                  <FaEnvelopeOpen />
+                  EMAIL : admin@mpupeoplesolution.com
+                </button>
               </Link>
-              <Link to={'/about'}>
+
+              <Link to={'/contact'}>
                 <button className="flex items-center gap-3 text-white font-FiraSans font-medium">
                   <FaPhoneAlt />
                   {`CALL : +6221 8428 3681`}
@@ -62,7 +66,7 @@ const Banner = () => {
       />
       <FsLightbox
         toggler={toggler}
-        sources={['https://youtu.be/gBEtq2duudY']}
+        sources={['https://youtu.be/owCTA9aU8-A']}
       />
     </section>
   );

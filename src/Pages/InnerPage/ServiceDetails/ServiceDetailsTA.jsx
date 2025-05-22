@@ -21,7 +21,7 @@ const Accordions = [
   },
   {
     title: 'What tools or platforms do you use for Talent Acquisition?',
-    text: 'We utilize modern applicant tracking systems (ATS), AI-powered screening tools, professional networking platforms like LinkedIn, and data-driven sourcing strategies to ensure efficient and effective hiring processes.',
+    text: 'We utilize professional networking platforms like LinkedIn, and data-driven sourcing strategies to ensure efficient and effective hiring processes.',
     active: false,
   },
   {
@@ -42,7 +42,7 @@ const ServiceDetailsTA = () => {
         breadCrumbLink={'Service'}
         breadCrumbLink2={'Talent Acquisition'}
       />
-      <section className="py-[120px] bg-BodyBg4-0">
+      <section className="pt-[120px] pb-[20px] bg-BodyBg4-0">
         <div className="Container">
           <div>
             <img
@@ -65,63 +65,17 @@ const ServiceDetailsTA = () => {
               </p>
               <p className="font-FiraSans text-TextColor2-0 mt-7 mb-7">
                 Our services cover end-to-end recruitment, from search,
-                screening, interviewing, to onboarding. We also provide employer
-                branding solutions to increase your company's appeal to
-                potential candidates.
+                screening, interviewing, to onboarding.
               </p>
               <p className="font-FiraSans text-TextColor2-0">
-                For both strategic and operational positions, we are committed
-                to providing a recruitment process that is efficient, accurate,
-                and tailored to your organization's work culture.
+                We are committed to provide a recruitment process that is
+                efficient, accurate, and tailored to your organization's work
+                culture.
               </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
-                <div
-                  className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
-                  style={{ minHeight: 108 }}
-                >
-                  <div className="size-[76px] flex items-center justify-center rounded-full bg-BodyBg-0">
-                    <img
-                      src={Icon}
-                      alt="Strategic Planning Icon"
-                      draggable="false"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h5 className="font-FiraSans font-medium text-xl text-HeadingColor-0">
-                      End-to-End Recruitment
-                    </h5>
-                    <p className="font-FiraSans text-TextColor2-0 mt-2">
-                      From search to onboarding, we help with the entire
-                      recruitment process.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5"
-                  style={{ minHeight: 108 }}
-                >
-                  <div className="size-[76px] flex items-center justify-center rounded-full bg-BodyBg-0">
-                    <img
-                      src={Icon2}
-                      alt="Business Solutions Icon"
-                      draggable="false"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h5 className="font-FiraSans font-medium text-xl text-HeadingColor-0">
-                      Employer Branding
-                    </h5>
-                    <p className="font-FiraSans text-TextColor2-0 mt-2">
-                      Enhance your company image to attract the best talent.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div className="col-span-3 lg:col-span-1 mt-8 lg:mt-0">
-              <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px] md:pb-[60px]">
+              <div className="bg-white rounded-2xl px-4 md:px-[52px] lg:px-8 xl:px-[52px] pt-5 pb-6 md:pt-[50px]">
                 <h4 className="font-FiraSans font-medium text-[22px] sm:text-[26px] lg:text-2xl xl:text-[26px] text-HeadingColor-0">
                   Benefits of Our Services
                 </h4>
@@ -155,9 +109,6 @@ const ServiceDetailsTA = () => {
                     Professional HR Consulting Support
                   </li>
                 </ul>
-                <Link to={'/contact'}>
-                  <button className="primary-btn">Contact Us</button>
-                </Link>
               </div>
             </div>
           </div>
