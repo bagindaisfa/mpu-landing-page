@@ -19,7 +19,7 @@ const Accordions = [
   },
   {
     title: 'What areas do we check?',
-    text: 'We check criminal records, employment history, education verification, reference checks, and social media screening based on the client’s needs.',
+    text: 'We conduct comprehensive background screening tailored to client needs. This includes employment background screening, education and certification verification, legal and criminal record checks, financial and credit checks (optional, based on local regulations), identity and document verification, social media and digital footprint analysis, background checks for third parties, bundled pre-employment screening packages, and periodic re-vetting.',
     active: false,
   },
   {

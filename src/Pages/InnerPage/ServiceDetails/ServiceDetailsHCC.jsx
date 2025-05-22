@@ -19,7 +19,7 @@ const Accordions = [
   },
   {
     title: 'What services do we provide?',
-    text: 'We offer workforce assessments, leadership development programs, organizational structure analysis, HR process improvement, succession planning, and talent strategy consulting.',
+    text: 'We offer HR operation diagnostic & audit, workforce planning & workload analysis, talent acquisition & onboarding improvement, HR shared services development, HR data management & metrics setup, employee lifecycle process re-engineering, industrial relations & compliance advisory, and capability building for the HR operation team.',
     active: false,
   },
   {
