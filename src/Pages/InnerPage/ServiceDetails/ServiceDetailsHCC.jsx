@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import FormProtectedRoute from '../../../Component1Default/FormProtectedRoute';
 import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
 import serviceDetailsThumb from '/images/service_img.png';
 import { FaArrowRightLong, FaCheck } from 'react-icons/fa6';
@@ -31,7 +33,7 @@ const Accordions = [
 
 const ServiceDetailsHCC = () => {
   return (
-    <>
+    <FormProtectedRoute>
       <BreadCrumb
         breadCrumbTitle={'Human Resource Consultancy'}
         breadCrumbIcon={<FaArrowRightLong />}
@@ -156,7 +158,7 @@ const ServiceDetailsHCC = () => {
         </div>
       </section>
       <Accordion accordions={Accordions} title={'Human Resource Consultancy'} />
-    </>
+    </FormProtectedRoute>
   );
 };
 

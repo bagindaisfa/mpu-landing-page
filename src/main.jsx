@@ -6,6 +6,7 @@ import './index.css';
 import { RouterProvider } from 'react-router-dom';
 import router from './Router/Router';
 import MaintenancePage from './Component1Default/MaintenancePage/MaintenancePage';
+import { UserFormProvider } from './UserFormContext';
 
 const helmetContext = {}; // Define helmetContext here
 
@@ -18,13 +19,12 @@ root.render(
     {isMaintenance ? (
       <MaintenancePage />
     ) : (
-      <>
-        {/* Ini bagian aslinya yang normal */}
+      <UserFormProvider>
         <HelmetProvider context={helmetContext}>
           <Preloader />
           <RouterProvider router={router} />
         </HelmetProvider>
-      </>
+      </UserFormProvider>
     )}
   </React.StrictMode>
 );

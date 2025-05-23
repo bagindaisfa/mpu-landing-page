@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import FormProtectedRoute from '../../../Component1Default/FormProtectedRoute';
 import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
 import serviceDetailsThumb from '/images/service_img.png';
 import { FaArrowRightLong, FaCheck } from 'react-icons/fa6';
@@ -31,7 +33,7 @@ const Accordions = [
 
 const ServiceDetailsVBC = () => {
   return (
-    <>
+    <FormProtectedRoute>
       <BreadCrumb
         breadCrumbTitle={'Vetting & Background Check'}
         breadCrumbIcon={<FaArrowRightLong />}
@@ -148,7 +150,7 @@ const ServiceDetailsVBC = () => {
         </div>
       </section>
       <Accordion accordions={Accordions} title={'Vetting & Background Check'} />
-    </>
+    </FormProtectedRoute>
   );
 };
 

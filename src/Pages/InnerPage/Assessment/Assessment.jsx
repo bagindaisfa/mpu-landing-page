@@ -74,8 +74,9 @@ const Assessment = () => {
         setLoading(false);
         throw new Error('Failed to send email');
       }
+
+      await saveContact(e);
       alert('Email sent successfully!');
-      saveContact(e);
     } catch (error) {
       alert('Failed to send email');
       console.error('Failed to send email', error);

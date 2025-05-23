@@ -1,26 +1,16 @@
 import { useState } from 'react';
-import { FaPhoneAlt, FaRegThumbsUp, FaUser, FaPencilAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaRegThumbsUp, FaUser } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
-import { MdCall } from 'react-icons/md';
 import border from '/images/hero_border.png';
 import appoinmentShape from '/images/contact_shape.png';
 import serviceShape3 from '/images/service_shpe2.png';
 import { Link } from 'react-router-dom';
 import { FaRegEnvelopeOpen } from 'react-icons/fa6';
 import { IoLocationOutline } from 'react-icons/io5';
-import ModalSchedule from '../ModalSchedule/ModalSchedule';
 import dayjs from 'dayjs';
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    number: '',
-    message: '',
-  });
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [formDataSchedule, setFormDataSchedule] = useState({
     name: '',
     email: '',
@@ -28,40 +18,11 @@ const Contact = () => {
     time: '',
   });
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   const handleChangeShecdule = (e) => {
     setFormDataSchedule({
       ...formDataSchedule,
       [e.target.name]: e.target.value,
     });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to send email');
-      }
-      alert('Email sent successfully!');
-      saveContact(e);
-    } catch (error) {
-      alert('Failed to send email');
-      console.error('Failed to send email', error);
-    }
   };
 
   const handleSubmitSchedule = async (e) => {
@@ -93,36 +54,6 @@ const Contact = () => {
       setLoading(false);
       setFormDataSchedule({ name: '', email: '', date: '', time: '' });
       onClose();
-    }
-  };
-
-  const saveContact = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/user-contact/contact`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error('Failed to save contact');
-      }
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        number: '',
-        message: '',
-      });
-    } catch (error) {
-      alert('Failed to save contact');
-      console.error('Failed to save contact', error);
     }
   };
 
@@ -288,7 +219,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <ModalSchedule isOpen={isModalOpen} onClose={closeModal} />
     </section>
   );
 };
