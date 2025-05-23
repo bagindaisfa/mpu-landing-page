@@ -3,12 +3,12 @@ import { FaUser, FaRegThumbsUp, FaPencilAlt } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { MdCall } from 'react-icons/md';
 import border from '/images/hero_border.png';
-import { useNavigate } from 'react-router-dom';
+import { useUserForm } from '../../../UserFormContext';
 import serviceShape3 from '/images/service_shpe2.png';
 import Select from 'react-select';
 
 const Assessment = () => {
-  const navigate = useNavigate();
+  const { markFormSubmitted } = useUserForm();
   const [questions, setQuestions] = useState({});
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -76,6 +76,7 @@ const Assessment = () => {
       }
 
       await saveContact(e);
+      markFormSubmitted();
       alert('Email sent successfully!');
     } catch (error) {
       alert('Failed to send email');
