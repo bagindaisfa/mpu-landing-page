@@ -51,15 +51,17 @@ const Home1 = () => {
       {/* <Brand /> */}
       <About />
       <ContentSlider />
-      <Feature />
+
       <Counter />
 
       {/* <Service /> */}
+      <Feature />
       <Work />
       {/* <Pricing /> */}
       {/* <LatestWork /> */}
       {/* <TeamMember /> */}
       {/* <Testimonial /> */}
+
       <Blog />
     </>
   );

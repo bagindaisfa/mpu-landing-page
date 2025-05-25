@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { FaUser, FaRegThumbsUp, FaPencilAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaUser, FaRegThumbsUp, FaPencilAlt, FaPhoneAlt } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { MdCall } from 'react-icons/md';
 import border from '/images/hero_border.png';
 import { useUserForm } from '../../../UserFormContext';
 import serviceShape3 from '/images/service_shpe2.png';
 import Select from 'react-select';
+import { FaRegEnvelopeOpen } from 'react-icons/fa6';
+import { IoLocationOutline } from 'react-icons/io5';
 
 const Assessment = () => {
   const { markFormSubmitted } = useUserForm();
@@ -125,154 +128,211 @@ const Assessment = () => {
   return (
     <section className="relative overflow-hidden py-28 bg-[url('/images/faq-bg.jpg')] bg-cover bg-no-repeat bg-center">
       <div className="Container">
-        <div className="absolute -z-10 right-48 bottom-10 hidden 2xl:block animate-rotate">
-          <img src={serviceShape3} draggable="false" />
-        </div>
-        <div className="text-center">
-          {/* <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase flex items-center justify-center gap-2 mb-3">
-            ASSESSMENT REQUEST
-          </h5> */}
-          <h1 className="font-FiraSans font-semibold text-HeadingColor-0 inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[30px] lg:leading-[44px] xl:text-[32px] xl:leading-[44px] 2xl:text-[34px] 2xl:leading-[44px] relative pb-4">
-            Let Us Help You to Understand Your People Chalanges
-            <img
-              src={border}
-              draggable="false"
-              className="absolute bottom-0 left-1/2 -translate-x-1/2"
-            />
-          </h1>
-        </div>
-        <div className="w-full mx-auto max-w-[850px] mt-12">
-          <div>
-            <form
-              action="#"
-              method="post"
-              className="flex flex-col gap-y-5 pt-11 pb-[60px]"
-              onSubmit={handleSubmit}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 lg:gap-10 2xl:gap-28 items-flexStart">
+          <div className="relative z-10">
+            <div>
+              <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase flex items-center gap-2 mb-3 pt-4">
+                GET IN TOUCH
+              </h5>
+              <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
+                Trusted by Experts
+                <br />
+                Driven by Solutions
+              </h1>
+            </div>
+            <div
+              className="bg-BodyBg4-0 rounded-xl mt-5"
+              style={{ padding: '1rem 2.5rem 0.5rem' }}
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div className="relative inline-block">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Enter Name*"
-                    required
-                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                  <FaUser
-                    size={'14'}
-                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                  />
+              <div className="flex items-center gap-5 group border-b border-dashed border-HeadingColor-0 border-opacity-40 pb-5">
+                <div className="size-[70px] bg-white rounded-full flex items-center justify-center text-PrimaryColor-0 transition-all duration-500 group-hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 before:rounded-full group-hover:before:scale-100">
+                  <FaPhoneAlt size={'20'} />
                 </div>
-                <div className="relative inline-block">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Enter E-Mail*"
-                    required
-                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                  <HiOutlineMailOpen
-                    size={'16'}
-                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                  />
+                <div>
+                  <h6 className="font-FiraSans text-TextColor2-0">
+                    Call us Anytime
+                  </h6>
+                  <Link to={'/'}>
+                    <button className="font-FiraSans text-xl text-HeadingColor-0 font-medium mt-1">
+                      +6221 8428 3681
+                    </button>
+                  </Link>
                 </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div className="relative inline-block">
-                  <input
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    placeholder="Enter Subject*"
-                    required
-                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                    value={formData.subject}
-                    onChange={handleChange}
-                  />
-                  <FaPencilAlt
-                    size={'14'}
-                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                  />
+              <div className="flex items-center gap-5 group border-b border-dashed border-HeadingColor-0 border-opacity-40 py-5">
+                <div className="size-[70px] bg-white rounded-full flex items-center justify-center text-PrimaryColor-0 transition-all duration-500 group-hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 before:rounded-full group-hover:before:scale-100">
+                  <FaRegEnvelopeOpen size={'20'} />
                 </div>
-                <div className="relative inline-block">
-                  <input
-                    type="text"
-                    name="number"
-                    id="number"
-                    placeholder="Enter Number*"
-                    required
-                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                    value={formData.number}
-                    onChange={handleChange}
-                  />
-                  <MdCall
-                    size={'16'}
-                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                  />
+                <div>
+                  <h6 className="font-FiraSans text-TextColor2-0">E-Mail us</h6>
+                  <Link to={'/'}>
+                    <button className="font-FiraSans text-xl text-HeadingColor-0 font-medium mt-1">
+                      admin@mpupeoplesolution.com
+                    </button>
+                  </Link>
                 </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div className="relative inline-block">
-                  <input
-                    type="text"
-                    name="company"
-                    id="company"
-                    placeholder="Enter Company Name*"
-                    required
-                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                    value={formData.company}
-                    onChange={handleChange}
-                  />
+              <div className="flex items-center gap-5 group pt-5 pb-2">
+                <div className="size-[70px] bg-white rounded-full flex items-center justify-center text-PrimaryColor-0 transition-all duration-500 group-hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 before:rounded-full group-hover:before:scale-100">
+                  <IoLocationOutline size={'24'} />
                 </div>
-
-                <div className="relative inline-block">
-                  <Select
-                    isMulti
-                    name="issues"
-                    options={questions}
-                    className="react-select-container"
-                    classNamePrefix="react-select"
-                    placeholder="Select Issues..."
-                    value={formData.issues}
-                    onChange={(selectedOptions) =>
-                      setFormData((prevData) => ({
-                        ...prevData,
-                        issues: selectedOptions,
-                      }))
-                    }
-                  />
+                <div>
+                  <h6 className="font-FiraSans text-TextColor2-0">
+                    Our Locations
+                  </h6>
+                  <p className="font-FiraSans text-HeadingColor-0 mt-2">
+                    Arkadia Green Park Tower G, 8th Floor <br /> Jakarta
+                    Selatan, DKI Jakarta, Indonesia 12520
+                  </p>
                 </div>
               </div>
-
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Write a short meassage..."
-                className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[120px] w-full focus:outline-PrimaryColor-0 resize-none"
-                value={formData.message}
-                onChange={handleChange}
-              ></textarea>
-              <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
-                Your data will be kept confidential and used solely for the
-                related project purposes.
-              </label>
-              <div className="inline-block mt-2">
-                <button
-                  type="submit"
-                  className="primary-btn2 !py-[15px]"
-                  disabled={loading}
+            </div>
+          </div>
+          <div className="relative">
+            <div className="text-center">
+              <h1 className="font-FiraSans font-semibold text-HeadingColor-0 inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[30px] lg:leading-[44px] xl:text-[32px] xl:leading-[44px] 2xl:text-[34px] 2xl:leading-[44px] relative pb-4">
+                Let Us Help You to Understand Your People Chalanges
+                <img
+                  src={border}
+                  draggable="false"
+                  className="absolute bottom-0 left-1/2 -translate-x-1/2"
+                />
+              </h1>
+            </div>
+            <div className="w-full mx-auto max-w-[850px] mt-12">
+              <div>
+                <form
+                  action="#"
+                  method="post"
+                  className="flex flex-col gap-y-5 pt-11 pb-[60px]"
+                  onSubmit={handleSubmit}
                 >
-                  <FaRegThumbsUp />
-                  {loading ? 'Sending...' : 'Submit'}
-                </button>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="relative inline-block">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Enter Name*"
+                        required
+                        className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                        value={formData.name}
+                        onChange={handleChange}
+                      />
+                      <FaUser
+                        size={'14'}
+                        className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                      />
+                    </div>
+                    <div className="relative inline-block">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Enter E-Mail*"
+                        required
+                        className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                        value={formData.email}
+                        onChange={handleChange}
+                      />
+                      <HiOutlineMailOpen
+                        size={'16'}
+                        className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                      />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="relative inline-block">
+                      <input
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        placeholder="Enter Subject*"
+                        required
+                        className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                        value={formData.subject}
+                        onChange={handleChange}
+                      />
+                      <FaPencilAlt
+                        size={'14'}
+                        className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                      />
+                    </div>
+                    <div className="relative inline-block">
+                      <input
+                        type="text"
+                        name="number"
+                        id="number"
+                        placeholder="Enter Number*"
+                        required
+                        className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                        value={formData.number}
+                        onChange={handleChange}
+                      />
+                      <MdCall
+                        size={'16'}
+                        className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                      />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="relative inline-block">
+                      <input
+                        type="text"
+                        name="company"
+                        id="company"
+                        placeholder="Enter Company Name*"
+                        required
+                        className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                        value={formData.company}
+                        onChange={handleChange}
+                      />
+                    </div>
+
+                    <div className="relative inline-block">
+                      <Select
+                        isMulti
+                        name="issues"
+                        options={questions}
+                        className="react-select-container"
+                        classNamePrefix="react-select"
+                        placeholder="Select Issues..."
+                        value={formData.issues}
+                        onChange={(selectedOptions) =>
+                          setFormData((prevData) => ({
+                            ...prevData,
+                            issues: selectedOptions,
+                          }))
+                        }
+                      />
+                    </div>
+                  </div>
+
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Write a short meassage..."
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[120px] w-full focus:outline-PrimaryColor-0 resize-none"
+                    value={formData.message}
+                    onChange={handleChange}
+                  ></textarea>
+                  <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
+                    Your data will be kept confidential and used solely for the
+                    related project purposes.
+                  </label>
+                  <div className="inline-block mt-2">
+                    <button
+                      type="submit"
+                      className="primary-btn2 !py-[15px]"
+                      disabled={loading}
+                    >
+                      <FaRegThumbsUp />
+                      {loading ? 'Sending...' : 'Submit'}
+                    </button>
+                  </div>
+                </form>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>

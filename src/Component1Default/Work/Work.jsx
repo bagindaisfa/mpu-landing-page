@@ -44,13 +44,8 @@ const Work = () => {
     <section className="mx-2 xl:mx-5 rounded-t-[40px] pt-28 pb-[120px] bg-BodyBg-0 relative z-10">
       <div className="Container">
         <div className="text-center">
-          <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase flex items-center justify-center gap-2 mb-3">
-            OUR WORKING STEPS
-          </h5>
           <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
             Our Working Steps
-            <br />
-            to Empower Your {`Team's`} Growth
           </h1>
           <p className="font-FiraSans text-TextColor2-0 pt-4">
             We follow a structured approach to improve employee performance,

@@ -416,7 +416,7 @@ const Navbar11 = () => {
                     </ul> */}
                   </li>
                   <li>
-                    <Link to={'/assessment'}>Contact</Link>
+                    <Link to={'/contact'}>Contact</Link>
                   </li>
                 </ul>
               </nav>
@@ -424,10 +424,10 @@ const Navbar11 = () => {
           </div>
           <div className="lg:col-span-2 2xl:col-span-3">
             <div className="header-right-box flex items-center gap-10 lg:gap-7 justify-end">
-              {location.pathname !== '/contact' && (
+              {location.pathname !== '/consultation' && (
                 <div className="hidden lg:block relative">
                   <Link
-                    to={'/contact'}
+                    to={'/consultation'}
                     className="lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[34px] 2xl:py-[17px] rounded-full font-FiraSans font-medium text-white overflow-hidden bg-PrimaryColor-0 flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0"
                   >
                     Get Consultation

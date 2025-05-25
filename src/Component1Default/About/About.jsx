@@ -50,7 +50,7 @@ const About = () => {
               ABOUT COMPANY
             </h5>
             <h1 className="font-FiraSans font-medium text-HeadingColor-0 text-[20px] leading-[30px] sm:text-[22px] sm:leading-[32px] md:text-[28px] lg:text-[22px] lg:leading-[32px] xl:text-[26px] xl:leading-[36px] 2xl:text-[28px] 2xl:leading-[38px]">
-              Since 2024, we’ve helped companies build
+              Since 2025, we’ve helped companies build
               <br className="hidden sm:block" />
               stronger teams and unlock leadership
               <br className="hidden sm:block" />

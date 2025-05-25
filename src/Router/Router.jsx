@@ -107,11 +107,11 @@ const router = createBrowserRouter([
         element: <PricingInner />,
       },
       {
-        path: '/contact',
+        path: '/consultation',
         element: <ContactInner />,
       },
       {
-        path: '/assessment',
+        path: '/contact',
         element: <Assessment />,
       },
     ],

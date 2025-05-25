@@ -306,7 +306,7 @@ const Navbar = () => {
                       </ul> */}
                     </li>
                     <li>
-                      <Link to={'/assessment'}>Contact</Link>
+                      <Link to={'/contact'}>Contact</Link>
                     </li>
                   </ul>
                 </nav>
@@ -315,7 +315,7 @@ const Navbar = () => {
             <div className="col-span-2">
               <div className="header-right-box flex items-center gap-10 lg:gap-4 2xl:gap-8 justify-end">
                 <div className="header-btn hidden lg:block">
-                  <Link to={'/contact'}>
+                  <Link to={'/consultation'}>
                     Get Consultation<span></span>
                     <LuMoveRight />
                   </Link>
