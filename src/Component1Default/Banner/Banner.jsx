@@ -14,10 +14,10 @@ const Banner = () => {
         <div className="grid lg:grid-cols-2 items-center gap-16 lg:gap-0 mt-[72px]">
           <div className="relative">
             <h1 className="font-FiraSans font-semibold text-white text-[30px] leading-[36px] sm:text-[46px] sm:leading-[52px] md:text-[68x] lg:text-[50px] xl:text-[54px] xl:leading-[68px] 2xl:text-[56px] 2xl:leading-[70px]">
-              Developing Agile Operation Talent to Drive
+              Developing Agile Talent
               <br />
               <span className="relative before:absolute before:bottom-3 before:left-0 before:w-full before:h-[10px] before:bg-PrimaryColor-0 before:-z-10">
-                Sustainable Growth
+                for Sustainable Growth
               </span>
             </h1>
             <p className="font-FiraSans text-TextColor-0 mb-[38px] mt-[22px]">

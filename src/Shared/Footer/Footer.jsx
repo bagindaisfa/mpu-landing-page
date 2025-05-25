@@ -21,9 +21,7 @@ const Footer = () => {
               />
             </Link>
             <p className="font-FiraSans text-[15px] text-TextColor-0 opacity-80 mt-7 mb-6">
-              Developing Agile Operation Talent{' '}
-              <br className="hidden lg:block xl:hidden" /> to{' '}
-              <br className="hidden xl:block" /> Drive Sustainable Growth.
+              Developing Agile Talent for Sustainable Growth.
             </p>
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-2">

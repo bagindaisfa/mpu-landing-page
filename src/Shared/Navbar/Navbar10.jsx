@@ -175,9 +175,7 @@ const Navbar10 = () => {
             </Link>
           </div>
           <div className="offcanvas_title">
-            <p>
-              Developing Agile Operation Talent to Drive Sustainable Growth.
-            </p>
+            <p>Developing Agile Talent for Sustainable Growth.</p>
           </div>
           <div className="main-menu-mobile lg:none"></div>
           <div className="offcanvas_contact-info">
@@ -479,9 +477,7 @@ const Navbar10 = () => {
             </Link>
           </div>
           <div className="sidebar_title">
-            <p>
-              Developing Agile Operation Talent to Drive Sustainable Growth.
-            </p>
+            <p>Developing Agile Talent for Sustainable Growth.</p>
           </div>
           <div>
             <div className="sidebar_service-title">
