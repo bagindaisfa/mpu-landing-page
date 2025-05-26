@@ -82,10 +82,10 @@ const router = createBrowserRouter([
       //   path: '/solution_details_3',
       //   element: <SolutionDetails3 />,
       // },
-      {
-        path: '/portfolio_details',
-        element: <PortfolioDetails />,
-      },
+      // {
+      //   path: '/portfolio_details',
+      //   element: <PortfolioDetails />,
+      // },
       {
         path: '/blog_grid',
         element: <BlogGrid />,
@@ -94,18 +94,18 @@ const router = createBrowserRouter([
         path: '/blog_details/:id',
         element: <BlogDetails />,
       },
-      {
-        path: '/team',
-        element: <TeamInner />,
-      },
-      {
-        path: '/portfolio',
-        element: <PortfolioInner />,
-      },
-      {
-        path: '/pricing',
-        element: <PricingInner />,
-      },
+      // {
+      //   path: '/team',
+      //   element: <TeamInner />,
+      // },
+      // {
+      //   path: '/portfolio',
+      //   element: <PortfolioInner />,
+      // },
+      // {
+      //   path: '/pricing',
+      //   element: <PricingInner />,
+      // },
       {
         path: '/consultation',
         element: <ContactInner />,

@@ -6,8 +6,10 @@ import thumb from '/images/like.png';
 import { Link } from 'react-router-dom';
 import { FaRegThumbsUp } from 'react-icons/fa';
 import { GoArrowUpRight } from 'react-icons/go';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <section className="pb-[120px] pt-[170px] relative z-10">
       <div className="Container">
@@ -52,13 +54,10 @@ const About = () => {
               HR CONSULTING
             </h5>
             <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[18px] leading-[26px] sm:text-[18px] sm:leading-[35px] md:text-[18px] md:leading-[40px] lg:text-[20px] lg:leading-[44px] xl:text-[25px] xl:leading-[50px] 2xl:text-[30px] 2xl:leading-[52px] mb-4">
-              Empowering Teams, Elevating Leaders <br /> HR Consulting
-              Excellence Since 2024
+              {t('aboutPage.title')}
             </h1>
             <p className="font-FiraSans text-TextColor2-0">
-              We specialize in boosting employee performance, developing future
-              leaders, and aligning talent with business goals. Our proven
-              approach drives measurable results in every organization we serve.
+              {t('aboutPage.description')}
             </p>
             <div className="grid items-center grid-cols-1 gap-7 sm:grid-cols-2 border-b border-BorderColor-0 mt-9 pb-7 mb-9">
               <div className="flex items-center gap-5">
@@ -71,7 +70,7 @@ const About = () => {
                 </div>
                 <div className="flex-1">
                   <h5 className="font-FiraSans font-medium text-HeadingColor-0 text-lg md:text-xl lg:text-sm xl:text-lg 2xl:text-xl">
-                    Performance Coaching & Development
+                    {t('aboutPage.point1')}
                   </h5>
                 </div>
               </div>
@@ -85,21 +84,21 @@ const About = () => {
                 </div>
                 <div className="flex-1">
                   <h5 className="font-FiraSans font-medium text-HeadingColor-0 text-lg md:text-xl lg:text-sm xl:text-lg 2xl:text-xl">
-                    Leadership Training Programs
+                    {t('aboutPage.point2')}
                   </h5>
                 </div>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-8">
-              <Link to={'/contact'}>
+              <Link to={'/consultation'}>
                 <button className="primary-btn2">
                   <FaRegThumbsUp />
-                  Book a Consultation
+                  {t('aboutPage.ctaConsult')}
                 </button>
               </Link>
               <Link to={'/service'}>
                 <button className="flex items-center gap-2 text-HeadingColor-0 font-FiraSans font-medium group">
-                  Our Services
+                  {t('aboutPage.ctaServices')}
                   <GoArrowUpRight
                     size={'20'}
                     className="text-PrimaryColor-0 transition-all duration-500 group-hover:rotate-45"

@@ -1,0 +1,429 @@
+{
+  "banner": {
+    "title": "Developing Agile Talent for Sustainable Growth",
+    "subtitle1": "Your Trusted Partner in",
+    "subtitle2": "Operational Leadership Development.",
+    "emailButton": "EMAIL : admin@mpupeoplesolution.com",
+    "callButton": "CALL : +6221 8428 3681"
+  },
+  "about": {
+    "sectionLabel": "ABOUT COMPANY",
+    "title": "Since 2025, we’ve helped companies build stronger teams and unlock leadership potential through customized consulting & training.",
+    "description": "We help organizations improve employee performance through practical training, performance assessments, and strategic HR solutions.",
+    "points": {
+      "0": "Professional Trainer",
+      "1": "Certified HR & Leadership Consultants",
+      "2": "Tailored Training Programs",
+      "3": "Measurable Performance Results"
+    },
+    "circleText": "* Leadership * HR Strategy * Growth * Culture"
+  },
+  "counter": {
+    "title": "We are Excited to Partner With You",
+    "cta": "Get Started Now",
+    "items": [
+      {
+        "desc": "CUSTOMIZED PROGRAMS READY"
+      },
+      {
+        "desc": "YEARS OF COMBINED EXPERIENCE"
+      },
+      {
+        "desc": "PEOPLE PERFORMANCE SUSTAINABILITY",
+        "suffix": " MISSION"
+      }
+    ]
+  },
+  "feature": {
+    "sectionTitle": "Featured Service",
+    "mainTitlePart1": "Empowering Operational Excellence through People,",
+    "mainTitlePart2": "Performance and Sustainability."
+  },
+  "peopleDevelopment": {
+    "title": "People Development",
+    "desc": "Tailored learning, leadership development, and coaching programs to build future-ready capabilities."
+  },
+  "talentAcquisition": {
+    "title": "Talent Acquisition",
+    "desc": "Strategic sourcing and recruitment to attract top talent aligned with your organizational goals."
+  },
+  "employeeEngagement": {
+    "title": "Employee Engagement Events",
+    "desc": "Creative, high-impact experiences that boost morale, teamwork, and organizational connection."
+  },
+  "hrConsultancy": {
+    "title": "Human Resource Consultancy",
+    "desc": "Advisory support to optimize HR strategy, workforce planning, and organizational design."
+  },
+  "vetting": {
+    "title": "Vetting & Background Check",
+    "desc": "Comprehensive screening services to support compliant, secure, and trustworthy hiring decisions."
+  },
+  "organisationDevelopment": {
+    "title": "Organisation Development",
+    "desc": "Process and performance improvement to enhance operational efficiency and business agility."
+  },
+  "work": {
+    "sectionTitle": "Our Working Steps",
+    "sectionDesc": "We follow a structured approach to improve employee performance, build strong leadership, and ensure sustainable organizational development.",
+    "strategicPlanning": {
+      "title": "Strategic Work Planning",
+      "desc": "We begin by identifying your organization’s needs and challenges. Our team designs a strategic action plan based on data and specific goals to ensure targeted and effective solutions."
+    },
+    "monitoringEvaluation": {
+      "title": "Monitoring and Evaluation",
+      "desc": "We closely monitor the implementation of each program. Regular evaluations are conducted to measure effectiveness and allow for timely adjustments that optimize outcomes."
+    },
+    "completedWorks": {
+      "title": "Completed Works",
+      "desc": "We deliver a final report along with follow-up recommendations. Our insights aim to support your organization’s continued growth and sustainable transformation."
+    },
+    "contactPrompt": {
+      "part1": "Feel free to reach out to our consulting",
+      "link": "Services",
+      "part2": "for inquiries and assistance."
+    }
+  },
+  "blog":{
+    "title": "Read Our Latest Insights from the Latest Blog Articles",
+    "ourBlog": "Our Blogs"
+  },
+  "aboutPage": {
+    "aboutUs": "About Us",
+    "sectionTag": "HR CONSULTING",
+    "title": "Empowering Teams, Elevating Leaders\nHR Consulting Excellence Since 2025",
+    "description": "We specialize in boosting employee performance, developing future leaders, and aligning talent with business goals. Our proven approach drives measurable results in every organization we serve.",
+    "point1": "Performance Coaching & Development",
+    "point2": "Leadership Training Programs",
+    "ctaConsult": "Book a Consultation",
+    "ctaServices": "Our Services"
+  },
+  "visionMission": {
+    "sectionTitle": "Our Vision & Mission",
+    "heading": "Driving Excellence in People and Leadership Development",
+    "description": "We are committed to delivering innovative and practical HR and leadership solutions that empower our clients and communities to thrive with integrity, collaboration, and lasting impact.",
+    "vision": "Vision",
+    "mission": "Mission",
+    "visionPoints": [
+      "To be a trusted and innovative HR and leadership partner that empowers people and organizations through practical solutions to support operational excellence for sustainable growth."
+    ],
+    "missionPoints": [
+      "Deliver tailored and practical HR & leadership solutions",
+      "Empower people and strengthen organizational capability",
+      "Promote operational excellence and long-term sustainability"
+    ]
+  },
+  "whyChoose": {
+    "subtitle": "WHY CHOOSE US",
+    "title": "Empowering Your Workforce",
+    "description": "We help companies optimize their workforce through strategic HR solutions — from recruitment and employee engagement to leadership development.",
+    "features": [
+      "Certified HR Experts",
+      "End-to-End Recruitment Support",
+      "Performance & Culture Diagnostics",
+      "Training & Development Programs"
+    ],
+    "watchVideo": "Watch Video"
+  },
+  "services": {
+    "ourServices": "Our Services",
+    "sectionTitle": "Services We Provide",
+    "items": {
+      "1": {
+        "subtitle": "Development",
+        "title": "People Development",
+        "description": "Empower your team with training, coaching, and personalized growth strategies.",
+        "button": "View Details"
+      },
+      "2": {
+        "subtitle": "Recruitment",
+        "title": "Talent Acquisition",
+        "description": "Attract and retain top talents with a strategic hiring process tailored to your company.",
+        "button": "View Details"
+      },
+      "3": {
+        "subtitle": "Engagement",
+        "title": "Employee Engagement",
+        "description": "Boost morale and performance through impactful internal events and activities.",
+        "button": "View Details"
+      },
+      "4": {
+        "subtitle": "Consulting",
+        "title": "Human Resource Consultancy",
+        "description": "Tailored HR solutions to align people strategy with business goals.",
+        "button": "View Details"
+      },
+      "5": {
+        "subtitle": "Screening",
+        "title": "Vetting & Background Check",
+        "description": "Comprehensive background checks to ensure candidate reliability and safety.",
+        "button": "View Details"
+      },
+      "6": {
+        "subtitle": "Strategy",
+        "title": "Organisation Development",
+        "description": "Drive business transformation with structured organizational development plans.",
+        "button": "View Details"
+      }
+    },
+    "contactUs":"Contact Us",
+    "callUs":"CALL US ANYTIME",
+    "getHRConsultant":"Get A HR Consultant"
+  },
+  "schedule":{
+    "scheduleWithUs": "Schedule With Us"
+  },
+  "contact": {
+    "get_in_touch": "Get in Touch",
+    "trusted_by_experts": "Trusted by Experts",
+    "driven_by_solutions": "Driven by Solutions",
+    "call_us": "Call us Anytime",
+    "email_us": "E-Mail us",
+    "our_locations": "Our Locations",
+    "location_address": "Arkadia Green Park Tower G, 8th Floor\nJakarta Selatan, DKI Jakarta, Indonesia 12520",
+    "phone": "+6221 8428 3681",
+    "email": "admin@mpupeoplesolution.com",
+    "schedule_consultation": "Schedule a Consultation",
+    "enter_name": "Enter Name*",
+    "enter_email": "Enter E-Mail*",
+    "enter_subject": "Enter Subject*",
+    "enter_phone": "Enter Phone Number*",
+    "enter_company": "Enter Company*",
+    "select_issues": "Select Issues*",
+    "enter_message": "Enter Your Message*",
+    "select_date": "Select Date*",
+    "select_time": "Select Time*",
+    "submit_now": "Submit Now",
+    "sending": "Sending...",
+    "success_schedule": "Consultation successfully scheduled!",
+    "failed_schedule": "Failed to schedule consultation.",
+    "failed_send": "Failed to send email.",
+    "failed_save": "Failed to save contact.",
+    "disclaimer":"Your data will be kept confidential and used solely for the related project purposes.",
+    "letUsHelpYou":"Let Us Help You to Understand Your People Challenges"
+  },
+  "servicePD": {
+    "breadcrumb": {
+      "title": "People Development",
+      "link": "Service"
+    },
+    "title": "People Development",
+    "description1": "We believe that people are the core of every organization’s success. Our People Development services aim to foster leadership capabilities, improve employee engagement, and build sustainable performance through structured learning experiences and coaching frameworks.",
+    "description2": "From operational leadership training to competency-based development programs, we help individuals and teams unlock their full potential. Our tailored approach ensures alignment with your organization’s values and long-term goals.",
+    "description3": "Investing in your people is investing in your future. With our solutions, your workforce will be equipped to adapt, lead, and thrive in today’s dynamic business environment.",
+    "benefits": {
+      "title": "Benefits of Our Services",
+      "description": "Develop people-centric strategies that enhance capability, resilience, and innovation.",
+      "list": [
+        "Certified Trainers and Coaches",
+        "Customized Training Programs",
+        "Measurable Performance Outcomes",
+        "Ongoing Post-Training Support"
+      ]
+    },
+    "accordionTitle": "People Development Services",
+    "accordion1": {
+      "title": "What is People Development and why is it important?",
+      "text": "People Development refers to a strategic approach to enhancing employees’ skills, competencies, and overall performance. It includes training, mentoring, coaching, and leadership development programs. Investing in people development helps build a high-performing workforce, improves retention, and drives long-term business success."
+    },
+    "accordion2": {
+      "title": "How can People Development impact organizational growth?",
+      "text": "By continuously developing employee capabilities, organizations create a culture of learning and innovation. This leads to higher productivity, better leadership succession, increased employee engagement, and a stronger competitive edge."
+    },
+    "accordion3": {
+      "title": "What kind of programs are included in your People Development services?",
+      "text": "Our services include leadership training, soft skills workshops, performance coaching, competency mapping, career pathing, and customized learning & development (L&D) strategies tailored to your company’s goals."
+    },
+    "accordion4": {
+      "title": "Do you provide personalized development plans for employees?",
+      "text": "Yes, we design individualized development plans that align with both organizational goals and personal career aspirations. These plans may include targeted training modules, mentoring programs, and performance feedback cycles."
+    }
+  },
+  "serviceTA": {
+    "breadcrumb": {
+      "title": "Talent Acquisition",
+      "link": "Service"
+    },
+    "title": "Professional Talent Acquisition Solutions",
+    "description1": "We help companies find and recruit the best talent that aligns with your organization's vision and values. With a data-driven approach and extensive industry experience, we ensure every candidate we recommend meets long-term needs.",
+    "description2": "Our services cover end-to-end recruitment, from search, screening, interviewing, to onboarding.",
+    "description3": "We are committed to provide a recruitment process that is efficient, accurate, and tailored to your organization's work culture.",
+    "benefits": {
+      "title": "Benefits of Our Services",
+      "description": "We believe that the right human resources are the foundation of a company's success.",
+      "list": [
+        "Access to a Network of Quality Candidates",
+        "Efficient and Fast Recruitment Process",
+        "Cultural Fit and Competence",
+        "Professional HR Consulting Support"
+      ]
+    },
+    "accordionTitle": "Talent Acquisition Services",
+    "accordions": [
+      {
+        "title": "What is Talent Acquisition and how does it differ from Recruitment?",
+        "text": "Talent acquisition is a long-term strategic approach focused on identifying, attracting, and nurturing top talent for future organizational needs. Recruitment, on the other hand, is a short-term process to fill specific job openings. Talent acquisition builds a talent pipeline and employer branding."
+      },
+      {
+        "title": "How can Talent Acquisition improve business performance?",
+        "text": "A well-structured talent acquisition strategy ensures the organization hires the right people with the right skills, leading to increased productivity, innovation, and employee retention—directly impacting business outcomes."
+      },
+      {
+        "title": "What tools or platforms do you use for Talent Acquisition?",
+        "text": "We utilize professional networking platforms like LinkedIn, and data-driven sourcing strategies to ensure efficient and effective hiring processes."
+      },
+      {
+        "title": "Do you offer customizable Talent Acquisition solutions?",
+        "text": "Yes, we provide tailored solutions based on your industry, hiring volume, and business goals. Whether you need end-to-end recruitment or assistance with employer branding and candidate sourcing, we adapt to your needs."
+      }
+    ]
+  },
+  "serviceEE": {
+    "breadcrumb": {
+      "title": "Employee Engagement",
+      "link": "Service"
+    },
+    "title": "Employee Engagement",
+    "description1": "Employee Engagement is a strategic approach that focuses on creating optimal conditions for employees to contribute fully to the success of the organization. This program aims to build emotional involvement and commitment between employees and the company.",
+    "description2": "Through initiatives such as People Development & Growth Programs, Recognition & Appreciation Programs, Wellness & Work-Life Balance Initiatives, Culture & Values Activation, Employee Voice & Participation, Team Engagement Activities and Onboarding & Offboarding Experience.",
+    "description3": "Investing in Employee Engagement has been proven to reduce turnover rates, increase employee loyalty, and build a collaborative and innovative work environment.",
+    "benefits": {
+      "title": "Benefits of Our Services",
+      "description": "Leadership skill before media innovation customer directed alignments",
+      "list": [
+        "Improving Employee Retention",
+        "Better Team Productivity",
+        "Positive Work Culture",
+        "Loyalty and Job Satisfaction"
+      ]
+    },
+    "accordionTitle": "Employee Engagement",
+    "accordions": [
+      {
+        "title": "What is Employee Engagement?",
+        "text": "Employee Engagement is the level of involvement, commitment, and motivation of employees towards their work and the company they work for. High engagement drives productivity and retention."
+      },
+      {
+        "title": "What are the benefits of Employee Engagement for companies?",
+        "text": "Benefits include increased productivity, employee loyalty, reduced turnover, increased customer satisfaction, and strengthening a healthy work culture."
+      },
+      {
+        "title": "What services do we offer?",
+        "text": "We offer People Development & Growth Programs, Recognition & Appreciation Programs, Wellness & Work-Life Balance Initiatives, Culture & Values Activation, Employee Voice & Participation, Team Engagement Activities and Onboarding & Offboarding Experience"
+      },
+      {
+        "title": "How does the implementation process work?",
+        "text": "We start with an initial assessment, followed by designing a program that fits your needs, implementing interventions, and evaluating results periodically."
+      }
+    ]
+  },
+  "serviceHCC": {
+    "breadcrumb": {
+      "title": "Human Resource Consultancy",
+      "link": "Service"
+    },
+    "title": "Strategic Human Resource Consultancy Services",
+    "description1": "We help organizations optimize their human resource potential through strategic planning, leadership development, and performance improvement initiatives. Our consultancy services are grounded in deep industry insight, research-based frameworks, and proven implementation strategies.",
+    "description2": "Whether your organization is undergoing transformation, scaling for growth, or addressing talent retention challenges, we bring tailored solutions that align with your goals. We collaborate with HR leaders to shape and execute people strategies that deliver measurable business impact.",
+    "description3": "From leadership coaching to workforce planning and culture transformation, our consultancy services are designed to empower your workforce and enhance organizational performance at all levels.",
+    "benefits": {
+      "title": "Benefits of Our Services",
+      "description": "Partnering with us brings tangible value to your organization by transforming human resource into a competitive advantage.",
+      "list": [
+        "Customized HR Strategies",
+        "Enhanced Leadership Capability",
+        "Measurable Workforce Impact",
+        "Scalable Talent Solutions"
+      ]
+    },
+    "accordionTitle": "Human Resource Consultancy",
+    "accordions": [
+      {
+        "title": "What is Human Resource Consultancy?",
+        "text": "Human Resource Consultancy involves strategic advisory services that help organizations maximize the value and effectiveness of their workforce. It covers areas such as talent management, leadership development, and organizational design."
+      },
+      {
+        "title": "Why is it important for organizations?",
+        "text": "A strong human resource strategy enables organizations to attract, retain, and develop top talent, align workforce capabilities with business goals, and drive long-term performance and resilience."
+      },
+      {
+        "title": "What services do we provide?",
+        "text": "We offer HR operation diagnostic & audit, workforce planning & workload analysis, talent acquisition & onboarding improvement, HR shared services development, HR data management & metrics setup, employee lifecycle process re-engineering, industrial relations & compliance advisory, and capability building for the HR operation team."
+      },
+      {
+        "title": "How do we work with clients?",
+        "text": "We begin with a diagnostic assessment to understand your needs, followed by tailored solution design, implementation support, and ongoing advisory to ensure sustainable impact."
+      }
+    ]
+  },
+  "vbc": {
+    "breadcrumb": {
+      "title": "Vetting & Background Check",
+      "link1": "Service",
+      "link2": "Vetting & Background"
+    },
+    "title": "Vetting & Background Check",
+    "paragraph1": "Our vetting and background check services help organizations ensure the integrity and trustworthiness of individuals before making hiring or partnership decisions.",
+    "paragraph2": "With a proven process and advanced tools, we verify identities, education, employment history, criminal records, and more accurately and quickly.",
+    "paragraph3": "We help reduce risks and improve compliance in recruitment and onboarding processes through comprehensive background checks.",
+    "benefitsTitle": "Benefits of Our Services",
+    "benefitsDesc": "Gain trusted insights for safer hiring decisions.",
+    "benefits": {
+      "verified": "Verified Candidate Background",
+      "confidence": "Enhanced Hiring Confidence",
+      "risks": "Reduced Legal & Compliance Risks",
+      "culture": "Secure Workplace Culture"
+    },
+    "faq1": {
+      "title": "What is Vetting & Background Check?",
+      "text": "It is a process of verifying an individual’s credentials, criminal records, education, work history, and other relevant background information before employment or partnership."
+    },
+    "faq2": {
+      "title": "Why is background checking important?",
+      "text": "It reduces the risk of fraud, protects workplace safety, ensures compliance, and helps organizations make informed hiring decisions."
+    },
+    "faq3": {
+      "title": "What areas do we check?",
+      "text": "We conduct comprehensive background screening tailored to client needs, including employment history, education and certification, legal and criminal records, identity verification, social media analysis, and more."
+    },
+    "faq4": {
+      "title": "How fast can we deliver the report?",
+      "text": "Depending on complexity, most reports can be completed within 5–10 business days."
+    }
+  },
+  "od": {
+    "breadcrumb": {
+      "title": "Organisation Development",
+      "link1": "Service",
+      "link2": "Organisation Development"
+    },
+    "title": "Organisation Development",
+    "paragraph1": "Our Organisation Development (OD) service is designed to help companies enhance their structure, culture, and processes for long-term success. We support organizations in navigating change, building leadership capabilities, and fostering an adaptive and engaged workforce.",
+    "paragraph2": "Through diagnostics, strategic planning, and tailored interventions, we help you achieve sustainable performance improvements and a thriving organizational culture.",
+    "paragraph3": "Whether you're managing transformation, scaling teams, or improving cross-functional collaboration, our experienced consultants work closely with you to design impactful, data-driven solutions.",
+    "benefitsTitle": "Benefits of Our Services",
+    "benefitsDesc": "Tailored solutions that build resilience and drive transformation in your organization.",
+    "benefits": {
+      "culture": "Improved Organizational Culture",
+      "collaboration": "Enhanced Team Collaboration",
+      "alignment": "Strategic Alignment and Execution",
+      "leadership": "Leadership Development"
+    },
+    "faq1": {
+      "title": "What is Organisation Development?",
+      "text": "Organisation Development (OD) is a planned, systemic approach to improving organizational effectiveness through interventions in its processes, structures, and culture."
+    },
+    "faq2": {
+      "title": "Why is OD important?",
+      "text": "OD helps organizations adapt to change, improve communication, build a positive culture, and increase overall performance and employee engagement."
+    },
+    "faq3": {
+      "title": "What services are included?",
+      "text": "Our OD services include strategic planning, leadership development, team building, change management, culture assessment, and performance improvement programs."
+    },
+    "faq4": {
+      "title": "How do we approach OD projects?",
+      "text": "We collaborate closely with clients to diagnose challenges, co-design interventions, implement programs, and evaluate outcomes for continuous improvement."
+    }
+  }
+}

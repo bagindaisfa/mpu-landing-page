@@ -1,16 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { FaAngleRight, FaArrowRightLong, FaCircle } from 'react-icons/fa6';
-import blogGridThumb from '/images/blog1.png';
-import blogGridThumb2 from '/images/blog2.png';
-import blogGridThumb3 from '/images/blog3.png';
-import blogGridThumb4 from '/images/blog4.png';
-import blogGridThumb5 from '/images/blog5.png';
-import blogGridThumb6 from '/images/blog6.png';
 import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
 import BlogGridCard from './BlogGridCard';
 import { BsArrowRight } from 'react-icons/bs';
 
 const BlogGrid = () => {
+  const { t } = useTranslation();
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
@@ -51,18 +47,14 @@ const BlogGrid = () => {
 
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
 
-  const indexOfLastBlog = currentPage * blogsPerPage;
-  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
-  const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
-
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <>
       <BreadCrumb
-        breadCrumbTitle={'Our Blogs'}
+        breadCrumbTitle={t('blog.ourBlog')}
         breadCrumbIcon={<FaArrowRightLong />}
-        breadCrumbLink={'Our Blogs'}
+        breadCrumbLink={t('blog.ourBlog')}
       />
       <section className="pt-28">
         <div className="Container">

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FaUser, FaRegThumbsUp, FaPencilAlt, FaPhoneAlt } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
@@ -11,6 +12,7 @@ import { FaRegEnvelopeOpen } from 'react-icons/fa6';
 import { IoLocationOutline } from 'react-icons/io5';
 
 const Assessment = () => {
+  const { t } = useTranslation();
   const { markFormSubmitted } = useUserForm();
   const [questions, setQuestions] = useState({});
   const [loading, setLoading] = useState(false);
@@ -132,12 +134,12 @@ const Assessment = () => {
           <div className="relative z-10">
             <div>
               <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase flex items-center gap-2 mb-3 pt-4">
-                GET IN TOUCH
+                {t('contact.get_in_touch')}
               </h5>
               <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px] xl:text-[42px] xl:leading-[52px]">
-                Trusted by Experts
+                {t('contact.trusted_by_experts')}
                 <br />
-                Driven by Solutions
+                {t('contact.driven_by_solutions')}
               </h1>
             </div>
             <div
@@ -150,7 +152,7 @@ const Assessment = () => {
                 </div>
                 <div>
                   <h6 className="font-FiraSans text-TextColor2-0">
-                    Call us Anytime
+                    {t('contact.call_us')}
                   </h6>
                   <Link to={'/'}>
                     <button className="font-FiraSans text-xl text-HeadingColor-0 font-medium mt-1">
@@ -164,7 +166,9 @@ const Assessment = () => {
                   <FaRegEnvelopeOpen size={'20'} />
                 </div>
                 <div>
-                  <h6 className="font-FiraSans text-TextColor2-0">E-Mail us</h6>
+                  <h6 className="font-FiraSans text-TextColor2-0">
+                    {t('contact.email_us')}
+                  </h6>
                   <Link to={'/'}>
                     <button className="font-FiraSans text-xl text-HeadingColor-0 font-medium mt-1">
                       admin@mpupeoplesolution.com
@@ -178,7 +182,7 @@ const Assessment = () => {
                 </div>
                 <div>
                   <h6 className="font-FiraSans text-TextColor2-0">
-                    Our Locations
+                    {t('contact.our_locations')}
                   </h6>
                   <p className="font-FiraSans text-HeadingColor-0 mt-2">
                     Arkadia Green Park Tower G, 8th Floor <br /> Jakarta
@@ -191,7 +195,7 @@ const Assessment = () => {
           <div className="relative">
             <div className="text-center">
               <h1 className="font-FiraSans font-semibold text-HeadingColor-0 inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[30px] lg:leading-[44px] xl:text-[32px] xl:leading-[44px] 2xl:text-[34px] 2xl:leading-[44px] relative pb-4">
-                Let Us Help You to Understand Your People Chalanges
+                {t('contact.letUsHelpYou')}
                 <img
                   src={border}
                   draggable="false"
@@ -213,7 +217,7 @@ const Assessment = () => {
                         type="text"
                         name="name"
                         id="name"
-                        placeholder="Enter Name*"
+                        placeholder={t('contact.enter_name')}
                         required
                         className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
                         value={formData.name}
@@ -229,7 +233,7 @@ const Assessment = () => {
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="Enter E-Mail*"
+                        placeholder={t('contact.enter_email')}
                         required
                         className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
                         value={formData.email}
@@ -247,7 +251,7 @@ const Assessment = () => {
                         type="text"
                         name="subject"
                         id="subject"
-                        placeholder="Enter Subject*"
+                        placeholder={t('contact.enter_subject')}
                         required
                         className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
                         value={formData.subject}
@@ -263,7 +267,7 @@ const Assessment = () => {
                         type="text"
                         name="number"
                         id="number"
-                        placeholder="Enter Number*"
+                        placeholder={t('contact.enter_phone')}
                         required
                         className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
                         value={formData.number}
@@ -281,7 +285,7 @@ const Assessment = () => {
                         type="text"
                         name="company"
                         id="company"
-                        placeholder="Enter Company Name*"
+                        placeholder={t('contact.enter_company')}
                         required
                         className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
                         value={formData.company}
@@ -296,7 +300,7 @@ const Assessment = () => {
                         options={questions}
                         className="react-select-container"
                         classNamePrefix="react-select"
-                        placeholder="Select Issues..."
+                        placeholder={t('contact.select_issues')}
                         value={formData.issues}
                         onChange={(selectedOptions) =>
                           setFormData((prevData) => ({
@@ -311,14 +315,13 @@ const Assessment = () => {
                   <textarea
                     name="message"
                     id="message"
-                    placeholder="Write a short meassage..."
+                    placeholder={t('contact.enter_message')}
                     className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[120px] w-full focus:outline-PrimaryColor-0 resize-none"
                     value={formData.message}
                     onChange={handleChange}
                   ></textarea>
                   <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
-                    Your data will be kept confidential and used solely for the
-                    related project purposes.
+                    {t('contact.disclaimer')}
                   </label>
                   <div className="inline-block mt-2">
                     <button

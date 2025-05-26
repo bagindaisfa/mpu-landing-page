@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
 import About from '../../../Component2Default/About/About';
@@ -8,12 +9,13 @@ import TeamMember from './TeamMember/TeamMember';
 import VisionMission from './VisionMission/VisionMission';
 
 const AboutInner = () => {
+  const { t } = useTranslation();
   return (
     <>
       <BreadCrumb
-        breadCrumbTitle={'About Us'}
+        breadCrumbTitle={t('aboutPage.aboutUs')}
         breadCrumbIcon={<FaArrowRightLong />}
-        breadCrumbLink={'About Us'}
+        breadCrumbLink={t('aboutPage.aboutUs')}
       />
       <About />
       <VisionMission />

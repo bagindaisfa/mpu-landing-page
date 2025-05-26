@@ -16,6 +16,7 @@ import { MdLocationPin } from 'react-icons/md';
 import { IoMdPaperPlane } from 'react-icons/io';
 import { BiSearch } from 'react-icons/bi';
 import { LiaLongArrowAltRightSolid } from 'react-icons/lia';
+import LanguageSwitcher from '../../Component1Default/LanguageSwitcher';
 
 const Navbar11 = () => {
   const location = useLocation();
@@ -426,19 +427,15 @@ const Navbar11 = () => {
                 <div className="hidden lg:block relative">
                   <Link
                     to={'/consultation'}
-                    className="lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[34px] 2xl:py-[17px] rounded-full font-FiraSans font-medium text-white overflow-hidden bg-PrimaryColor-0 flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0"
+                    className="lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[34px] 2xl:py-[17px] rounded-full font-FiraSans font-medium text-[#0a1630] hover:text-white overflow-hidden  flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0"
                   >
                     Get Consultation
                     <LiaLongArrowAltRightSolid size={'18'} />
                   </Link>
                 </div>
               )}
-              <div className="header-sidebar hidden 2xl:block">
-                <button ref={menuSideBarRef} className="menu-sidebar">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
+              <div className="light-btn hidden xl:block relative">
+                <LanguageSwitcher />
               </div>
               <div className="header-bar lg:hidden">
                 <button ref={menuBarRef} className="menu-bar">
@@ -451,106 +448,6 @@ const Navbar11 = () => {
           </div>
         </div>
       </div>
-      <div className="sidebar-content">
-        <div ref={sidebarContentRef} className="sidebar">
-          <div className="sidebar_close-btn">
-            <button ref={closeBtn2Ref} className="close-btn2">
-              <FaTimes />
-            </button>
-          </div>
-          <div className="sidebar_logo">
-            <Link to={'/'}>
-              <img src={Logo2} draggable="false" />
-            </Link>
-          </div>
-          <div className="sidebar_title">
-            <p>Developing Agile Talent for Sustainable Growth.</p>
-          </div>
-          <div>
-            <div className="sidebar_service-title">
-              <h5>What Services We Provide?</h5>
-            </div>
-            <ul className="service_list">
-              <li>
-                <Link to={'/service/people-development'}>
-                  <button>People Development</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/service/talent-acquisition'}>
-                  <button>Talent Acquisition</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/service/employee-engagement'}>
-                  <button>Employee Engagement Events</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/service/human-capital-consultancy'}>
-                  <button>Human Resource Consultancy</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/service/vetting-background-check'}>
-                  <button>Vetting & Background Check</button>
-                </Link>
-              </li>
-              <li>
-                <Link to={'/service/organisation-development'}>
-                  <button>Organisation Development</button>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="sidebar_contact-info">
-            <div className="sidebar_contact-title">
-              <h5>Have Questions? Contact Our Team!</h5>
-            </div>
-            <ul>
-              <li>
-                <MdLocationPin />
-                <Link to={'/'}>
-                  Arkadia Green Park Tower G, 8th Floor. Jakarta Selatan, DKI
-                  Jakarta, Indonesia 12520
-                </Link>
-              </li>
-              <li>
-                <FaEnvelope />
-                <Link to={'/'}>admin@mpupeoplesolution.com</Link>
-              </li>
-              <li>
-                <FaPhoneAlt />
-                <Link to={'/'}>+6221 8428 3681</Link>
-              </li>
-            </ul>
-          </div>
-
-          <ul className="sidebar-social-icon">
-            <li>
-              <Link to={'/'}>
-                <FaFacebookF />
-              </Link>
-            </li>
-            <li>
-              <Link to={'/'}>
-                <FaXTwitter />
-              </Link>
-            </li>
-            <li>
-              <Link to={'/'}>
-                <FaPinterestP />
-              </Link>
-            </li>
-            <li>
-              <Link to={'/'}>
-                <FaLinkedinIn />
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div ref={bodyOverlay2Ref} className="body-overlay2"></div>
     </div>
   );
 };

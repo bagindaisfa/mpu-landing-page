@@ -15,6 +15,7 @@ import { FaPhoneAlt, FaTimes } from 'react-icons/fa';
 import { MdLightMode, MdLocationPin } from 'react-icons/md';
 import { IoMdPaperPlane } from 'react-icons/io';
 import { LuMoveRight } from 'react-icons/lu';
+import LanguageSwitcher from '../../Component1Default/LanguageSwitcher';
 
 const Navbar = () => {
   //sticky
@@ -237,7 +238,10 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-span-8 hidden lg:block">
+            <div
+              className="col-span-8 hidden lg:block"
+              style={{ marginBottom: 20 }}
+            >
               <div className="header-main-menu text-center">
                 <nav className="main-menu-content">
                   <ul>
@@ -318,7 +322,9 @@ const Navbar = () => {
                     <LuMoveRight />
                   </Link>
                 </div>
-                <div className="light-btn hidden xl:block relative top-3"></div>
+                <div className="light-btn hidden xl:block relative top-3">
+                  <LanguageSwitcher />
+                </div>
                 <div className="header-bar lg:hidden">
                   <button ref={menuBarRef} className="menu-bar">
                     <span></span>

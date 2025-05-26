@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import whyChooseThumb from '/images/choose_thumb.png';
 import whyChooseShape from '/images/box.png';
 import whyChooseShape2 from '/images/choose_rotete.png';
@@ -10,7 +11,10 @@ import { useState } from 'react';
 import { HiOutlinePlayCircle } from 'react-icons/hi2';
 
 const WhyChoose = () => {
+  const { t } = useTranslation();
   const [toggler, setToggler] = useState(false);
+  const features = t('whyChoose.features', { returnObjects: true });
+
   return (
     <section className="pb-[120px] pt-20 sm:pt-0 lg:pt-[170px] bg-[url(/images/choose_bg.jpg)] bg-no-repeat bg-cover bg-center relative z-20 overflow-hidden">
       <div className="Container">
@@ -35,10 +39,10 @@ const WhyChoose = () => {
           <div className="relative z-10">
             <span className="absolute -left-32 -bottom-32 -z-10 h-96 w-96 blur-3xl bg-[#e9f8f5] rounded-full"></span>
             <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3">
-              WHY CHOOSE US
+              {t('whyChoose.subtitle')}
             </h5>
             <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[38px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] relative pb-4">
-              Empowering Your Workforce
+              {t('whyChoose.title')}
               <img
                 src={border}
                 draggable="false"
@@ -46,47 +50,21 @@ const WhyChoose = () => {
               />
             </h1>
             <p className="font-FiraSans text-TextColor2-0 pt-5">
-              We help companies optimize their workforce through strategic HR
-              solutions — from recruitment and employee engagement to leadership
-              development.
+              {t('whyChoose.description')}
             </p>
             <ul className="grid items-center grid-cols-1 gap-x-7 gap-y-5 sm:grid-cols-2 mt-9 pb-10">
-              <li
-                className="font-FiraSans text-HeadingColor-0 bg-white py-5 px-8 w-full rounded-md flex items-center gap-2 shadow-cases"
-                style={{ height: 80 }}
-              >
-                <span className="text-PrimaryColor-0 text-2xl">
-                  <IoIosCheckmarkCircleOutline />
-                </span>
-                Certified HR Experts
-              </li>
-              <li
-                className="font-FiraSans text-HeadingColor-0 bg-white py-5 px-8 w-full rounded-md flex items-center gap-2 shadow-cases"
-                style={{ height: 80 }}
-              >
-                <span className="text-PrimaryColor-0 text-2xl">
-                  <IoIosCheckmarkCircleOutline />
-                </span>
-                End-to-End Recruitment Support
-              </li>
-              <li
-                className="font-FiraSans text-HeadingColor-0 bg-white py-5 px-8 w-full rounded-md flex items-center gap-2 shadow-cases"
-                style={{ height: 80 }}
-              >
-                <span className="text-PrimaryColor-0 text-2xl">
-                  <IoIosCheckmarkCircleOutline />
-                </span>
-                Performance & Culture Diagnostics
-              </li>
-              <li
-                className="font-FiraSans text-HeadingColor-0 bg-white py-5 px-8 w-full rounded-md flex items-center gap-2 shadow-cases"
-                style={{ height: 80 }}
-              >
-                <span className="text-PrimaryColor-0 text-2xl">
-                  <IoIosCheckmarkCircleOutline />
-                </span>
-                Training & Development Programs
-              </li>
+              {features.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="font-FiraSans text-HeadingColor-0 bg-white py-5 px-8 w-full rounded-md flex items-center gap-2 shadow-cases"
+                  style={{ height: 80 }}
+                >
+                  <span className="text-PrimaryColor-0 text-2xl">
+                    <IoIosCheckmarkCircleOutline />
+                  </span>
+                  {item}
+                </li>
+              ))}
             </ul>
             <div className="inline-block relative z-50">
               <div
@@ -97,7 +75,7 @@ const WhyChoose = () => {
                   <HiOutlinePlayCircle size={'34'} />
                 </button>
                 <span className="text-HeadingColor-0 font-FiraSans font-medium">
-                  Watch Video
+                  {t('whyChoose.watchVideo')}
                 </span>
                 <FsLightbox
                   toggler={toggler}

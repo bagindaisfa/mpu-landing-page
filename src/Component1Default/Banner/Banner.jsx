@@ -5,38 +5,43 @@ import { FaPhoneAlt, FaEnvelopeOpen } from 'react-icons/fa';
 import { useState } from 'react';
 import FsLightbox from 'fslightbox-react';
 import { IoPlayOutline } from 'react-icons/io5';
+import { useTranslation } from 'react-i18next';
 
 const Banner = () => {
+  const { t, i18n } = useTranslation();
   const [toggler, setToggler] = useState(false);
   return (
     <section className="mx-2 xl:mx-5 lg:mt-5 xl:mt-0 2xl:mt-5 bg-Secondarycolor-0 lg:bg-opacity-0 lg:bg-[url('/images/banner.png')] bg-cover xl:bg-contain 2xl:bg-cover bg-center bg-no-repeat h-[600px] sm:h-[700px] md:h-[1100px] lg:h-[600px] xl:h-[548px] 2xl:h-[830px] flex items-center relative z-10 overflow-hidden rounded-[40px]">
       <div className="Container">
         <div className="grid lg:grid-cols-2 items-center gap-16 lg:gap-0 mt-[72px]">
           <div className="relative">
-            <h1 className="font-FiraSans font-semibold text-white text-[30px] leading-[36px] sm:text-[46px] sm:leading-[52px] md:text-[68x] lg:text-[50px] xl:text-[54px] xl:leading-[68px] 2xl:text-[56px] 2xl:leading-[70px]">
-              Developing Agile Talent
-              <br />
-              <span className="relative before:absolute before:bottom-3 before:left-0 before:w-full before:h-[10px] before:bg-PrimaryColor-0 before:-z-10">
-                for Sustainable Growth
-              </span>
+            <h1
+              className={`font-FiraSans font-semibold text-white leading-snug max-w-4xl
+        ${
+          i18n.language === 'id'
+            ? 'text-[26px] sm:text-[40px] lg:text-[44px] xl:text-[48px] 2xl:text-[50px]'
+            : 'text-[30px] sm:text-[46px] lg:text-[50px] xl:text-[54px] 2xl:text-[56px]'
+        }`}
+            >
+              {t('banner.title')}
             </h1>
             <p className="font-FiraSans text-TextColor-0 mb-[38px] mt-[22px]">
-              Your Trusted Partner in{' '}
+              {t('banner.subtitle1')}{' '}
               <br className="hidden xl:block 2xl:hidden" />
-              Operational Leadership Development.
+              {t('banner.subtitle2')}
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-8">
               <Link to={'/assessment'}>
                 <button className="flex items-center gap-3 text-white font-FiraSans font-medium">
                   <FaEnvelopeOpen />
-                  EMAIL : admin@mpupeoplesolution.com
+                  {t('banner.emailButton')}
                 </button>
               </Link>
 
               <Link to={'/contact'}>
                 <button className="flex items-center gap-3 text-white font-FiraSans font-medium">
                   <FaPhoneAlt />
-                  {`CALL : +6221 8428 3681`}
+                  {t('banner.callButton')}
                 </button>
               </Link>
             </div>

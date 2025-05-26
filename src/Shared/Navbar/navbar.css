@@ -439,7 +439,7 @@ nav.main-menu-content > ul > li:hover > a > span {
 }
 
 .header-btn {
-  margin: 28px 0 0;
+  margin: 20px 0 0;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1399px) {
@@ -451,7 +451,7 @@ nav.main-menu-content > ul > li:hover > a > span {
 .header-btn a {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 1px;
   font-size: 16px;
   color: #ffffff;
   font-weight: 500;

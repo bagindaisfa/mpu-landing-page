@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import serviceThumb from '/images/service_1.png';
 import serviceThumb2 from '/images/service_2.png';
 import serviceThumb3 from '/images/service_5.png';
@@ -15,94 +16,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 
-const ServiceData = [
-  {
-    id: 1,
-    serviceSubTitle: 'Development',
-    serviceTitle: 'People Development',
-    serviceDesc:
-      'Empower your team with training, coaching, and personalized growth strategies.',
-    serviceUrl: '/service/people-development',
-    btnContent: 'View Details',
-    btnIcon: <GoArrowUpRight />,
-    serviceThumb: serviceThumb, // ganti jika ingin beda
-    serviceThumbShape: serviceThumbShape,
-    thumbIcon: thumbIcon,
-    contentShape: contentShape,
-  },
-  {
-    id: 2,
-    serviceSubTitle: 'Recruitment',
-    serviceTitle: 'Talent Acquisition',
-    serviceDesc:
-      'Attract and retain top talents with a strategic hiring process tailored to your company.',
-    serviceUrl: '/service/talent-acquisition',
-    btnContent: 'View Details',
-    btnIcon: <GoArrowUpRight />,
-    serviceThumb: serviceThumb2,
-    serviceThumbShape: serviceThumbShape,
-    thumbIcon: thumbIcon,
-    contentShape: contentShape,
-  },
-  {
-    id: 3,
-    serviceSubTitle: 'Engagement',
-    serviceTitle: 'Employee Engagement',
-    serviceDesc:
-      'Boost morale and performance through impactful internal events and activities.',
-    serviceUrl: '/service/employee-engagement',
-    btnContent: 'View Details',
-    btnIcon: <GoArrowUpRight />,
-    serviceThumb: serviceThumb3,
-    serviceThumbShape: serviceThumbShape,
-    thumbIcon: thumbIcon,
-    contentShape: contentShape,
-  },
-  {
-    id: 4,
-    serviceSubTitle: 'Consulting',
-    serviceTitle: 'Human Resource Consultancy',
-    serviceDesc:
-      'Tailored HR solutions to align people strategy with business goals.',
-    serviceUrl: '/service/human-capital-consultancy',
-    btnContent: 'View Details',
-    btnIcon: <GoArrowUpRight />,
-    serviceThumb: serviceThumb2,
-    serviceThumbShape: serviceThumbShape,
-    thumbIcon: thumbIcon,
-    contentShape: contentShape,
-  },
-  {
-    id: 5,
-    serviceSubTitle: 'Screening',
-    serviceTitle: 'Vetting & Background Check',
-    serviceDesc:
-      'Comprehensive background checks to ensure candidate reliability and safety.',
-    serviceUrl: '/service/vetting-background-check',
-    btnContent: 'View Details',
-    btnIcon: <GoArrowUpRight />,
-    serviceThumb: serviceThumb,
-    serviceThumbShape: serviceThumbShape,
-    thumbIcon: thumbIcon,
-    contentShape: contentShape,
-  },
-  {
-    id: 6,
-    serviceSubTitle: 'Strategy',
-    serviceTitle: 'Organisation Development',
-    serviceDesc:
-      'Drive business transformation with structured organizational development plans.',
-    serviceUrl: '/service/organisation-development',
-    btnContent: 'View Details',
-    btnIcon: <GoArrowUpRight />,
-    serviceThumb: serviceThumb3,
-    serviceThumbShape: serviceThumbShape,
-    thumbIcon: thumbIcon,
-    contentShape: contentShape,
-  },
-];
-
 const Service = () => {
+  const { t } = useTranslation();
   const settings = {
     loop: true,
     spaceBetween: 30,
@@ -125,6 +40,88 @@ const Service = () => {
       },
     },
   };
+  const getServiceData = (t) => [
+    {
+      id: 1,
+      serviceSubTitle: t('services.items.1.subtitle'),
+      serviceTitle: t('services.items.1.title'),
+      serviceDesc: t('services.items.1.description'),
+      serviceUrl: '/service/people-development',
+      btnContent: t('services.items.1.button'),
+      btnIcon: <GoArrowUpRight />,
+      serviceThumb: serviceThumb,
+      serviceThumbShape: serviceThumbShape,
+      thumbIcon: thumbIcon,
+      contentShape: contentShape,
+    },
+    {
+      id: 2,
+      serviceSubTitle: t('services.items.2.subtitle'),
+      serviceTitle: t('services.items.2.title'),
+      serviceDesc: t('services.items.2.description'),
+      serviceUrl: '/service/talent-acquisition',
+      btnContent: t('services.items.2.button'),
+      btnIcon: <GoArrowUpRight />,
+      serviceThumb: serviceThumb2,
+      serviceThumbShape: serviceThumbShape,
+      thumbIcon: thumbIcon,
+      contentShape: contentShape,
+    },
+    {
+      id: 3,
+      serviceSubTitle: t('services.items.3.subtitle'),
+      serviceTitle: t('services.items.3.title'),
+      serviceDesc: t('services.items.3.description'),
+      serviceUrl: '/service/employee-engagement',
+      btnContent: t('services.items.3.button'),
+      btnIcon: <GoArrowUpRight />,
+      serviceThumb: serviceThumb3,
+      serviceThumbShape: serviceThumbShape,
+      thumbIcon: thumbIcon,
+      contentShape: contentShape,
+    },
+    {
+      id: 4,
+      serviceSubTitle: t('services.items.4.subtitle'),
+      serviceTitle: t('services.items.4.title'),
+      serviceDesc: t('services.items.4.description'),
+      serviceUrl: '/service/human-capital-consultancy',
+      btnContent: t('services.items.4.button'),
+      btnIcon: <GoArrowUpRight />,
+      serviceThumb: serviceThumb2,
+      serviceThumbShape: serviceThumbShape,
+      thumbIcon: thumbIcon,
+      contentShape: contentShape,
+    },
+    {
+      id: 5,
+      serviceSubTitle: t('services.items.5.subtitle'),
+      serviceTitle: t('services.items.5.title'),
+      serviceDesc: t('services.items.5.description'),
+      serviceUrl: '/service/vetting-background-check',
+      btnContent: t('services.items.5.button'),
+      btnIcon: <GoArrowUpRight />,
+      serviceThumb: serviceThumb,
+      serviceThumbShape: serviceThumbShape,
+      thumbIcon: thumbIcon,
+      contentShape: contentShape,
+    },
+    {
+      id: 6,
+      serviceSubTitle: t('services.items.6.subtitle'),
+      serviceTitle: t('services.items.6.title'),
+      serviceDesc: t('services.items.6.description'),
+      serviceUrl: '/service/organisation-development',
+      btnContent: t('services.items.6.button'),
+      btnIcon: <GoArrowUpRight />,
+      serviceThumb: serviceThumb3,
+      serviceThumbShape: serviceThumbShape,
+      thumbIcon: thumbIcon,
+      contentShape: contentShape,
+    },
+  ];
+
+  const ServiceData = getServiceData(t);
 
   const pagination = {
     clickable: true,
@@ -150,7 +147,7 @@ const Service = () => {
       <div className="Container">
         <div className="text-center">
           <h1 className="font-FiraSans font-semibold text-HeadingColor-0 inline-block text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[34px] lg:leading-[44px] xl:text-[40px] xl:leading-[50px] 2xl:text-[42px] 2xl:leading-[52px] relative pb-4">
-            Services We Provide
+            {t('services.sectionTitle')}
             <img
               src={border}
               draggable="false"

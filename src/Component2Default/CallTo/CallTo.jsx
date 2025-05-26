@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { FaRegThumbsUp } from 'react-icons/fa';
 import { LuPhone } from 'react-icons/lu';
 import { Link } from 'react-router-dom';
 import callShape from '/images/call_shape.png';
 
 const CallTo = () => {
+  const { t } = useTranslation();
   return (
     <section className="bg-BodyBg3-0 py-8">
       <div className="Container">
@@ -12,11 +14,8 @@ const CallTo = () => {
             <div className="absolute top-2 right-10 animate-swing hidden xl:block">
               <img src={callShape} draggable="false" />
             </div>
-            <h5 className="font-FiraSans font-medium text-sm sm:text-base text-white uppercase mb-3">
-              CALL TO ACTION
-            </h5>
             <h1 className="font-FiraSans font-semibold text-white text-[16px] leading-[26px] sm:text-[25px] sm:leading-[35px] md:text-[30px] md:leading-[40px] lg:text-[32px] lg:leading-[42px] mb-4">
-              Get A HR Consultant
+              {t('services.getHRConsultant')}
             </h1>
           </div>
           <div className="col-span-6 xl:col-span-5">
@@ -27,7 +26,7 @@ const CallTo = () => {
                 </div>
                 <div className="flex-1">
                   <h6 className="font-FiraSans text-white text-opacity-70 text-[15px]">
-                    CALL US ANYTIME
+                    {t('services.callUs')}
                   </h6>
                   <Link to={'/'}>
                     <button className="font-FiraSans font-medium text-left text-lg 2xl:text-xl text-white">
@@ -40,7 +39,7 @@ const CallTo = () => {
                 <Link to={'/contact'}>
                   <button className="primary-btn2 !border-2 !border-BorderColor2-0">
                     <FaRegThumbsUp />
-                    {`Contact Us`}
+                    {t('services.contactUs')}
                   </button>
                 </Link>
               </div>

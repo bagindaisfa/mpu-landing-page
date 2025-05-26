@@ -1,0 +1,429 @@
+{
+  "banner": {
+    "title": "Mengembangkan Talenta Adaptif untuk Pertumbuhan yang Berkelanjutan",
+    "subtitle1": "Mitra Tepercaya Anda dalam",
+    "subtitle2": "Pengembangan Kepemimpinan Operasional.",
+    "emailButton": "EMAIL : admin@mpupeoplesolution.com",
+    "callButton": "TELPON : +6221 8428 3681"
+  },
+  "about": {
+    "sectionLabel": "TENTANG PERUSAHAAN",
+    "title": "Sejak 2025, kami telah membantu perusahaan membangun tim yang lebih kuat dan membuka potensi kepemimpinan melalui konsultasi dan pelatihan yang disesuaikan.",
+    "description": "Kami membantu organisasi meningkatkan kinerja karyawan melalui pelatihan praktis, asesmen kinerja, dan solusi HR strategis.",
+    "points": {
+      "0": "Pelatih Profesional",
+      "1": "Konsultan HR & Kepemimpinan Bersertifikat",
+      "2": "Program Pelatihan yang Disesuaikan",
+      "3": "Hasil Kinerja yang Terukur"
+    },
+    "circleText": "* Kepemimpinan * Strategi SDM * Pertumbuhan * Budaya"
+  },
+  "counter": {
+    "title": "Kami Siap Menjadi Mitra Strategis Anda",
+    "cta": "Mulai Sekarang",
+    "items": [
+      {
+        "desc": "Program Kustom Siap Diluncurkan"
+      },
+      {
+        "desc": "Gabungan Pengalaman Selama 10 Tahun"
+      },
+      {
+        "desc": "Keberlanjutan Performa SDM",
+        "suffix": " Misi"
+      }
+    ]
+  },
+  "feature": {
+    "sectionTitle": "Layanan Unggulan",
+    "mainTitlePart1": "Mendorong Keunggulan Operasional melalui",
+    "mainTitlePart2": "Sumber Daya Manusia, Performa, dan Keberlanjutan."
+  },
+  "peopleDevelopment": {
+    "title": "Pengembangan SDM",
+    "desc": "Program pembelajaran, pengembangan kepemimpinan, dan coaching yang disesuaikan untuk membangun kapabilitas masa depan."
+  },
+  "talentAcquisition": {
+    "title": "Akuisisi Talenta",
+    "desc": "Sumber dan rekrutmen strategis untuk menarik talenta terbaik yang selaras dengan tujuan organisasi Anda."
+  },
+  "employeeEngagement": {
+    "title": "Kegiatan Keterlibatan Karyawan",
+    "desc": "Pengalaman kreatif dan berdampak tinggi untuk meningkatkan semangat, kerja sama tim, dan keterikatan organisasi."
+  },
+  "hrConsultancy": {
+    "title": "Konsultasi Sumber Daya Manusia",
+    "desc": "Dukungan advis untuk mengoptimalkan strategi SDM, perencanaan tenaga kerja, dan desain organisasi."
+  },
+  "vetting": {
+    "title": "Pemeriksaan Latar Belakang",
+    "desc": "Layanan screening menyeluruh untuk mendukung keputusan perekrutan yang patuh, aman, dan dapat dipercaya."
+  },
+  "organisationDevelopment": {
+    "title": "Pengembangan Organisasi",
+    "desc": "Peningkatan proses dan kinerja untuk meningkatkan efisiensi operasional dan kelincahan bisnis."
+  },
+  "work": {
+    "sectionTitle": "Tahapan Kerja Kami",
+    "sectionDesc": "Kami mengikuti pendekatan terstruktur untuk meningkatkan kinerja karyawan, membangun kepemimpinan yang kuat, dan memastikan pengembangan organisasi yang berkelanjutan.",
+    "strategicPlanning": {
+      "title": "Perencanaan Kerja Strategis",
+      "desc": "Kami memulai dengan mengidentifikasi kebutuhan dan tantangan organisasi Anda. Tim kami merancang rencana aksi strategis berdasarkan data dan tujuan spesifik guna memastikan solusi yang terarah dan efektif."
+    },
+    "monitoringEvaluation": {
+      "title": "Pemantauan dan Evaluasi",
+      "desc": "Kami memantau secara ketat pelaksanaan setiap program. Evaluasi rutin dilakukan untuk mengukur efektivitas dan memungkinkan penyesuaian tepat waktu guna mengoptimalkan hasil."
+    },
+    "completedWorks": {
+      "title": "Pekerjaan yang Telah Diselesaikan",
+      "desc": "Kami menyampaikan laporan akhir beserta rekomendasi tindak lanjut. Wawasan kami bertujuan mendukung pertumbuhan berkelanjutan dan transformasi organisasi Anda."
+    },
+    "contactPrompt": {
+      "part1": "Jangan ragu untuk menghubungi layanan konsultasi kami",
+      "link": "Layanan",
+      "part2": "untuk pertanyaan dan bantuan."
+    }
+  },
+  "blog":{
+    "title": "Baca Wawasan Terbaru Kami dari Artikel Blog Terbaru",
+    "ourBlog": "Blog Kami"
+  },
+  "aboutPage": {
+    "aboutUs": "Tentang Kami",
+    "sectionTag": "KONSULTASI SDM",
+    "title": "Memberdayakan Tim, Meningkatkan Kepemimpinan\nKeunggulan Konsultasi SDM Sejak 2025",
+    "description": "Kami ahli dalam meningkatkan kinerja karyawan, mengembangkan pemimpin masa depan, dan menyelaraskan talenta dengan tujuan bisnis. Pendekatan kami yang terbukti memberikan hasil nyata di setiap organisasi yang kami layani.",
+    "point1": "Pelatihan dan Pengembangan Kinerja",
+    "point2": "Program Pelatihan Kepemimpinan",
+    "ctaConsult": "Jadwalkan Konsultasi",
+    "ctaServices": "Layanan Kami"
+  },
+  "visionMission": {
+    "sectionTitle": "Visi & Misi Kami",
+    "heading": "Mendorong Keunggulan dalam Pengembangan SDM dan Kepemimpinan",
+    "description": "Kami berkomitmen untuk menghadirkan solusi SDM dan kepemimpinan yang inovatif dan aplikatif, memberdayakan klien dan komunitas untuk berkembang dengan integritas, kolaborasi, dan dampak yang berkelanjutan.",
+    "vision": "Visi",
+    "mission": "Misi",
+    "visionPoints": [
+      "Menjadi mitra HR dan kepemimpinan yang terpercaya dan inovatif yang memberdayakan individu dan organisasi melalui solusi praktis untuk mendukung keunggulan operasional dan pertumbuhan berkelanjutan."
+    ],
+    "missionPoints": [
+      "Memberikan solusi HR & kepemimpinan yang disesuaikan dan aplikatif",
+      "Memberdayakan individu dan memperkuat kapabilitas organisasi",
+      "Mendorong keunggulan operasional dan keberlanjutan jangka panjang"
+    ]
+  },
+  "whyChoose": {
+    "subtitle": "MENGAPA MEMILIH KAMI",
+    "title": "Memberdayakan Tenaga Kerja Anda",
+    "description": "Kami membantu perusahaan mengoptimalkan tenaga kerja mereka melalui solusi SDM strategis — mulai dari rekrutmen dan keterlibatan karyawan hingga pengembangan kepemimpinan.",
+    "features": [
+      "Pakar HR Bersertifikat",
+      "Dukungan Rekrutmen Menyeluruh",
+      "Diagnostik Kinerja & Budaya",
+      "Program Pelatihan & Pengembangan"
+    ],
+    "watchVideo": "Tonton Video"
+  },
+  "services": {
+    "ourServices": "Layanan Kami",
+    "sectionTitle": "Layanan yang Kami Tawarkan",
+    "items": {
+      "1": {
+        "subtitle": "Pengembangan",
+        "title": "Pengembangan SDM",
+        "description": "Memberdayakan tim Anda dengan pelatihan, coaching, dan strategi pertumbuhan yang dipersonalisasi.",
+        "button": "Lihat Detail"
+      },
+      "2": {
+        "subtitle": "Rekrutmen",
+        "title": "Akuisisi Talenta",
+        "description": "Menarik dan mempertahankan talenta terbaik dengan proses perekrutan strategis yang disesuaikan dengan perusahaan Anda.",
+        "button": "Lihat Detail"
+      },
+      "3": {
+        "subtitle": "Keterlibatan",
+        "title": "Keterlibatan Karyawan",
+        "description": "Meningkatkan semangat dan kinerja melalui kegiatan internal yang berdampak.",
+        "button": "Lihat Detail"
+      },
+      "4": {
+        "subtitle": "Konsultasi",
+        "title": "Konsultansi SDM",
+        "description": "Solusi SDM yang disesuaikan untuk menyelaraskan strategi SDM dengan tujuan bisnis.",
+        "button": "Lihat Detail"
+      },
+      "5": {
+        "subtitle": "Penyaringan",
+        "title": "Pemeriksaan Latar Belakang",
+        "description": "Pemeriksaan latar belakang menyeluruh untuk memastikan keandalan dan keamanan kandidat.",
+        "button": "Lihat Detail"
+      },
+      "6": {
+        "subtitle": "Strategi",
+        "title": "Pengembangan Organisasi",
+        "description": "Mendorong transformasi bisnis dengan rencana pengembangan organisasi yang terstruktur.",
+        "button": "Lihat Detail"
+      }
+    },
+    "contactUs":"Hubungi Kami",
+    "callUs":"Hubungi Kami Kapanpun",
+    "getHRConsultant":"Dapatkan Konsultan SDM"
+  },
+  "schedule":{
+    "scheduleWithUs": "Jadwalkan Bersama Kami"
+  },
+  "contact": {
+    "get_in_touch": "Hubungi Kami",
+    "trusted_by_experts": "Dipercaya Para Ahli",
+    "driven_by_solutions": "Didorong oleh Solusi",
+    "call_us": "Hubungi Kapan Saja",
+    "email_us": "Kirim Email",
+    "our_locations": "Lokasi Kami",
+    "location_address": "Arkadia Green Park Tower G, Lantai 8\nJakarta Selatan, DKI Jakarta, Indonesia 12520",
+    "phone": "+6221 8428 3681",
+    "email": "admin@mpupeoplesolution.com",
+    "schedule_consultation": "Jadwalkan Konsultasi",
+    "enter_name": "Masukkan Nama*",
+    "enter_email": "Masukkan Email*",
+    "enter_subject": "Masukkan Subjek*",
+    "enter_phone": "Masukkan Nomor Telepon*",
+    "enter_company": "Masukkan Nama Perusahaan*",
+    "select_issues": "Pilih Permasalahan*",
+    "enter_message": "Masukkan Pesan Anda*",
+    "select_date": "Pilih Tanggal*",
+    "select_time": "Pilih Waktu*",
+    "submit_now": "Kirim Sekarang",
+    "success_schedule": "Konsultasi berhasil dijadwalkan!",
+    "failed_schedule": "Gagal menjadwalkan konsultasi.",
+    "failed_send": "Gagal mengirim email.",
+    "failed_save": "Gagal menyimpan kontak.",
+    "disclaimer":"Data Anda akan dijaga kerahasiaannya dan hanya digunakan untuk tujuan proyek terkait.",
+    "letUsHelpYou":"Biarkan Kami Membantu Anda Memahami Tantangan SDM Anda"
+  },
+  "servicePD": {
+    "breadcrumb": {
+      "title": "Pengembangan SDM",
+      "link": "Layanan"
+    },
+    "title": "Pengembangan SDM",
+    "description1": "Kami percaya bahwa manusia adalah inti dari kesuksesan setiap organisasi. Layanan Pengembangan SDM kami bertujuan untuk membangun kemampuan kepemimpinan, meningkatkan keterlibatan karyawan, dan menciptakan kinerja berkelanjutan melalui pengalaman belajar terstruktur dan kerangka kerja pelatihan.",
+    "description2": "Mulai dari pelatihan kepemimpinan operasional hingga program pengembangan berbasis kompetensi, kami membantu individu dan tim untuk mencapai potensi penuh mereka. Pendekatan yang disesuaikan memastikan keselarasan dengan nilai dan tujuan jangka panjang organisasi Anda.",
+    "description3": "Berinvestasi pada SDM Anda adalah berinvestasi pada masa depan Anda. Dengan solusi kami, tenaga kerja Anda akan siap untuk beradaptasi, memimpin, dan berkembang di lingkungan bisnis yang dinamis saat ini.",
+    "benefits": {
+      "title": "Manfaat Layanan Kami",
+      "description": "Kembangkan strategi berorientasi manusia untuk meningkatkan kapabilitas, ketahanan, dan inovasi.",
+      "list": [
+        "Pelatih dan Coach Bersertifikat",
+        "Program Pelatihan yang Disesuaikan",
+        "Hasil Kinerja yang Terukur",
+        "Dukungan Lanjutan Pasca-Pelatihan"
+      ]
+    },
+    "accordionTitle": "Layanan Pengembangan SDM",
+    "accordion1": {
+      "title": "Apa itu Pengembangan SDM dan mengapa penting?",
+      "text": "Pengembangan SDM adalah pendekatan strategis untuk meningkatkan keterampilan, kompetensi, dan kinerja karyawan secara keseluruhan. Ini mencakup pelatihan, mentoring, coaching, dan program pengembangan kepemimpinan. Investasi dalam pengembangan SDM membantu membangun tenaga kerja yang berkinerja tinggi, meningkatkan retensi, dan mendorong kesuksesan bisnis jangka panjang."
+    },
+    "accordion2": {
+      "title": "Bagaimana Pengembangan SDM berdampak pada pertumbuhan organisasi?",
+      "text": "Dengan terus mengembangkan kemampuan karyawan, organisasi menciptakan budaya pembelajaran dan inovasi. Ini menghasilkan produktivitas yang lebih tinggi, suksesi kepemimpinan yang lebih baik, peningkatan keterlibatan karyawan, dan keunggulan kompetitif yang lebih kuat."
+    },
+    "accordion3": {
+      "title": "Program apa saja yang termasuk dalam layanan Pengembangan SDM Anda?",
+      "text": "Layanan kami mencakup pelatihan kepemimpinan, workshop soft skills, coaching kinerja, pemetaan kompetensi, perencanaan karier, dan strategi pembelajaran & pengembangan (L&D) yang disesuaikan dengan tujuan perusahaan Anda."
+    },
+    "accordion4": {
+      "title": "Apakah Anda menyediakan rencana pengembangan pribadi untuk karyawan?",
+      "text": "Ya, kami merancang rencana pengembangan individu yang selaras dengan tujuan organisasi dan aspirasi karier pribadi. Rencana ini dapat mencakup modul pelatihan terarah, program mentoring, dan siklus umpan balik kinerja."
+    }
+  },
+  "serviceTA": {
+    "breadcrumb": {
+      "title": "Akuisisi Talenta",
+      "link": "Layanan"
+    },
+    "title": "Solusi Akuisisi Talenta Profesional",
+    "description1": "Kami membantu perusahaan menemukan dan merekrut talenta terbaik yang selaras dengan visi dan nilai organisasi Anda. Dengan pendekatan berbasis data dan pengalaman industri yang luas, kami memastikan setiap kandidat yang kami rekomendasikan sesuai dengan kebutuhan jangka panjang.",
+    "description2": "Layanan kami mencakup rekrutmen end-to-end, mulai dari pencarian, penyaringan, wawancara, hingga onboarding.",
+    "description3": "Kami berkomitmen memberikan proses rekrutmen yang efisien, akurat, dan disesuaikan dengan budaya kerja organisasi Anda.",
+    "benefits": {
+      "title": "Manfaat Layanan Kami",
+      "description": "Kami percaya bahwa sumber daya manusia yang tepat adalah fondasi kesuksesan perusahaan.",
+      "list": [
+        "Akses ke Jaringan Kandidat Berkualitas",
+        "Proses Rekrutmen yang Efisien dan Cepat",
+        "Kesesuaian Budaya dan Kompetensi",
+        "Dukungan Konsultasi SDM Profesional"
+      ]
+    },
+    "accordionTitle": "Layanan Akuisisi Talenta",
+    "accordions": [
+      {
+        "title": "Apa itu Akuisisi Talenta dan bagaimana perbedaannya dengan Rekrutmen?",
+        "text": "Akuisisi Talenta adalah pendekatan strategis jangka panjang yang berfokus pada identifikasi, penarikan, dan pengembangan talenta terbaik untuk kebutuhan organisasi di masa depan. Sementara itu, rekrutmen adalah proses jangka pendek untuk mengisi posisi tertentu."
+      },
+      {
+        "title": "Bagaimana Akuisisi Talenta dapat meningkatkan kinerja bisnis?",
+        "text": "Strategi akuisisi talenta yang terstruktur memastikan organisasi mendapatkan orang yang tepat dengan keterampilan yang tepat, sehingga meningkatkan produktivitas, inovasi, dan retensi karyawan—yang berdampak langsung pada hasil bisnis."
+      },
+      {
+        "title": "Platform atau alat apa saja yang digunakan untuk Akuisisi Talenta?",
+        "text": "Kami menggunakan platform jejaring profesional seperti LinkedIn dan strategi penyaringan berbasis data untuk memastikan proses rekrutmen yang efisien dan efektif."
+      },
+      {
+        "title": "Apakah Anda menawarkan solusi Akuisisi Talenta yang dapat disesuaikan?",
+        "text": "Ya, kami menyediakan solusi yang disesuaikan berdasarkan industri, volume rekrutmen, dan tujuan bisnis Anda."
+      }
+    ]
+  },
+  "serviceEE": {
+    "breadcrumb": {
+      "title": "Keterlibatan Karyawan",
+      "link": "Layanan"
+    },
+    "title": "Keterlibatan Karyawan",
+    "description1": "Keterlibatan Karyawan adalah pendekatan strategis yang berfokus pada menciptakan kondisi optimal agar karyawan dapat berkontribusi secara maksimal terhadap keberhasilan organisasi. Program ini bertujuan membangun keterlibatan emosional dan komitmen antara karyawan dan perusahaan.",
+    "description2": "Melalui inisiatif seperti Program Pengembangan & Pertumbuhan Karyawan, Program Penghargaan & Apresiasi, Inisiatif Kesejahteraan & Keseimbangan Hidup-Kerja, Aktivasi Budaya & Nilai, Suara & Partisipasi Karyawan, Aktivitas Keterlibatan Tim, serta Pengalaman Onboarding & Offboarding.",
+    "description3": "Investasi dalam Keterlibatan Karyawan telah terbukti mengurangi tingkat turnover, meningkatkan loyalitas karyawan, dan membangun lingkungan kerja yang kolaboratif serta inovatif.",
+    "benefits": {
+      "title": "Manfaat dari Layanan Kami",
+      "description": "Pengembangan keterampilan kepemimpinan sebelum inovasi media dan penyelarasan yang berorientasi pada pelanggan.",
+      "list": [
+        "Meningkatkan Retensi Karyawan",
+        "Produktivitas Tim yang Lebih Baik",
+        "Budaya Kerja yang Positif",
+        "Loyalitas dan Kepuasan Kerja"
+      ]
+    },
+    "accordionTitle": "Keterlibatan Karyawan",
+    "accordions": [
+      {
+        "title": "Apa itu Keterlibatan Karyawan?",
+        "text": "Keterlibatan Karyawan adalah tingkat keterlibatan, komitmen, dan motivasi karyawan terhadap pekerjaan mereka dan perusahaan tempat mereka bekerja. Keterlibatan yang tinggi mendorong produktivitas dan retensi."
+      },
+      {
+        "title": "Apa manfaat Keterlibatan Karyawan bagi perusahaan?",
+        "text": "Manfaatnya meliputi peningkatan produktivitas, loyalitas karyawan, pengurangan turnover, peningkatan kepuasan pelanggan, dan penguatan budaya kerja yang sehat."
+      },
+      {
+        "title": "Layanan apa saja yang kami tawarkan?",
+        "text": "Kami menawarkan Program Pengembangan & Pertumbuhan Karyawan, Program Penghargaan & Apresiasi, Inisiatif Kesejahteraan & Keseimbangan Hidup-Kerja, Aktivasi Budaya & Nilai, Suara & Partisipasi Karyawan, Aktivitas Keterlibatan Tim, serta Pengalaman Onboarding & Offboarding."
+      },
+      {
+        "title": "Bagaimana proses implementasinya?",
+        "text": "Kami memulai dengan asesmen awal, kemudian merancang program yang sesuai dengan kebutuhan Anda, mengimplementasikan intervensi, dan mengevaluasi hasilnya secara berkala."
+      }
+    ]
+  },
+  "serviceHCC": {
+    "breadcrumb": {
+      "title": "Konsultansi Sumber Daya Manusia",
+      "link": "Layanan"
+    },
+    "title": "Layanan Konsultansi Strategis Sumber Daya Manusia",
+    "description1": "Kami membantu organisasi dalam mengoptimalkan potensi sumber daya manusia melalui perencanaan strategis, pengembangan kepemimpinan, dan inisiatif peningkatan kinerja. Layanan konsultansi kami didasarkan pada wawasan industri yang mendalam, kerangka kerja berbasis riset, dan strategi implementasi yang terbukti efektif.",
+    "description2": "Apakah organisasi Anda sedang mengalami transformasi, bersiap untuk tumbuh, atau menghadapi tantangan dalam mempertahankan talenta, kami hadir dengan solusi yang disesuaikan untuk mendukung tujuan Anda. Kami bekerja sama dengan para pemimpin HR untuk membentuk dan menjalankan strategi SDM yang memberikan dampak nyata bagi bisnis.",
+    "description3": "Mulai dari pelatihan kepemimpinan hingga perencanaan tenaga kerja dan transformasi budaya, layanan konsultansi kami dirancang untuk memberdayakan karyawan Anda dan meningkatkan kinerja organisasi di semua tingkat.",
+    "benefits": {
+      "title": "Manfaat Layanan Kami",
+      "description": "Bermitra dengan kami akan memberikan nilai nyata bagi organisasi Anda dengan menjadikan sumber daya manusia sebagai keunggulan kompetitif.",
+      "list": [
+        "Strategi SDM yang Disesuaikan",
+        "Peningkatan Kapabilitas Kepemimpinan",
+        "Dampak Tenaga Kerja yang Terukur",
+        "Solusi Talenta yang Dapat Diskalakan"
+      ]
+    },
+    "accordionTitle": "Konsultansi Sumber Daya Manusia",
+    "accordions": [
+      {
+        "title": "Apa itu Konsultansi Sumber Daya Manusia?",
+        "text": "Konsultansi SDM mencakup layanan strategis yang membantu organisasi memaksimalkan nilai dan efektivitas tenaga kerja mereka. Ini mencakup manajemen talenta, pengembangan kepemimpinan, dan desain organisasi."
+      },
+      {
+        "title": "Mengapa penting bagi organisasi?",
+        "text": "Strategi SDM yang kuat memungkinkan organisasi untuk menarik, mempertahankan, dan mengembangkan talenta terbaik, menyelaraskan kapabilitas tenaga kerja dengan tujuan bisnis, serta mendorong kinerja dan ketahanan jangka panjang."
+      },
+      {
+        "title": "Layanan apa saja yang kami tawarkan?",
+        "text": "Kami menyediakan diagnostik & audit operasional HR, perencanaan tenaga kerja & analisis beban kerja, perbaikan akuisisi & orientasi talenta, pengembangan layanan bersama HR, manajemen data HR & penyusunan metrik, rekayasa ulang proses siklus hidup karyawan, konsultasi hubungan industrial & kepatuhan, serta peningkatan kapabilitas tim operasi HR."
+      },
+      {
+        "title": "Bagaimana kami bekerja dengan klien?",
+        "text": "Kami memulai dengan penilaian diagnostik untuk memahami kebutuhan Anda, dilanjutkan dengan perancangan solusi yang disesuaikan, dukungan implementasi, dan konsultasi berkelanjutan untuk memastikan dampak yang berkelanjutan."
+      }
+    ]
+  },
+  "vbc": {
+    "breadcrumb": {
+      "title": "Vetting & Pemeriksaan Latar Belakang",
+      "link1": "Layanan",
+      "link2": "Vetting & Pemeriksaan"
+    },
+    "title": "Vetting & Pemeriksaan Latar Belakang",
+    "paragraph1": "Layanan vetting dan pemeriksaan latar belakang kami membantu organisasi memastikan integritas dan kepercayaan individu sebelum membuat keputusan perekrutan atau kemitraan.",
+    "paragraph2": "Dengan proses yang terbukti dan alat canggih, kami memverifikasi identitas, riwayat pendidikan, riwayat pekerjaan, catatan kriminal, dan lainnya secara akurat dan cepat.",
+    "paragraph3": "Kami membantu mengurangi risiko dan meningkatkan kepatuhan dalam proses rekrutmen dan onboarding melalui pemeriksaan latar belakang yang komprehensif.",
+    "benefitsTitle": "Manfaat Layanan Kami",
+    "benefitsDesc": "Dapatkan informasi terpercaya untuk proses perekrutan yang lebih aman.",
+    "benefits": {
+      "verified": "Verifikasi Latar Belakang Kandidat",
+      "confidence": "Kepercayaan Lebih dalam Perekrutan",
+      "risks": "Mengurangi Risiko Hukum & Kepatuhan",
+      "culture": "Budaya Kerja yang Aman"
+    },
+    "faq1": {
+      "title": "Apa itu Vetting & Pemeriksaan Latar Belakang?",
+      "text": "Ini adalah proses untuk memverifikasi kredensial individu, catatan kriminal, pendidikan, riwayat kerja, dan informasi relevan lainnya sebelum bekerja sama atau merekrut."
+    },
+    "faq2": {
+      "title": "Mengapa pemeriksaan latar belakang itu penting?",
+      "text": "Untuk mengurangi risiko penipuan, menjaga keamanan tempat kerja, memastikan kepatuhan, dan membantu organisasi mengambil keputusan perekrutan yang tepat."
+    },
+    "faq3": {
+      "title": "Apa saja yang kami periksa?",
+      "text": "Kami melakukan pemeriksaan menyeluruh sesuai kebutuhan klien, termasuk riwayat pekerjaan, pendidikan dan sertifikasi, catatan hukum dan kriminal, verifikasi identitas, analisis media sosial, dan lainnya."
+    },
+    "faq4": {
+      "title": "Seberapa cepat laporan bisa kami berikan?",
+      "text": "Tergantung kompleksitasnya, sebagian besar laporan bisa diselesaikan dalam waktu 5–10 hari kerja."
+    }
+  },
+  "od": {
+    "breadcrumb": {
+      "title": "Pengembangan Organisasi",
+      "link1": "Layanan",
+      "link2": "Pengembangan Organisasi"
+    },
+    "title": "Pengembangan Organisasi",
+    "paragraph1": "Layanan Pengembangan Organisasi (OD) kami dirancang untuk membantu perusahaan meningkatkan struktur, budaya, dan proses demi kesuksesan jangka panjang. Kami mendukung organisasi dalam menghadapi perubahan, membangun kepemimpinan, dan menciptakan tenaga kerja yang adaptif dan terlibat.",
+    "paragraph2": "Melalui diagnosis, perencanaan strategis, dan intervensi yang disesuaikan, kami membantu Anda mencapai peningkatan kinerja yang berkelanjutan dan budaya organisasi yang berkembang.",
+    "paragraph3": "Baik Anda sedang melakukan transformasi, memperbesar tim, atau meningkatkan kolaborasi lintas fungsi, konsultan kami yang berpengalaman akan bekerja sama dengan Anda untuk merancang solusi berdampak berbasis data.",
+    "benefitsTitle": "Manfaat Layanan Kami",
+    "benefitsDesc": "Solusi yang disesuaikan untuk membangun ketahanan dan mendorong transformasi di organisasi Anda.",
+    "benefits": {
+      "culture": "Budaya Organisasi yang Lebih Baik",
+      "collaboration": "Kolaborasi Tim yang Lebih Efektif",
+      "alignment": "Penyelarasan & Eksekusi Strategis",
+      "leadership": "Pengembangan Kepemimpinan"
+    },
+    "faq1": {
+      "title": "Apa itu Pengembangan Organisasi?",
+      "text": "Pengembangan Organisasi (OD) adalah pendekatan sistematis dan terencana untuk meningkatkan efektivitas organisasi melalui intervensi pada proses, struktur, dan budaya."
+    },
+    "faq2": {
+      "title": "Mengapa OD itu penting?",
+      "text": "OD membantu organisasi beradaptasi terhadap perubahan, meningkatkan komunikasi, membangun budaya yang positif, serta meningkatkan performa dan keterlibatan karyawan secara keseluruhan."
+    },
+    "faq3": {
+      "title": "Apa saja layanan yang disediakan?",
+      "text": "Layanan OD kami meliputi perencanaan strategis, pengembangan kepemimpinan, pembangunan tim, manajemen perubahan, asesmen budaya, dan program peningkatan kinerja."
+    },
+    "faq4": {
+      "title": "Bagaimana pendekatan kami terhadap proyek OD?",
+      "text": "Kami bekerja sama dengan klien untuk mendiagnosis tantangan, merancang intervensi, mengimplementasikan program, dan mengevaluasi hasil demi perbaikan berkelanjutan."
+    }
+  }
+}
+

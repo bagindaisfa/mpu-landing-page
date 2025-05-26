@@ -1,30 +1,29 @@
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function VisionMission() {
-  const visionPoints = [
-    'To be a trusted and innovative HR and leadership partner that empowers people and organizations through practical solutions to support operational excellence for sustainable growth.',
-  ];
+  const { t } = useTranslation();
+
+  const visionPoints = [t('visionMission.visionPoints.0')];
 
   const missionPoints = [
-    'Deliver tailored and practical HR & leadership solutions',
-    'Empower people and strengthen organizational capability',
-    'Promote operational excellence and long-term sustainability',
+    t('visionMission.missionPoints.0'),
+    t('visionMission.missionPoints.1'),
+    t('visionMission.missionPoints.2'),
   ];
 
   return (
     <section className="bg-gradient-to-b from-white to-gray-50 py-20 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-center mb-16">
         <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3">
-          OUR VISION & MISSION
+          {t('visionMission.sectionTitle')}
         </h5>
         <h1 className="font-FiraSans font-semibold text-HeadingColor-0 text-[18px] leading-[26px] sm:text-[18px] sm:leading-[35px] md:text-[18px] md:leading-[40px] lg:text-[20px] lg:leading-[44px] xl:text-[25px] xl:leading-[50px] 2xl:text-[30px] 2xl:leading-[52px] mb-4">
-          Driving Excellence in People and Leadership Development
+          {t('visionMission.heading')}
         </h1>
         <p className="font-FiraSans text-TextColor2-0">
-          We are committed to delivering innovative and practical HR and
-          leadership solutions that empower our clients and communities to
-          thrive with integrity, collaboration, and lasting impact.
+          {t('visionMission.description')}
         </p>
       </div>
 
@@ -37,7 +36,7 @@ export default function VisionMission() {
           className="bg-white rounded-2xl shadow-md p-8"
         >
           <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3">
-            Vision
+            {t('visionMission.vision')}
           </h5>
           <ul className="space-y-4 text-left">
             {visionPoints.map((point, idx) => (
@@ -62,7 +61,7 @@ export default function VisionMission() {
           className="bg-white rounded-2xl shadow-md p-8"
         >
           <h5 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3">
-            Mission
+            {t('visionMission.mission')}
           </h5>
           <ul className="space-y-4 text-left">
             {missionPoints.map((point, idx) => (

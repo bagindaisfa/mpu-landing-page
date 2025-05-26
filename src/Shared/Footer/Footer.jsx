@@ -3,8 +3,10 @@ import footerLogo from '/images/logo-new.png';
 import { FaAnglesRight, FaPhone } from 'react-icons/fa6';
 import { MdLocationPin } from 'react-icons/md';
 import { HiOutlineMailOpen } from 'react-icons/hi';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer
       className="relative z-10 pt-28 overflow-hidden"
@@ -21,7 +23,7 @@ const Footer = () => {
               />
             </Link>
             <p className="font-FiraSans text-[15px] text-TextColor-0 opacity-80 mt-7 mb-6">
-              Developing Agile Talent for Sustainable Growth.
+              {t('banner.title')}
             </p>
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-2">

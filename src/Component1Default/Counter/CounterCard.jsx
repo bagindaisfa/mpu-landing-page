@@ -15,7 +15,7 @@ const CounterCard = ({
       />
       <div>
         <CountUp
-          start={-11}
+          start={0}
           end={counterNumber}
           suffix={counterSuffex}
           className="font-FiraSans text-3xl sm:text-4xl md:text-[40px] text-white font-semibold"

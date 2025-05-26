@@ -7,6 +7,7 @@ import { RouterProvider } from 'react-router-dom';
 import router from './Router/Router';
 import MaintenancePage from './Component1Default/MaintenancePage/MaintenancePage';
 import { UserFormProvider } from './UserFormContext';
+import './i18n';
 
 const helmetContext = {}; // Define helmetContext here
 
