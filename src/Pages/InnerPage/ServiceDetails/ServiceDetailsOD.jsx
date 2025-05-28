@@ -1,7 +1,7 @@
 import React from 'react';
 import FormProtectedRoute from '../../../Component1Default/FormProtectedRoute';
 import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
-import serviceDetailsThumb from '/images/service_img.png';
+import serviceDetailsThumb from '/images/service-detail-OD.png';
 import { FaArrowRightLong, FaCheck } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
 import Accordion from './Accordion/Accordion';

@@ -1,7 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import serviceThumb from '/images/service_1.png';
-import serviceThumb2 from '/images/service_2.png';
-import serviceThumb3 from '/images/service_5.png';
+import serviceTA from '/images/service-banner-TA.png';
+import serviceEE from '/images/service-banner-EE.png';
+import serviceHRC from '/images/service-banner-HRC.png';
+import serviceVBC from '/images/service-banner-VBC.png';
+import serviceOD from '/images/service-banner-OD.png';
+import servicePD from '/images/service-banner-PD.png';
 import thumbIcon from '/images/service_icon.png';
 import serviceThumbShape from '/images/service_shpe.png';
 import serviceShape from '/images/boxs.png';
@@ -49,7 +52,7 @@ const Service = () => {
       serviceUrl: '/service/people-development',
       btnContent: t('services.items.1.button'),
       btnIcon: <GoArrowUpRight />,
-      serviceThumb: serviceThumb,
+      serviceThumb: servicePD,
       serviceThumbShape: serviceThumbShape,
       thumbIcon: thumbIcon,
       contentShape: contentShape,
@@ -62,7 +65,7 @@ const Service = () => {
       serviceUrl: '/service/talent-acquisition',
       btnContent: t('services.items.2.button'),
       btnIcon: <GoArrowUpRight />,
-      serviceThumb: serviceThumb2,
+      serviceThumb: serviceTA,
       serviceThumbShape: serviceThumbShape,
       thumbIcon: thumbIcon,
       contentShape: contentShape,
@@ -75,7 +78,7 @@ const Service = () => {
       serviceUrl: '/service/employee-engagement',
       btnContent: t('services.items.3.button'),
       btnIcon: <GoArrowUpRight />,
-      serviceThumb: serviceThumb3,
+      serviceThumb: serviceEE,
       serviceThumbShape: serviceThumbShape,
       thumbIcon: thumbIcon,
       contentShape: contentShape,
@@ -88,7 +91,7 @@ const Service = () => {
       serviceUrl: '/service/human-capital-consultancy',
       btnContent: t('services.items.4.button'),
       btnIcon: <GoArrowUpRight />,
-      serviceThumb: serviceThumb2,
+      serviceThumb: serviceHRC,
       serviceThumbShape: serviceThumbShape,
       thumbIcon: thumbIcon,
       contentShape: contentShape,
@@ -101,7 +104,7 @@ const Service = () => {
       serviceUrl: '/service/vetting-background-check',
       btnContent: t('services.items.5.button'),
       btnIcon: <GoArrowUpRight />,
-      serviceThumb: serviceThumb,
+      serviceThumb: serviceVBC,
       serviceThumbShape: serviceThumbShape,
       thumbIcon: thumbIcon,
       contentShape: contentShape,
@@ -114,7 +117,7 @@ const Service = () => {
       serviceUrl: '/service/organisation-development',
       btnContent: t('services.items.6.button'),
       btnIcon: <GoArrowUpRight />,
-      serviceThumb: serviceThumb3,
+      serviceThumb: serviceOD,
       serviceThumbShape: serviceThumbShape,
       thumbIcon: thumbIcon,
       contentShape: contentShape,

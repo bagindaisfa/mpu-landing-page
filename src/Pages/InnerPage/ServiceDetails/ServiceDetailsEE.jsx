@@ -1,7 +1,7 @@
 import React from 'react';
 import FormProtectedRoute from '../../../Component1Default/FormProtectedRoute';
 import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
-import serviceDetailsThumb from '/images/service_img.png';
+import serviceDetailsEE from '/images/service-detail-EE.png';
 import { FaArrowRightLong, FaCheck } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
 import Accordion from './Accordion/Accordion';
@@ -24,11 +24,7 @@ const ServiceDetailsEE = () => {
       <section className="py-[120px] bg-BodyBg4-0">
         <div className="Container">
           <div>
-            <img
-              src={serviceDetailsThumb}
-              draggable="false"
-              className="w-full"
-            />
+            <img src={serviceDetailsEE} draggable="false" className="w-full" />
           </div>
           <div className="grid grid-cols-3 mt-[62px]">
             <div className="col-span-3 lg:col-span-2 lg:mr-7 2xl:mr-[84px]">

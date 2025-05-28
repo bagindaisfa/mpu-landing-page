@@ -2,46 +2,70 @@ import './preloader.css';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-const Preloader = () => {
+const Preloader = ({ onComplete }) => {
   const preloaderRef = useRef(null);
   const svgRef = useRef(null);
 
   useEffect(() => {
+    const preloader = preloaderRef.current;
     const svg = svgRef.current;
-    const tl = gsap.timeline({
-      onComplete: startStrokeAnimation,
-    });
 
     const curve = 'M0 502S175 272 500 272s500 230 500 230V0H0Z';
     const flat = 'M0 2S175 1 500 1s500 1 500 1V0H0Z';
 
-    tl.to('.preloader-heading .load-text', {
-      delay: 1.5,
-      y: -100,
-      opacity: 0,
-    })
-      .to(svg, {
-        duration: 0.5,
-        attr: { d: curve },
-        ease: 'power2.easeIn',
-      })
-      .to(svg, {
-        duration: 0.5,
-        attr: { d: flat },
-        ease: 'power2.easeOut',
-      })
-      .to(preloaderRef.current, {
-        y: -1500,
-      })
-      .to(preloaderRef.current, {
-        zIndex: -1,
-        display: 'none',
+    function startStrokeAnimation() {
+      // Optional: any stroke animation logic here
+      console.log('Stroke animation started');
+    }
+
+    // ✅ Promise untuk delay minimal tampil 2 detik
+    const delayPromise = new Promise((resolve) => {
+      setTimeout(resolve, 5000);
+    });
+
+    // ✅ Promise untuk semua gambar selesai dimuat
+    const imagesPromise = Promise.all(
+      Array.from(document.images).map((img) =>
+        img.complete
+          ? Promise.resolve()
+          : new Promise((res) => {
+              img.onload = img.onerror = res;
+            })
+      )
+    );
+
+    // ✅ Jalankan animasi hanya setelah kedua promise selesai
+    Promise.all([delayPromise, imagesPromise]).then(() => {
+      const tl = gsap.timeline({
+        onComplete: () => {
+          startStrokeAnimation();
+          if (onComplete) onComplete();
+        },
       });
 
-    function startStrokeAnimation() {
-      // Your stroke animation logic here
-    }
-  }, []);
+      tl.to('.preloader-heading .load-text', {
+        y: -100,
+        opacity: 0,
+      })
+        .to(svg, {
+          duration: 0.5,
+          attr: { d: curve },
+          ease: 'power2.easeIn',
+        })
+        .to(svg, {
+          duration: 0.5,
+          attr: { d: flat },
+          ease: 'power2.easeOut',
+        })
+        .to(preloader, {
+          y: -1500,
+        })
+        .to(preloader, {
+          zIndex: -1,
+          display: 'none',
+        });
+    });
+  }, [onComplete]);
 
   return (
     <div className="preloader" ref={preloaderRef}>

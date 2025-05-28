@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 import Accordion from './Accordion/Accordion';
 
-import serviceDetailsThumb from '/images/service_img.png';
+import serviceDetailsThumb from '/images/service-detail-VBC.png';
 import Icon2 from '/images/service-icon2.png';
 
 const ServiceDetailsVBC = () => {

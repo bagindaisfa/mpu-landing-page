@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import whyChooseThumb from '/images/choose_thumb.png';
+import whyChooseThumb from '/images/choose_thumb2.png';
 import whyChooseShape from '/images/box.png';
 import whyChooseShape2 from '/images/choose_rotete.png';
 import whyChooseShape3 from '/images/choose_dot.png';
@@ -89,7 +89,8 @@ const WhyChoose = () => {
       <img
         src={whyChooseShape}
         draggable="false"
-        className="absolute -z-10 top-48 right-[13%] animate-rotate hidden 2xl:block"
+        className="absolute -z-10 right-[13%] animate-rotate hidden 2xl:block"
+        style={{ top: 160 }}
       />
       <img
         src={whyChooseShape2}

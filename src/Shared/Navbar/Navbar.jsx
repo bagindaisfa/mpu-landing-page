@@ -322,7 +322,7 @@ const Navbar = () => {
                     <LuMoveRight />
                   </Link>
                 </div>
-                <div className="light-btn hidden xl:block relative top-3">
+                <div className="light-btn block relative top-3">
                   <LanguageSwitcher />
                 </div>
                 <div className="header-bar lg:hidden">

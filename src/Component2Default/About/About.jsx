@@ -1,4 +1,4 @@
-import aboutThumb from '/images/about_2.png';
+import aboutThumb from '/images/about_3.png';
 import aboutShape from '/images/about_shape2.png';
 import aboutIcon from '/images/people.png';
 import aboutIcon2 from '/images/famous.png';

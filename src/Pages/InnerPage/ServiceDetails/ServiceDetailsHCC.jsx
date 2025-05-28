@@ -1,7 +1,7 @@
 import React from 'react';
 import FormProtectedRoute from '../../../Component1Default/FormProtectedRoute';
 import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
-import serviceDetailsThumb from '/images/service_img.png';
+import serviceDetailsThumb from '/images/service-detail-HRC.png';
 import { FaArrowRightLong, FaCheck } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
 import Icon2 from '/images/service-icon2.png';
@@ -34,7 +34,7 @@ const ServiceDetailsHCC = () => {
           </div>
           <div className="grid grid-cols-3 mt-[62px]">
             <div className="col-span-3 lg:col-span-2 lg:mr-7 2xl:mr-[84px]">
-              <h2 className="font-FiraSans font-semibold text-2xl sm:text-[42px] text-HeadingColor-0">
+              <h2 className="font-FiraSans font-semibold text-2xl sm:text-[38px] text-HeadingColor-0">
                 {t('serviceHCC.title')}
               </h2>
               <p className="font-FiraSans text-TextColor2-0 mt-[26px]">

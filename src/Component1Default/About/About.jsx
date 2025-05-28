@@ -1,4 +1,4 @@
-import aboutThumb from '/images/about_thumb.png';
+import aboutThumb from '/images/about_thumb3.png';
 import aboutShape from '/images/about_shape.png';
 import { FaCheck } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
