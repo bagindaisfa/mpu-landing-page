@@ -71,7 +71,9 @@ const Banner = () => {
       />
       <FsLightbox
         toggler={toggler}
-        sources={['https://youtu.be/owCTA9aU8-A']}
+        sources={[
+          'https://www.youtube.com/embed/owCTA9aU8-A?rel=0&modestbranding=1',
+        ]}
       />
     </section>
   );
