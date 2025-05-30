@@ -46,9 +46,9 @@ const WhyChoose = () => {
               />
             </h1>
             <p className="font-FiraSans text-TextColor2-0 pt-5">
-              Globally engage cross-media leadership skills before cross-media
-              innovation develop standardized platforms without robust
-              applications. Conveniently go forward collaboration and
+              Globally engage cross-media leadership competencies before
+              cross-media innovation develop standardized platforms without
+              robust applications. Conveniently go forward collaboration and
               idea-sharing
             </p>
             <ul className="grid items-center grid-cols-1 gap-x-7 gap-y-5 sm:grid-cols-2 mt-9 pb-10">

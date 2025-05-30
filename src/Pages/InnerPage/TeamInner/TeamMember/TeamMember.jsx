@@ -1,76 +1,77 @@
-import teamThumb from "/images/team1.jpg";
-import teamThumb2 from "/images/team2.jpg";
-import teamThumb3 from "/images/team3.jpg";
-import teamThumb4 from "/images/team_4.png";
-import teamThumb5 from "/images/team5.png";
-import teamThumb6 from "/images/team6.png";
-import TeamCard from "./TeamCard";
+import teamThumb from '/images/team1.jpg';
+import teamThumb2 from '/images/team2.jpg';
+import teamThumb3 from '/images/team3.jpg';
+import teamThumb4 from '/images/team_4.png';
+import teamThumb5 from '/images/team5.png';
+import teamThumb6 from '/images/team6.png';
+import TeamCard from './TeamCard';
 import {
   FaFacebookF,
   FaLinkedinIn,
   FaPinterestP,
   FaXTwitter,
-} from "react-icons/fa6";
+} from 'react-icons/fa6';
 
 const teamData = [
   {
     id: 1,
     teamThumb: teamThumb,
-    teamTitle: "Connie Diaz",
+    teamTitle: 'Connie Diaz',
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
     socialIcon4: <FaPinterestP />,
-    teamDesc: "Lead Developer",
+    teamDesc: 'Lead Developer',
   },
   {
     id: 2,
     teamThumb: teamThumb3,
-    teamTitle: "Jone D. Alexon",
+    teamTitle: 'Jone D. Alexon',
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
     socialIcon4: <FaPinterestP />,
-    teamDesc: "CEO & Founder",
+    teamDesc: 'CEO & Founder',
   },
   {
     id: 3,
     teamThumb: teamThumb2,
-    teamTitle: "James E. Huey",
+    teamTitle: 'James E. Huey',
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
     socialIcon4: <FaPinterestP />,
-    teamDesc: "IT Expert",
-  },  {
+    teamDesc: 'IT Expert',
+  },
+  {
     id: 4,
     teamThumb: teamThumb4,
-    teamTitle: "Anne M. Smith",
+    teamTitle: 'Anne M. Smith',
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
     socialIcon4: <FaPinterestP />,
-    teamDesc: "Branding",
+    teamDesc: 'Branding',
   },
   {
     id: 5,
     teamThumb: teamThumb5,
-    teamTitle: "Anjelina Joli",
+    teamTitle: 'Anjelina Joli',
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
     socialIcon4: <FaPinterestP />,
-    teamDesc: "Maneger",
+    teamDesc: 'Maneger',
   },
   {
     id: 6,
     teamThumb: teamThumb6,
-    teamTitle: "David Miller",
+    teamTitle: 'David Miller',
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
     socialIcon4: <FaPinterestP />,
-    teamDesc: "Marketing",
+    teamDesc: 'Marketing',
   },
 ];
 
@@ -88,8 +89,8 @@ const TeamMember = () => {
             for Helping the Customers
           </h1>
           <p className="font-FiraSans text-TextColor2-0 pt-4">
-            Globally engage cross-media leadership skills before cross-media
-            innovation forward
+            Globally engage cross-media leadership competencies before
+            cross-media innovation forward
             <br className="hidden md:block" /> develope standardized platforms
             without robust
           </p>

@@ -53,7 +53,7 @@
   },
   "hrConsultancy": {
     "title": "Konsultasi Sumber Daya Manusia",
-    "desc": "Dukungan advis untuk mengoptimalkan strategi SDM, perencanaan tenaga kerja, dan desain organisasi."
+    "desc": "Dukungan advis untuk mengoptimalkan strategi SDM, perencanaan tenaga kerja, desain organisasi, hubungan industrial dan formalitas perusahaan."
   },
   "vetting": {
     "title": "Pemeriksaan Latar Belakang",
@@ -91,7 +91,7 @@
   "aboutPage": {
     "aboutUs": "Tentang Kami",
     "sectionTag": "KONSULTASI SDM",
-    "title": "Memberdayakan Tim, Meningkatkan Kepemimpinan\nKeunggulan Konsultasi SDM Sejak 2025",
+    "title": "Memberdayakan Tim dan Meningkatkan Kepemimpinan",
     "description": "Kami ahli dalam meningkatkan kinerja karyawan, mengembangkan pemimpin masa depan, dan menyelaraskan talenta dengan tujuan bisnis. Pendekatan kami yang terbukti memberikan hasil nyata di setiap organisasi yang kami layani.",
     "point1": "Pelatihan dan Pengembangan Kinerja",
     "point2": "Program Pelatihan Kepemimpinan",
@@ -347,7 +347,7 @@
       },
       {
         "title": "Layanan apa saja yang kami tawarkan?",
-        "text": "Kami menyediakan diagnostik & audit operasional HR, perencanaan tenaga kerja & analisis beban kerja, perbaikan akuisisi & orientasi talenta, pengembangan layanan bersama HR, manajemen data HR & penyusunan metrik, rekayasa ulang proses siklus hidup karyawan, konsultasi hubungan industrial & kepatuhan, serta peningkatan kapabilitas tim operasi HR."
+        "text": "Kami menyediakan diagnostik & audit operasional HR, perencanaan tenaga kerja & analisis beban kerja, perbaikan akuisisi & orientasi talenta, pengembangan layanan bersama HR, manajemen data HR & penyusunan metrik, rekayasa ulang proses siklus hidup karyawan, konsultasi hubungan industrial & kepatuhan, formalitas perusahaan, serta peningkatan kapabilitas tim operasi HR."
       },
       {
         "title": "Bagaimana kami bekerja dengan klien?",

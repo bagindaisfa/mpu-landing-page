@@ -27,14 +27,19 @@ const WorkCard = ({
         />
       </div>
       <Link to={workUrl}>
-        <button className="font-FiraSans text-left font-medium text-xl text-HeadingColor-0">
+        <button
+          className="font-FiraSans text-left font-medium text-xl text-HeadingColor-0"
+          disabled
+        >
           {workTitle}
         </button>
       </Link>
       <p className="font-FiraSans text-TextColor2-0 pt-3 pb-6">{workDesc}</p>
-      <Link to={workUrl}>
-        <button className="text-PrimaryColor-0 text-2xl">{workBtn}</button>
-      </Link>
+      {/* <Link to={workUrl}>
+        <button className="text-PrimaryColor-0 text-2xl" disabled>
+          {workBtn}
+        </button>
+      </Link> */}
     </div>
   );
 };

@@ -55,9 +55,9 @@ const About = () => {
               helps companies
             </h1>
             <p className="font-FiraSans text-TextColor2-0 mt-6">
-              Globally engage cross-media leadership skills before cross-media
-              innovation develop standardized platforms without robust
-              applications. Conveniently go forward collaboration and
+              Globally engage cross-media leadership competencies before
+              cross-media innovation develop standardized platforms without
+              robust applications. Conveniently go forward collaboration and
               idea-sharing
             </p>
             <ul className="mt-5">

@@ -1,7 +1,7 @@
-import { FaRegEnvelope, FaRegUser } from "react-icons/fa6";
-import bannerShape from "/images/hero_dot_shape.png";
-import bannerShape3 from "/images/hero_shape2.png";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaRegEnvelope, FaRegUser } from 'react-icons/fa6';
+import bannerShape from '/images/hero_dot_shape.png';
+import bannerShape3 from '/images/hero_shape2.png';
+import { FaPhoneAlt } from 'react-icons/fa';
 
 const CallBack = () => {
   return (
@@ -16,7 +16,8 @@ const CallBack = () => {
               Request A Free Consulting
             </h1>
             <p className="font-FiraSans text-TextColor-0">
-              Media leadership skills before cross-media innovation testing
+              Media leadership competencies before cross-media innovation
+              testing
               <br />
               develop standardized platforms without
             </p>
@@ -63,7 +64,7 @@ const CallBack = () => {
                   className="h-[56px] w-full rounded px-6 py-2 font-FiraSans text-sm placeholder:text-TextColor2-0 text-HeadingColor-0 bg-white border-none outline-none"
                 />
                 <span className="absolute top-1/2 -translate-y-1/2 right-6 text-TextColor2-0">
-                  <FaPhoneAlt size={"15"} />
+                  <FaPhoneAlt size={'15'} />
                 </span>
               </label>
               <button

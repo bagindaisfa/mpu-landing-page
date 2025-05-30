@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
-import testiImg from "/images/testi_author2.png";
-import testiQuote from "/images/testi_icon2.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { MdOutlineStarPurple500 } from "react-icons/md";
-import TestimonialCard from "./TestimonialCard";
-import CountUp from "react-countup";
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
-import TestimonialNavigation from "./TestimonialNavigation";
-import Brand from "../Brand/Brand";
+import testiImg from '/images/testi_author2.png';
+import testiQuote from '/images/testi_icon2.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { MdOutlineStarPurple500 } from 'react-icons/md';
+import TestimonialCard from './TestimonialCard';
+import CountUp from 'react-countup';
+import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
+import TestimonialNavigation from './TestimonialNavigation';
+import Brand from '../Brand/Brand';
 
 const testiData = [
   {
@@ -16,11 +16,11 @@ const testiData = [
     testiQuote: testiQuote,
     testiImg: testiImg,
     testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiName: "Hemilton Masakajja",
-    testiDesignation: "Web Developer",
+    testiName: 'Hemilton Masakajja',
+    testiDesignation: 'Web Developer',
     testiDesc: `Conveniently transform error-free architectures
                 diness vis-a-vis equity invested Appropriately in
-                underwhelm  proactive leadership skills without 
+                underwhelm  proactive leadership competencies without 
                 future applications Consultant`,
   },
   {
@@ -28,11 +28,11 @@ const testiData = [
     testiQuote: testiQuote,
     testiImg: testiImg,
     testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiName: "Jhon D. Alexon",
-    testiDesignation: "UI/UX Designer",
+    testiName: 'Jhon D. Alexon',
+    testiDesignation: 'UI/UX Designer',
     testiDesc: `Conveniently transform error-free architectures
                 diness vis-a-vis equity invested Appropriately in
-                underwhelm  proactive leadership skills without 
+                underwhelm  proactive leadership competencies without 
                 future applications Consultant`,
   },
 ];
@@ -58,8 +58,9 @@ const Testimonial = () => {
               Trusted By The Genius <br /> People With Cosult
             </h1>
             <p className="font-FiraSans text-TextColor-0 mb-7">
-              Media leadership skills before cross-media innovation <br className="hidden sm:block lg:hidden xl:block"/>{" "}
-              develop standardized platforms without
+              Media leadership competencies before cross-media innovation{' '}
+              <br className="hidden sm:block lg:hidden xl:block" /> develop
+              standardized platforms without
             </p>
             <div className="relative flex items-center gap-5 border-t border-BorderColor2-0 sm:mr-10 pt-8">
               <div className="border-r border-Secondarycolor-0 border-opacity-15 pr-5">
@@ -67,26 +68,26 @@ const Testimonial = () => {
                   start={-11}
                   prefix="4."
                   end={98}
-                  suffix={""}
+                  suffix={''}
                   className="font-FiraSans text-4xl leading-[26px] md:text-[56px] md:leading-[40px] text-PrimaryColor-0 font-medium"
                 />
               </div>
               <div>
                 <ul className="flex items-center gap-1">
                   <li className="text-[#ffb609]">
-                    <FaStar size={"18"} />
+                    <FaStar size={'18'} />
                   </li>
                   <li className="text-[#ffb609]">
-                    <FaStar size={"18"} />
+                    <FaStar size={'18'} />
                   </li>
                   <li className="text-[#ffb609]">
-                    <FaStar size={"18"} />
+                    <FaStar size={'18'} />
                   </li>
                   <li className="text-[#ffb609]">
-                    <FaStar size={"18"} />
+                    <FaStar size={'18'} />
                   </li>
                   <li className="text-[#ffb609]">
-                    <FaStarHalfAlt size={"18"} />
+                    <FaStarHalfAlt size={'18'} />
                   </li>
                 </ul>
                 <p className="font-FiraSans sm:text-lg text-TextColor-0 capitalize mt-2">

@@ -56,8 +56,8 @@ const TeamMember = () => {
             for Helping the Customers
           </h1>
           <p className="font-FiraSans text-TextColor2-0 pt-4">
-            Globally engage cross-media leadership skills before cross-media
-            innovation forward
+            Globally engage cross-media leadership competencies before
+            cross-media innovation forward
             <br className="hidden md:block" /> develope standardized platforms
             without robust
           </p>

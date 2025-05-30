@@ -4,15 +4,15 @@ import { MdOutlineStarPurple500 } from 'react-icons/md';
 import TestimonialCard from './TestimonialCard';
 import testiProfile from '/images/testi_author.png';
 import { RiDoubleQuotesR } from 'react-icons/ri';
-import testiShape from "/images/testi2-shape1.png"
-import testiShape2 from "/images/testi2-shape2.png"
+import testiShape from '/images/testi2-shape1.png';
+import testiShape2 from '/images/testi2-shape2.png';
 
 const testiData = [
   {
     id: 1,
     testiQuote: <RiDoubleQuotesR />,
     testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiDesc: `“Conveniently transform error-free architectures whereas maximizing collaboration and idea-sharing. Intrinsically team driven web-readiness vis-a-vis equity invested. Appropriately underwhelm proactive leadership skills without future-proof applications Consultant”`,
+    testiDesc: `“Conveniently transform error-free architectures whereas maximizing collaboration and idea-sharing. Intrinsically team driven web-readiness vis-a-vis equity invested. Appropriately underwhelm proactive leadership competencies without future-proof applications Consultant”`,
     testiName: 'Jhon D. Alexon',
     testiDesignation: 'Web Developer',
     testiProfile: testiProfile,
@@ -21,7 +21,7 @@ const testiData = [
     id: 2,
     testiQuote: <RiDoubleQuotesR />,
     testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiDesc: `“Conveniently transform error-free architectures whereas maximizing collaboration and idea-sharing. Intrinsically team driven web-readiness vis-a-vis equity invested. Appropriately underwhelm proactive leadership skills without future-proof applications Consultant”`,
+    testiDesc: `“Conveniently transform error-free architectures whereas maximizing collaboration and idea-sharing. Intrinsically team driven web-readiness vis-a-vis equity invested. Appropriately underwhelm proactive leadership competencies without future-proof applications Consultant”`,
     testiName: 'Jhon D. Alexon',
     testiDesignation: 'Web Developer',
     testiProfile: testiProfile,
@@ -50,21 +50,21 @@ const Testimonial = () => {
     },
   };
   return (
-    <section className='py-28 bg-PrimaryColor-0 relative z-10 overflow-hidden'>
+    <section className="py-28 bg-PrimaryColor-0 relative z-10 overflow-hidden">
       <img
         src={testiShape}
-        alt='Image'
-        draggable='false'
-        className='absolute top-16 right-36 animate-rotate hidden 2xl:block'
+        alt="Image"
+        draggable="false"
+        className="absolute top-16 right-36 animate-rotate hidden 2xl:block"
       />
       <img
         src={testiShape2}
-        alt='Image'
-        draggable='false'
-        className='absolute bottom-28 left-64 animate-rotate hidden 2xl:block'
+        alt="Image"
+        draggable="false"
+        className="absolute bottom-28 left-64 animate-rotate hidden 2xl:block"
       />
-      <div className='Container'>
-        <div className='flex justify-center text-center'>
+      <div className="Container">
+        <div className="flex justify-center text-center">
           <Swiper {...settings}>
             <div>
               {testiData.map(

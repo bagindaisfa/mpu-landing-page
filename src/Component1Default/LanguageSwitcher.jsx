@@ -38,13 +38,21 @@ export default function LanguageSwitcher() {
           }`}
         ></div>
 
-        {/* Circle + Icon */}
+        {/* Circle + Flag Image */}
         <div
           className={`dot absolute top-1 left-1 flex h-6 w-6 items-center justify-center rounded-full bg-white shadow-md transition-transform duration-300 ${
             isChecked ? 'translate-x-6' : ''
           }`}
         >
-          {isChecked ? '🇮🇩' : '🇺🇸'}
+          <img
+            src={
+              isChecked
+                ? 'https://flagcdn.com/id.svg'
+                : 'https://flagcdn.com/gb.svg'
+            }
+            alt={isChecked ? 'Bahasa Indonesia' : 'English'}
+            className="w-4 h-4 object-contain"
+          />
         </div>
       </div>
     </label>

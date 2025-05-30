@@ -1,9 +1,9 @@
-import aboutThumb from "/images/skills_thumb.png";
-import skillProfile from "/images/skill_author.png";
-import ceoSign from "/images/sign.png";
-import skillShape2 from "/images/service_shape1.png";
-import skillShape3 from "/images/skill_shape.png";
-import ProgressBar from "react-animated-progress-bar";
+import aboutThumb from '/images/skills_thumb.png';
+import skillProfile from '/images/skill_author.png';
+import ceoSign from '/images/sign.png';
+import skillShape2 from '/images/service_shape1.png';
+import skillShape3 from '/images/skill_shape.png';
+import ProgressBar from 'react-animated-progress-bar';
 
 const Skill = () => {
   return (
@@ -35,9 +35,9 @@ const Skill = () => {
               Financial Journey to Elevating <br /> Your Business Destiny
             </h1>
             <p className="font-FiraSans text-TextColor2-0">
-              Globally engage cross-media leadership skills before cross-media
-              innovation develop standardized platforms without robust
-              applications. Conveniently go forward collaboration and
+              Globally engage cross-media leadership competencies before
+              cross-media innovation develop standardized platforms without
+              robust applications. Conveniently go forward collaboration and
               idea-sharing
             </p>
             <div className="mb-6 mt-7">
@@ -56,10 +56,10 @@ const Skill = () => {
                 fontWeight="400"
                 percentage="90"
                 defColor={{
-                  excellent: "#0c6e6d",
-                  good: "#79b900",
-                  fair: "green",
-                  poor: "red",
+                  excellent: '#0c6e6d',
+                  good: '#79b900',
+                  fair: 'green',
+                  poor: 'red',
                 }}
                 trackPathColor="#dbe9e9"
                 trackBorderColor="transparent"
@@ -82,10 +82,10 @@ const Skill = () => {
                 fontWeight="400"
                 percentage="85"
                 defColor={{
-                  excellent: "#0c6e6d",
-                  good: "#79b900",
-                  fair: "green",
-                  poor: "red",
+                  excellent: '#0c6e6d',
+                  good: '#79b900',
+                  fair: 'green',
+                  poor: 'red',
                 }}
                 trackPathColor="#dbe9e9"
                 trackBorderColor="transparent"

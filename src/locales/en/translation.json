@@ -53,7 +53,7 @@
   },
   "hrConsultancy": {
     "title": "Human Resource Consultancy",
-    "desc": "Advisory support to optimize HR strategy, workforce planning, and organizational design."
+    "desc": "Advisory support to optimize HR strategy, workforce planning, organizational design, industrial relation and company formalities."
   },
   "vetting": {
     "title": "Vetting & Background Check",
@@ -91,7 +91,7 @@
   "aboutPage": {
     "aboutUs": "About Us",
     "sectionTag": "HR CONSULTING",
-    "title": "Empowering Teams, Elevating Leaders\nHR Consulting Excellence Since 2025",
+    "title": "Empowering Teams and Elevating Leaders",
     "description": "We specialize in boosting employee performance, developing future leaders, and aligning talent with business goals. Our proven approach drives measurable results in every organization we serve.",
     "point1": "Performance Coaching & Development",
     "point2": "Leadership Training Programs",
@@ -348,7 +348,7 @@
       },
       {
         "title": "What services do we provide?",
-        "text": "We offer HR operation diagnostic & audit, workforce planning & workload analysis, talent acquisition & onboarding improvement, HR shared services development, HR data management & metrics setup, employee lifecycle process re-engineering, industrial relations & compliance advisory, and capability building for the HR operation team."
+        "text": "We offer HR operation diagnostic & audit, workforce planning & workload analysis, talent acquisition & onboarding improvement, HR shared services development, HR data management & metrics setup, employee lifecycle process re-engineering, industrial relations & compliance advisory, company formalities, and capability building for the HR operation team."
       },
       {
         "title": "How do we work with clients?",

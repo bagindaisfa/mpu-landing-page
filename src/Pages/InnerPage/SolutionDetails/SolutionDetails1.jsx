@@ -34,14 +34,14 @@ const SolutionDetails1 = () => {
                 Custom Leadership Development Framework
               </h2>
               <p className="font-FiraSans text-TextColor2-0 mt-[26px]">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward morph flexible whereas process-centric
-                models. Efficiently transform customer directed alignments for
-                front-end meta Dramatically harness cross-platform best
-                practices whereas business services. Conveniently formula
-                standards in innovation with wireless vertical intellectual
-                capital before global architectures engage based results with
-                visionary models.
+                Globally engage cross-media leadership competencies before
+                cross-media innovation forward morph flexible whereas
+                process-centric models. Efficiently transform customer directed
+                alignments for front-end meta Dramatically harness
+                cross-platform best practices whereas business services.
+                Conveniently formula standards in innovation with wireless
+                vertical intellectual capital before global architectures engage
+                based results with visionary models.
               </p>
               <p className="font-FiraSans text-TextColor2-0 mt-7 mb-7">
                 Dramatically harness cross-platform best practices whereas
@@ -51,9 +51,9 @@ const SolutionDetails1 = () => {
                 monotonectally
               </p>
               <p className="font-FiraSans text-TextColor2-0">
-                Globally engage cross-media leadership skills before cross-media
-                innovation forward morph whereas process-centric models.
-                Efficiently transform customer directed alignments
+                Globally engage cross-media leadership competencies before
+                cross-media innovation forward morph whereas process-centric
+                models. Efficiently transform customer directed alignments
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-14">
                 <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5">

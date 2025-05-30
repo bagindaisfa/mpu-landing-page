@@ -63,9 +63,9 @@ const About = () => {
               />
             </h1>
             <p className="font-FiraSans text-TextColor2-0 pt-6">
-              Globally engage cross-media leadership skills before cross-media
-              innovation develop standardized platforms without robust
-              applications. Conveniently go forward collaboration and
+              Globally engage cross-media leadership competencies before
+              cross-media innovation develop standardized platforms without
+              robust applications. Conveniently go forward collaboration and
               idea-sharing
             </p>
             <div className="grid items-center grid-cols-1 gap-7 sm:gap-1 md:gap-7 lg:gap-1 2xl:gap-7 sm:grid-cols-2 border-b border-BorderColor-0 mt-9 pb-7 mb-9">
