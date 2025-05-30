@@ -19,7 +19,7 @@ const Assessment = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    subject: 'New Contact Form Submission',
     number: '',
     company: '',
     issues: [], // array of selected options
@@ -115,7 +115,7 @@ const Assessment = () => {
       setFormData({
         name: '',
         email: '',
-        subject: '',
+        subject: 'New Contact Form Submission',
         number: '',
         message: '',
       });
@@ -246,7 +246,7 @@ const Assessment = () => {
                     </div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div className="relative inline-block">
+                    {/* <div className="relative inline-block">
                       <input
                         type="text"
                         name="subject"
@@ -261,7 +261,7 @@ const Assessment = () => {
                         size={'14'}
                         className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
                       />
-                    </div>
+                    </div> */}
                     <div className="relative inline-block">
                       <input
                         type="text"
@@ -278,8 +278,6 @@ const Assessment = () => {
                         className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
                       />
                     </div>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div className="relative inline-block">
                       <input
                         type="text"
@@ -292,26 +290,22 @@ const Assessment = () => {
                         onChange={handleChange}
                       />
                     </div>
-
-                    <div className="relative inline-block">
-                      <Select
-                        isMulti
-                        name="issues"
-                        options={questions}
-                        className="react-select-container"
-                        classNamePrefix="react-select"
-                        placeholder={t('contact.select_issues')}
-                        value={formData.issues}
-                        onChange={(selectedOptions) =>
-                          setFormData((prevData) => ({
-                            ...prevData,
-                            issues: selectedOptions,
-                          }))
-                        }
-                      />
-                    </div>
                   </div>
-
+                  <Select
+                    isMulti
+                    name="issues"
+                    options={questions}
+                    className="react-select-container"
+                    classNamePrefix="react-select"
+                    placeholder={t('contact.select_issues')}
+                    value={formData.issues}
+                    onChange={(selectedOptions) =>
+                      setFormData((prevData) => ({
+                        ...prevData,
+                        issues: selectedOptions,
+                      }))
+                    }
+                  />
                   <textarea
                     name="message"
                     id="message"
@@ -319,7 +313,11 @@ const Assessment = () => {
                     className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[120px] w-full focus:outline-PrimaryColor-0 resize-none"
                     value={formData.message}
                     onChange={handleChange}
+                    maxLength="1000"
                   ></textarea>
+                  <div className="text-sm text-right text-TextColor-0 -mt-[2px]">
+                    {formData.message.length}/1000 characters
+                  </div>
                   <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
                     {t('contact.disclaimer')}
                   </label>

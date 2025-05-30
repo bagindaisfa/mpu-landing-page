@@ -1,8 +1,8 @@
-import { BiRightTopArrowCircle } from "react-icons/bi";
-import { FaUser } from "react-icons/fa6";
-import { GrAlarm } from "react-icons/gr";
-import { HiOutlineMailOpen } from "react-icons/hi";
-import { MdCall, MdEmail } from "react-icons/md";
+import { BiRightTopArrowCircle } from 'react-icons/bi';
+import { FaUser } from 'react-icons/fa6';
+import { GrAlarm } from 'react-icons/gr';
+import { HiOutlineMailOpen } from 'react-icons/hi';
+import { MdCall, MdEmail } from 'react-icons/md';
 
 const Appionment = () => {
   return (
@@ -25,7 +25,7 @@ const Appionment = () => {
                     className="font-FiraSans text-TextColor2-0 font-light bg-transparent border-2 border-BorderColor2-0 rounded py-2 px-6 h-[60px] w-full focus:outline-PrimaryColor-0"
                   />
                   <FaUser
-                    size={"14"}
+                    size={'14'}
                     className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
                   />
                 </div>
@@ -39,7 +39,7 @@ const Appionment = () => {
                     className="font-FiraSans text-TextColor2-0 font-light bg-transparent border-2 border-BorderColor2-0 rounded py-2 px-6 h-[60px] w-full focus:outline-PrimaryColor-0"
                   />
                   <HiOutlineMailOpen
-                    size={"16"}
+                    size={'16'}
                     className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
                   />
                 </div>
@@ -50,12 +50,12 @@ const Appionment = () => {
                     type="text"
                     name="number"
                     id="number"
-                    placeholder="Enter Number*"
+                    placeholder="Enter Phone Number*"
                     required
                     className="font-FiraSans text-TextColor2-0 font-light bg-transparent border-2 border-BorderColor2-0 rounded py-2 px-6 h-[60px] w-full focus:outline-PrimaryColor-0"
                   />
                   <MdCall
-                    size={"16"}
+                    size={'16'}
                     className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
                   />
                 </div>
@@ -87,7 +87,7 @@ const Appionment = () => {
               <div className="inline-block">
                 <button type="submit" className="primary-btn3">
                   Send Message
-                  <BiRightTopArrowCircle size={"20"} />
+                  <BiRightTopArrowCircle size={'20'} />
                 </button>
               </div>
             </form>
@@ -98,7 +98,7 @@ const Appionment = () => {
             </h3>
             <div className="flex flex-col sm:flex-row gap-5 sm:items-center">
               <div className="w-[52px] h-[52px] rounded-full border-2 border-white bg-transparent flex justify-center items-center text-white">
-                <MdCall size={"20"} />
+                <MdCall size={'20'} />
               </div>
               <div>
                 <p className="font-FiraSans text-[15px] text-white">Call Us</p>
@@ -109,7 +109,7 @@ const Appionment = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-5 sm:items-center my-[50px]">
               <div className="w-[52px] h-[52px] rounded-full border-2 border-white bg-transparent flex justify-center items-center text-white">
-                <MdEmail size={"20"} />
+                <MdEmail size={'20'} />
               </div>
               <div>
                 <p className="font-FiraSans text-[15px] text-white">
@@ -122,7 +122,7 @@ const Appionment = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-5 sm:items-center">
               <div className="w-[52px] h-[52px] rounded-full border-2 border-white bg-transparent flex justify-center items-center text-white">
-                <GrAlarm size={"20"} />
+                <GrAlarm size={'20'} />
               </div>
               <div>
                 <p className="font-FiraSans text-[15px] text-white">

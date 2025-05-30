@@ -425,5 +425,9 @@
       "title": "How do we approach OD projects?",
       "text": "We collaborate closely with clients to diagnose challenges, co-design interventions, implement programs, and evaluate outcomes for continuous improvement."
     }
+  },
+  "popup":{
+    "disclaimer": "Please complete the form so we can better understand your HR challenges. Your information will be used solely to provide a tailored solution that meets your organization’s needs.",
+    "success": "We appreciate your submission. Please take a moment to browse our website for further insights into how we can support your organization."
   }
 }

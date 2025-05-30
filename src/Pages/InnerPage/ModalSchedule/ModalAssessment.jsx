@@ -1,23 +1,36 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useUserForm } from '../../../UserFormContext';
 import { FaUser, FaRegThumbsUp, FaPencilAlt } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { MdCall } from 'react-icons/md';
 import Select from 'react-select';
+import ModalNotifikasi from '../../../Shared/ModalNotifikasi/ModalNotifikasi';
 
-const ModalAssessment = ({ isOpen, onClose }) => {
+const ModalAssessment = ({ isOpen, onClose, onSuccess }) => {
   const { markFormSubmitted } = useUserForm();
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [questions, setQuestions] = useState({});
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    subject: 'New Contact Form Submission',
     number: '',
     company: '',
     issues: [], // array of selected options
     message: '',
   });
+  const [showInitialInfoModal, setShowInitialInfoModal] = useState(false);
+
+  const [infoModalContent, setInfoModalContent] = useState('');
+
+  useEffect(() => {
+    if (isOpen) {
+      setInfoModalContent(t('popup.disclaimer'));
+      setShowInitialInfoModal(true);
+    }
+  }, [isOpen]);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -80,8 +93,6 @@ const ModalAssessment = ({ isOpen, onClose }) => {
 
       await saveContact();
       markFormSubmitted();
-      onClose();
-      alert('Email sent successfully!');
     } catch (error) {
       alert('Failed to send email');
       console.error('Failed to send email', error);
@@ -113,11 +124,12 @@ const ModalAssessment = ({ isOpen, onClose }) => {
       setFormData({
         name: '',
         email: '',
-        subject: '',
+        subject: 'New Contact Form Submission',
         number: '',
         message: '',
       });
       setLoading(false);
+      onSuccess();
     } catch (error) {
       alert('Failed to save contact');
       console.error('Failed to save contact', error);
@@ -126,151 +138,158 @@ const ModalAssessment = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-150">
-        <button
-          className="ml-auto block text-gray-500 hover:text-gray-800"
-          onClick={onClose}
-        >
-          &times;
-        </button>
-        <div className="mt-2">
-          <h3 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3">
-            Please complete the form.
-          </h3>
-          <form
-            action="#"
-            method="post"
-            className="flex flex-col gap-y-5 pb-[60px]"
-            onSubmit={handleSubmit}
+    <>
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="bg-white p-6 rounded-lg shadow-lg w-150">
+          <button
+            className="ml-auto block text-gray-500 hover:text-gray-800"
+            onClick={onClose}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="relative inline-block">
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Enter Name*"
-                  required
-                  className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                  value={formData.name}
-                  onChange={handleChange}
-                />
-                <FaUser
-                  size={'14'}
-                  className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                />
+            &times;
+          </button>
+          <div className="mt-2">
+            <h3 className="font-FiraSans font-medium text-sm sm:text-base text-PrimaryColor-0 uppercase mb-3">
+              Please complete the form.
+            </h3>
+            <form
+              action="#"
+              method="post"
+              className="flex flex-col gap-y-5 pb-[60px]"
+              onSubmit={handleSubmit}
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="relative inline-block">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter Name*"
+                    required
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                  <FaUser
+                    size={'14'}
+                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                  />
+                </div>
+                <div className="relative inline-block">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter E-Mail*"
+                    required
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  <HiOutlineMailOpen
+                    size={'16'}
+                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                  />
+                </div>
               </div>
-              <div className="relative inline-block">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter E-Mail*"
-                  required
-                  className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-                <HiOutlineMailOpen
-                  size={'16'}
-                  className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* <div className="relative inline-block">
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    placeholder="Enter Subject*"
+                    required
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                    value={formData.subject}
+                    onChange={handleChange}
+                  />
+                  <FaPencilAlt
+                    size={'14'}
+                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                  />
+                </div> */}
+                <div className="relative inline-block">
+                  <input
+                    type="text"
+                    name="number"
+                    id="number"
+                    placeholder="Enter Phone Number*"
+                    required
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                    value={formData.number}
+                    onChange={handleChange}
+                  />
+                  <MdCall
+                    size={'16'}
+                    className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
+                  />
+                </div>
+                <div className="relative inline-block">
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    placeholder="Enter Company Name*"
+                    required
+                    className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
+                    value={formData.company}
+                    onChange={handleChange}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="relative inline-block">
-                <input
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  placeholder="Enter Subject*"
-                  required
-                  className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                  value={formData.subject}
-                  onChange={handleChange}
-                />
-                <FaPencilAlt
-                  size={'14'}
-                  className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                />
+              <Select
+                isMulti
+                name="issues"
+                options={questions}
+                className="react-select-container"
+                classNamePrefix="react-select"
+                placeholder="Select Issues..."
+                value={formData.issues}
+                onChange={(selectedOptions) =>
+                  setFormData((prevData) => ({
+                    ...prevData,
+                    issues: selectedOptions,
+                  }))
+                }
+              />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Write a short meassage..."
+                className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[120px] w-full focus:outline-PrimaryColor-0 resize-none"
+                value={formData.message}
+                onChange={handleChange}
+                maxLength="1000"
+              ></textarea>
+              <div className="text-sm text-right text-TextColor-0 -mt-[2px]">
+                {formData.message.length}/1000 characters
               </div>
-              <div className="relative inline-block">
-                <input
-                  type="text"
-                  name="number"
-                  id="number"
-                  placeholder="Enter Number*"
-                  required
-                  className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                  value={formData.number}
-                  onChange={handleChange}
-                />
-                <MdCall
-                  size={'16'}
-                  className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                />
+              <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
+                Your data will be kept confidential and used solely for the
+                related project purposes.
+              </label>
+              <div className="inline-block mt-2">
+                <button
+                  type="submit"
+                  className="primary-btn2 !py-[15px]"
+                  disabled={loading}
+                >
+                  <FaRegThumbsUp />
+                  {loading ? 'Sending...' : 'Submit'}
+                </button>
               </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="relative inline-block">
-                <input
-                  type="text"
-                  name="company"
-                  id="company"
-                  placeholder="Enter Company Name*"
-                  required
-                  className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                  value={formData.company}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="relative inline-block">
-                <Select
-                  isMulti
-                  name="issues"
-                  options={questions}
-                  className="react-select-container"
-                  classNamePrefix="react-select"
-                  placeholder="Select Issues..."
-                  value={formData.issues}
-                  onChange={(selectedOptions) =>
-                    setFormData((prevData) => ({
-                      ...prevData,
-                      issues: selectedOptions,
-                    }))
-                  }
-                />
-              </div>
-            </div>
-
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Write a short meassage..."
-              className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[120px] w-full focus:outline-PrimaryColor-0 resize-none"
-              value={formData.message}
-              onChange={handleChange}
-            ></textarea>
-            <label className="font-FiraSans text-TextColor-0 text-sm flex items-center gap-2">
-              Your data will be kept confidential and used solely for the
-              related project purposes.
-            </label>
-            <div className="inline-block mt-2">
-              <button
-                type="submit"
-                className="primary-btn2 !py-[15px]"
-                disabled={loading}
-              >
-                <FaRegThumbsUp />
-                {loading ? 'Sending...' : 'Submit'}
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+      {showInitialInfoModal && (
+        <ModalNotifikasi
+          isOpen={showInitialInfoModal}
+          onClose={() => setShowInitialInfoModal(false)}
+          message={infoModalContent}
+        />
+      )}
+    </>
   );
 };
 

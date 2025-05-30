@@ -424,6 +424,10 @@
       "title": "Bagaimana pendekatan kami terhadap proyek OD?",
       "text": "Kami bekerja sama dengan klien untuk mendiagnosis tantangan, merancang intervensi, mengimplementasikan program, dan mengevaluasi hasil demi perbaikan berkelanjutan."
     }
+  },
+  "popup":{
+    "disclaimer": "Harap lengkapi formulir ini agar kami dapat lebih memahami tantangan SDM Anda. Informasi Anda akan digunakan semata-mata untuk menyediakan solusi yang disesuaikan dengan kebutuhan organisasi Anda.",
+    "success": "Kami menghargai kiriman Anda. Silakan luangkan waktu untuk menjelajahi situs web kami guna memperoleh informasi lebih lanjut tentang bagaimana kami dapat mendukung organisasi Anda."
   }
 }
 

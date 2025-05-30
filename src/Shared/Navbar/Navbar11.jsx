@@ -428,6 +428,7 @@ const Navbar11 = () => {
                   <Link
                     to={'/consultation'}
                     className="lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[34px] 2xl:py-[17px] rounded-full font-FiraSans font-medium text-[#0a1630] hover:text-white overflow-hidden  flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0"
+                    style={{ backgroundColor: 'darkorange' }}
                   >
                     Get Consultation
                     <LiaLongArrowAltRightSolid size={'18'} />
