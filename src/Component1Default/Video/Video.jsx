@@ -26,7 +26,7 @@ const Video = () => {
             <FsLightbox
               toggler={toggler}
               sources={[
-                'https://www.youtube.com/embed/owCTA9aU8-A?rel=0&modestbranding=1',
+                'https://www.youtube.com/embed/7gxco_8QinI?rel=0&modestbranding=1',
               ]}
             />
           </div>
