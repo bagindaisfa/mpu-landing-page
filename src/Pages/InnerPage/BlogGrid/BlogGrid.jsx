@@ -14,7 +14,7 @@ const BlogGrid = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/blogs`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/blogs/compro`);
 
         if (!res.ok) {
           throw new Error('Failed to fetch blog');
