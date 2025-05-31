@@ -243,7 +243,7 @@ const ModalAssessment = ({ isOpen, onClose, onSuccess }) => {
                 options={questions}
                 className="react-select-container"
                 classNamePrefix="react-select"
-                placeholder="Select Issues..."
+                placeholder={t('contact.select_issues')}
                 value={formData.issues}
                 onChange={(selectedOptions) =>
                   setFormData((prevData) => ({
@@ -252,6 +252,9 @@ const ModalAssessment = ({ isOpen, onClose, onSuccess }) => {
                   }))
                 }
               />
+              <div className="text-sm text-right text-TextColor-0 -mt-[2px]">
+                You can choose more than one answer
+              </div>
               <textarea
                 name="message"
                 id="message"

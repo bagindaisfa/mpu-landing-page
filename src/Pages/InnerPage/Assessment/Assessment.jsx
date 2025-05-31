@@ -306,6 +306,9 @@ const Assessment = () => {
                       }))
                     }
                   />
+                  <div className="text-sm text-right text-TextColor-0 -mt-[2px]">
+                    You can choose more than one answer
+                  </div>
                   <textarea
                     name="message"
                     id="message"
