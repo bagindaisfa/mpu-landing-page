@@ -6,7 +6,7 @@ import ModalAssessment from '../Pages/InnerPage/ModalSchedule/ModalAssessment';
 import ModalNotifikasi from '../Shared/ModalNotifikasi/ModalNotifikasi';
 
 const FormProtectedRoute = ({ children }) => {
-  const { hasSubmittedForm } = useUserForm();
+  const { hasSubmittedForm, markFormSubmitted } = useUserForm();
   const { t } = useTranslation();
   const [modalOpen, setModalOpen] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
@@ -23,6 +23,7 @@ const FormProtectedRoute = ({ children }) => {
 
   const handleSuccess = () => {
     setShowNotification(true);
+    markFormSubmitted();
     handleCloseModal();
   };
 
