@@ -316,10 +316,13 @@ const Navbar = () => {
             </div>
             <div className="col-span-2">
               <div className="header-right-box flex items-center gap-10 lg:gap-4 2xl:gap-8 justify-end">
-                <div className="header-btn hidden lg:block">
-                  <Link to={'/consultation'}>
-                    Get Consultation<span></span>
-                    <LuMoveRight />
+                <div className="hidden lg:block relative">
+                  <Link
+                    to={'/consultation'}
+                    className="lg:px-[18px] lg:py-3 xl:px-7 xl:py-3 2xl:px-[10px] 2xl:py-[10px] rounded-full font-FiraSans font-medium text-white hover:text-white overflow-hidden  flex items-center gap-2 relative z-10 before:absolute before:left-1/2 before:top-0 before:w-0 before:h-full before:-z-10 before:bg-HeadingColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0"
+                    style={{ backgroundColor: 'darkorange' }}
+                  >
+                    Get Consultation
                   </Link>
                 </div>
                 <div className="light-btn block relative top-3">
