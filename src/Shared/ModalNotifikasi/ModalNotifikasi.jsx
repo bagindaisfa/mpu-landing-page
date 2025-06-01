@@ -10,7 +10,7 @@ const ModalNotifikasi = ({ isOpen, onClose, message }) => {
 
       const timeout = setTimeout(() => {
         handleClose();
-      }, 3000); // auto-close in 3 seconds
+      }, 10000); // auto-close in 3 seconds
 
       const handleEscape = (event) => {
         if (event.key === 'Escape') {
