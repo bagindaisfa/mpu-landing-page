@@ -54,9 +54,11 @@ const BreadCrumb2 = ({
           <h6 className="font-FiraSans font-medium text-sm text-white bg-PrimaryColor-0 inline-block text-center rounded-r-full py-[5px] px-4 uppercase">
             {breadCrumbCategory}
           </h6>
-          <h1 className="font-FiraSans font-semibold text-[19px] sm:text-4xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-white capitalize relative z-10 mt-6 max-w-[655px] mx-auto">
-            {formatBreadcrumbTitle(breadCrumbTitle)}
-          </h1>
+          <div className="bg-black/50 rounded-xl p-4 mt-6 max-w-[655px] mx-auto">
+            <h1 className="font-FiraSans font-semibold text-[19px] sm:text-4xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-white capitalize relative z-10 mt-6 max-w-[655px] mx-auto">
+              {formatBreadcrumbTitle(breadCrumbTitle)}
+            </h1>
+          </div>
           <div className="mt-6 sm:mt-4 md:mt-[26px] inline-block">
             <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center mx-auto text-center">
               <li>
