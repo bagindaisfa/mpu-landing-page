@@ -212,17 +212,15 @@ const Navbar11 = () => {
 
           <div className="offcanvas_social">
             <div className="social-icon">
-              <Link to={'/'}>
-                <FaFacebookF />
+              <Link
+                to={
+                  'https://www.instagram.com/mpupeoplesolution?igsh=MWU3OHZqaXU0bzc0Ng=='
+                }
+              >
+                <FaInstagram />
               </Link>
-              <Link to={'/'}>
-                <FaXTwitter />
-              </Link>
-              <Link to={'/'}>
-                <FaPinterestP />
-              </Link>
-              <Link to={'/'}>
-                <FaLinkedinIn />
+              <Link to={'https://www.youtube.com/@MitraPrabhutvaUtama'}>
+                <FaYoutube />
               </Link>
             </div>
           </div>

@@ -6,10 +6,8 @@ import { useEffect, useRef } from 'react';
 import {
   FaChevronDown,
   FaEnvelope,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaPinterestP,
-  FaXTwitter,
+  FaInstagram,
+  FaYoutube,
 } from 'react-icons/fa6';
 import { FaPhoneAlt, FaTimes } from 'react-icons/fa';
 import { MdLightMode, MdLocationPin } from 'react-icons/md';
@@ -204,17 +202,15 @@ const Navbar = () => {
           </div>
           <div className="offcanvas_social">
             <div className="social-icon">
-              <Link to={'/'}>
-                <FaFacebookF />
+              <Link
+                to={
+                  'https://www.instagram.com/mpupeoplesolution?igsh=MWU3OHZqaXU0bzc0Ng=='
+                }
+              >
+                <FaInstagram />
               </Link>
-              <Link to={'/'}>
-                <FaXTwitter />
-              </Link>
-              <Link to={'/'}>
-                <FaPinterestP />
-              </Link>
-              <Link to={'/'}>
-                <FaLinkedinIn />
+              <Link to={'https://www.youtube.com/@MitraPrabhutvaUtama'}>
+                <FaYoutube />
               </Link>
             </div>
           </div>
@@ -240,7 +236,7 @@ const Navbar = () => {
             </div>
             <div
               className="col-span-8 hidden lg:block"
-              style={{ marginBottom: 20 }}
+              style={{ marginBottom: 56 }}
             >
               <div className="header-main-menu text-center">
                 <nav className="main-menu-content">

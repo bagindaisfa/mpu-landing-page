@@ -4,7 +4,7 @@ import {
   FaCheck,
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
+  FaYoutube,
   FaXTwitter,
 } from 'react-icons/fa6';
 import { Link, useParams } from 'react-router-dom';
@@ -144,34 +144,20 @@ const BlogDetails = () => {
                   <ul className="flex items-center gap-4">
                     <li>
                       <Link
-                        to={'/'}
-                        className="text-sm size-10 bg-BodyBg4-0 rounded-full flex items-center justify-center text-PrimaryColor-0 transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100"
-                      >
-                        <FaFacebookF />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to={'/'}
-                        className="text-sm size-10 bg-BodyBg4-0 rounded-full flex items-center justify-center text-PrimaryColor-0 transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100"
-                      >
-                        <FaXTwitter />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to={'/'}
-                        className="text-sm size-10 bg-BodyBg4-0 rounded-full flex items-center justify-center text-PrimaryColor-0 transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100"
-                      >
-                        <FaLinkedinIn />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to={'/'}
+                        to={
+                          'https://www.instagram.com/mpupeoplesolution?igsh=MWU3OHZqaXU0bzc0Ng=='
+                        }
                         className="text-sm size-10 bg-BodyBg4-0 rounded-full flex items-center justify-center text-PrimaryColor-0 transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100"
                       >
                         <FaInstagram />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={'https://www.youtube.com/@MitraPrabhutvaUtama'}
+                        className="text-sm size-10 bg-BodyBg4-0 rounded-full flex items-center justify-center text-PrimaryColor-0 transition-all duration-500 hover:text-white relative z-10 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:scale-0 before:transition-all before:rounded-full before:-z-10 before:duration-500 hover:before:scale-100"
+                      >
+                        <FaYoutube />
                       </Link>
                     </li>
                   </ul>

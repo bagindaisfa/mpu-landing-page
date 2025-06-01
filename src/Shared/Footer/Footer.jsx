@@ -205,18 +205,29 @@ const Footer = () => {
           <div>
             <ul className="flex gap-3 sm:gap-6">
               <li>
-                <button className="font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase">
-                  Facebook
+                <button
+                  onClick={() =>
+                    window.open(
+                      'https://www.instagram.com/mpupeoplesolution?igsh=MWU3OHZqaXU0bzc0Ng==',
+                      '_blank'
+                    )
+                  }
+                  className="font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase"
+                >
+                  Instagram
                 </button>
               </li>
               <li>
-                <button className="font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase">
-                  Pinterest
-                </button>
-              </li>
-              <li>
-                <button className="font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase">
-                  LinkedIn
+                <button
+                  onClick={() =>
+                    window.open(
+                      'https://www.youtube.com/@MitraPrabhutvaUtama',
+                      '_blank'
+                    )
+                  }
+                  className="font-FiraSans text-[15px] flex items-center transition-all duration text-TextColor-0 hover:text-white uppercase"
+                >
+                  Youtube
                 </button>
               </li>
             </ul>
