@@ -27,41 +27,43 @@ const FormProtectedRoute = ({ children }) => {
     handleCloseModal();
   };
 
-  if (!hasSubmittedForm) {
-    return (
-      <>
-        <ModalAssessment
-          isOpen={modalOpen}
-          onClose={handleCloseModal}
-          onSuccess={handleSuccess}
-        />
-        {/* Optional: Tampilkan loading state atau blank */}
-        <div className="h-screen flex items-center justify-center text-gray-600">
-          <div className="flex flex-col items-center text-center">
-            <p>Please complete the form to access this content.</p>
-            <button
-              type="submit"
-              className="primary-btn2 !py-[15px] mt-4"
-              onClick={() => setModalOpen(true)}
-            >
-              Submit my data
-            </button>
+  return (
+    <>
+      {!hasSubmittedForm ? (
+        <>
+          <ModalAssessment
+            isOpen={modalOpen}
+            onClose={handleCloseModal}
+            onSuccess={handleSuccess}
+          />
+          {/* Optional: Tampilkan loading state atau blank */}
+          <div className="h-screen flex items-center justify-center text-gray-600">
+            <div className="flex flex-col items-center text-center">
+              <p>Please complete the form to access this content.</p>
+              <button
+                type="submit"
+                className="primary-btn2 !py-[15px] mt-4"
+                onClick={() => setModalOpen(true)}
+              >
+                Submit my data
+              </button>
+            </div>
           </div>
-        </div>
+        </>
+      ) : (
+        children
+      )}
 
-        <ModalNotifikasi
-          isOpen={showNotification}
-          onClose={() => {
-            setShowNotification(false);
-            handleCloseModal();
-          }}
-          message={t('popup.success')}
-        />
-      </>
-    );
-  }
-
-  return children;
+      <ModalNotifikasi
+        isOpen={showNotification}
+        onClose={() => {
+          setShowNotification(false);
+          handleCloseModal();
+        }}
+        message={t('popup.success')}
+      />
+    </>
+  );
 };
 
 export default FormProtectedRoute;
