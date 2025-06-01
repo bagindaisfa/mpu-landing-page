@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useUserForm } from '../../../UserFormContext';
-import { FaUser, FaRegThumbsUp, FaPencilAlt } from 'react-icons/fa';
+import { FaUser, FaRegThumbsUp } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { MdCall } from 'react-icons/md';
 import Select from 'react-select';
 import ModalNotifikasi from '../../../Shared/ModalNotifikasi/ModalNotifikasi';
 
 const ModalAssessment = ({ isOpen, onClose, onSuccess }) => {
-  const { markFormSubmitted } = useUserForm();
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
-  const [questions, setQuestions] = useState({});
+  const [questions, setQuestions] = useState([]);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -92,7 +91,6 @@ const ModalAssessment = ({ isOpen, onClose, onSuccess }) => {
       }
 
       await saveContact();
-      markFormSubmitted();
     } catch (error) {
       alert('Failed to send email');
       console.error('Failed to send email', error);
@@ -140,7 +138,7 @@ const ModalAssessment = ({ isOpen, onClose, onSuccess }) => {
   return (
     <>
       <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-        <div className="bg-white p-6 rounded-lg shadow-lg w-150">
+        <div className="bg-white p-6 rounded-lg shadow-lg w-[95%] max-w-2xl max-h-[90vh] overflow-y-auto">
           <button
             className="ml-auto block text-gray-500 hover:text-gray-800"
             onClick={onClose}
