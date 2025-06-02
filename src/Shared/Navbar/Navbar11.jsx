@@ -6,6 +6,8 @@ import { useEffect, useRef } from 'react';
 import {
   FaChevronDown,
   FaEnvelope,
+  FaInstagram,
+  FaYoutube,
   FaFacebookF,
   FaLinkedinIn,
   FaPinterestP,
