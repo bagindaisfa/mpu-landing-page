@@ -117,6 +117,8 @@ const Assessment = () => {
         email: '',
         subject: 'New Contact Form Submission',
         number: '',
+        company: '',
+        issues: [], // array of selected options
         message: '',
       });
       setLoading(false);
