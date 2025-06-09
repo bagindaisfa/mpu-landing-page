@@ -31,9 +31,13 @@ const Contact = () => {
     issues: [], // array of selected options
     message: '',
   });
+  const [loadingQuestions, setLoadingQuestions] = useState(true);
+  const [fetchError, setFetchError] = useState('');
 
   useEffect(() => {
     const fetchQuestions = async () => {
+      setLoadingQuestions(true);
+      setFetchError('');
       try {
         const res = await fetch(
           `${import.meta.env.VITE_API_URL}/assessments/compro`
@@ -50,7 +54,10 @@ const Contact = () => {
 
         setQuestions(issueOptions);
       } catch (error) {
+        setFetchError('Failed to fetch options. Please refresh the page.');
         console.error('Error fetching questions:', error);
+      } finally {
+        setLoadingQuestions(false);
       }
     };
     fetchQuestions();
@@ -345,21 +352,48 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    <Select
-                      isMulti
-                      name="issues"
-                      options={questions}
-                      className="react-select-container"
-                      classNamePrefix="react-select"
-                      placeholder={t('contact.select_issues')}
-                      value={formData.issues}
-                      onChange={(selectedOptions) =>
-                        setFormData((prevData) => ({
-                          ...prevData,
-                          issues: selectedOptions,
-                        }))
-                      }
-                    />
+                    <div className="col-span-2">
+                      <Select
+                        isMulti
+                        name="issues"
+                        options={questions}
+                        className="react-select-container"
+                        classNamePrefix="react-select"
+                        value={formData.issues}
+                        onChange={(selectedOptions) =>
+                          setFormData((prevData) => ({
+                            ...prevData,
+                            issues: selectedOptions,
+                          }))
+                        }
+                        isLoading={loadingQuestions}
+                        placeholder={
+                          loadingQuestions
+                            ? 'Loading options...'
+                            : fetchError
+                            ? 'Failed to load selection'
+                            : t('contact.select_issues')
+                        }
+                        noOptionsMessage={() =>
+                          loadingQuestions
+                            ? 'Loading options...'
+                            : fetchError
+                            ? 'Unable to load selection'
+                            : 'No options available'
+                        }
+                        styles={{
+                          control: (base) => ({
+                            ...base,
+                            borderColor: fetchError ? 'red' : base.borderColor,
+                          }),
+                        }}
+                      />
+                      {fetchError && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {fetchError}
+                        </p>
+                      )}
+                    </div>
                     <div className="text-sm text-right text-TextColor-0 -mt-[2px]">
                       You can choose more than one answer
                     </div>

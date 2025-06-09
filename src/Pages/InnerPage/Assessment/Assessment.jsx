@@ -25,15 +25,19 @@ const Assessment = () => {
     issues: [], // array of selected options
     message: '',
   });
+  const [loadingQuestions, setLoadingQuestions] = useState(true);
+  const [fetchError, setFetchError] = useState('');
 
   useEffect(() => {
     const fetchQuestions = async () => {
+      setLoadingQuestions(true);
+      setFetchError('');
       try {
         const res = await fetch(
           `${import.meta.env.VITE_API_URL}/assessments/compro`
         );
         if (!res.ok) {
-          throw new Error('Failed to fetch blog');
+          throw new Error('Failed to fetch options');
         }
 
         const data = await res.json();
@@ -44,7 +48,10 @@ const Assessment = () => {
 
         setQuestions(issueOptions);
       } catch (error) {
-        console.error('Error fetching questions:', error);
+        setFetchError('Failed to fetch options. Please refresh the page.');
+        console.error(error);
+      } finally {
+        setLoadingQuestions(false);
       }
     };
     fetchQuestions();
@@ -248,22 +255,6 @@ const Assessment = () => {
                     </div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    {/* <div className="relative inline-block">
-                      <input
-                        type="text"
-                        name="subject"
-                        id="subject"
-                        placeholder={t('contact.enter_subject')}
-                        required
-                        className="font-FiraSans text-HeadingColor-0 placeholder:text-TextColor-0 text-sm bg-transparent border border-Secondarycolor-0 border-opacity-20 rounded py-2 px-6 h-[54px] w-full focus:outline-PrimaryColor-0"
-                        value={formData.subject}
-                        onChange={handleChange}
-                      />
-                      <FaPencilAlt
-                        size={'14'}
-                        className="absolute text-PrimaryColor-0 top-1/2 -translate-y-1/2 right-5"
-                      />
-                    </div> */}
                     <div className="relative inline-block">
                       <input
                         type="text"
@@ -293,21 +284,43 @@ const Assessment = () => {
                       />
                     </div>
                   </div>
-                  <Select
-                    isMulti
-                    name="issues"
-                    options={questions}
-                    className="react-select-container"
-                    classNamePrefix="react-select"
-                    placeholder={t('contact.select_issues')}
-                    value={formData.issues}
-                    onChange={(selectedOptions) =>
-                      setFormData((prevData) => ({
-                        ...prevData,
-                        issues: selectedOptions,
-                      }))
-                    }
-                  />
+                  <div className="col-span-2">
+                    <Select
+                      name="issues"
+                      isMulti
+                      options={questions}
+                      className="react-select-container"
+                      classNamePrefix="react-select"
+                      value={formData.issues}
+                      onChange={(selectedOptions) =>
+                        setFormData({ ...formData, issues: selectedOptions })
+                      }
+                      isLoading={loadingQuestions}
+                      placeholder={
+                        loadingQuestions
+                          ? 'Loading options...'
+                          : fetchError
+                          ? 'Failed to load selection'
+                          : t('contact.select_issues')
+                      }
+                      noOptionsMessage={() =>
+                        loadingQuestions
+                          ? 'Loading options...'
+                          : fetchError
+                          ? 'Unable to load selection'
+                          : 'No options available'
+                      }
+                      styles={{
+                        control: (base) => ({
+                          ...base,
+                          borderColor: fetchError ? 'red' : base.borderColor,
+                        }),
+                      }}
+                    />
+                    {fetchError && (
+                      <p className="text-red-500 text-sm mt-1">{fetchError}</p>
+                    )}
+                  </div>
                   <div className="text-sm text-right text-TextColor-0 -mt-[2px]">
                     You can choose more than one answer
                   </div>
@@ -319,7 +332,7 @@ const Assessment = () => {
                     value={formData.message}
                     onChange={handleChange}
                     maxLength="1000"
-                  ></textarea>
+                  />
                   <div className="text-sm text-right text-TextColor-0 -mt-[2px]">
                     {formData.message.length}/1000 characters
                   </div>
