@@ -239,7 +239,10 @@ const Navbar = () => {
               style={{ marginBottom: 56 }}
             >
               <div className="header-main-menu text-center">
-                <nav className="main-menu-content">
+                <nav
+                  className="main-menu-content"
+                  style={{ position: 'relative', top: '-10px' }}
+                >
                   <ul>
                     <li className="has-dropdown">
                       <Link to={'/'}>

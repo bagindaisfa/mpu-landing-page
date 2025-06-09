@@ -619,3 +619,43 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::before {
   background-color: rgb(6 50 50 ) !important;
   color: white !important;
 }
+
+@media (max-width: 1280px) {
+  .banner-section .hero-image {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .banner-section .hero-text {
+    text-align: start;
+    padding: 0 20px;
+    margin-top: 50px;
+  }
+
+  .banner-section .play-button {
+    left: 16px !important;
+  }
+
+  .banner-button {
+    font-size: 14px;
+  }
+
+  .button-play-banner {
+    width: 80px !important;
+    height: 80px !important;
+    left: 20px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1399px) {
+  .banner-shape {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner-shape {
+    display: none !important;
+  }
+}
