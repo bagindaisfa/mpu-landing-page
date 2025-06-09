@@ -188,11 +188,14 @@ const Footer = () => {
               <div className="size-[26px] rounded-full bg-PrimaryColor-0 text-white flex items-center justify-center">
                 <HiOutlineMailOpen size={'15'} />
               </div>
-              <Link to={'/'} className="flex-1">
+              <a
+                href="mailto:admin@mpupeoplesolution.com?subject=Consultation%20Request&body=Hello%20MPU%20team,%0AI%20would%20like%20to%20ask%20about..."
+                className="flex-1"
+              >
                 <button className="font-FiraSans text-[15px] text-white">
                   admin@mpupeoplesolution.com
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

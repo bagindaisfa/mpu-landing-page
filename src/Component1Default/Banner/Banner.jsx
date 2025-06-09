@@ -30,12 +30,12 @@ const Banner = () => {
               {t('banner.subtitle2')}
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-8">
-              <Link to={'/assessment'}>
+              <a href="mailto:admin@mpupeoplesolution.com?subject=Consultation%20Request&body=Hello%20MPU%20team,%0AI%20would%20like%20to%20ask%20about...">
                 <button className="banner-button flex items-center gap-3 text-white font-FiraSans font-medium">
                   <FaEnvelopeOpen />
                   {t('banner.emailButton')}
                 </button>
-              </Link>
+              </a>
               <Link to={'/contact'}>
                 <button className="banner-button flex items-center gap-3 text-white font-FiraSans font-medium">
                   <FaPhoneAlt />

@@ -203,7 +203,9 @@ const Navbar11 = () => {
               </li>
               <li>
                 <FaEnvelope />
-                <Link to={'/'}>admin@mpupeoplesolution.com</Link>
+                <a href="mailto:admin@mpupeoplesolution.com?subject=Consultation%20Request&body=Hello%20MPU%20team,%0AI%20would%20like%20to%20ask%20about...">
+                  admin@mpupeoplesolution.com
+                </a>
               </li>
               <li>
                 <FaPhoneAlt />

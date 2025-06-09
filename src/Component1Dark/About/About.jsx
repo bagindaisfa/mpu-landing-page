@@ -78,12 +78,12 @@ const About = () => {
               <Link to={'/about'}>
                 <button className="primary-btn">{`Discover More`}</button>
               </Link>
-              <Link to={'/'}>
+              <a href="mailto:admin@mpupeoplesolution.com?subject=Consultation%20Request&body=Hello%20MPU%20team,%0AI%20would%20like%20to%20ask%20about...">
                 <button className="flex items-center gap-2 font-FiraSans font-medium text-TextColor-0">
                   <FaEnvelopeOpen />
                   admin@mpupeoplesolution.com
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -222,11 +222,11 @@ const Contact = () => {
                   <h6 className="font-FiraSans text-TextColor2-0">
                     {t('contact.email_us')}
                   </h6>
-                  <Link to={'/'}>
+                  <a href="mailto:admin@mpupeoplesolution.com?subject=Consultation%20Request&body=Hello%20MPU%20team,%0AI%20would%20like%20to%20ask%20about...">
                     <button className="font-FiraSans text-xl text-HeadingColor-0 font-medium mt-1">
                       admin@mpupeoplesolution.com
                     </button>
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div className="flex items-center gap-5 group pt-5 pb-2">
