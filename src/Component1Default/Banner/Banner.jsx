@@ -2,14 +2,30 @@ import { Link } from 'react-router-dom';
 import bannerThumb from '/images/banner-thumb.png';
 import bannerShape from '/images/hero_shape.png';
 import { FaPhoneAlt, FaEnvelopeOpen } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import FsLightbox from 'fslightbox-react';
 import { IoPlayOutline } from 'react-icons/io5';
 import { useTranslation } from 'react-i18next';
 
+const banners = [
+  '/images/banner-thumb.png',
+  '/images/banner-thumb-2.png',
+  '/images/banner-thumb-3.png',
+];
+
 const Banner = () => {
   const { t, i18n } = useTranslation();
   const [toggler, setToggler] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % banners.length);
+    }, 5000); // 3 detik
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="banner-section mx-2 xl:mx-5 lg:mt-5 xl:mt-0 2xl:mt-5 bg-Secondarycolor-0 lg:bg-opacity-0 lg:bg-[url('/images/banner.png')] bg-cover xl:bg-contain 2xl:bg-cover bg-center bg-no-repeat h-[600px] sm:h-[700px] md:h-[1100px] lg:h-[600px] xl:h-[548px] 2xl:h-[830px] flex items-center relative z-10 overflow-hidden rounded-[40px]">
       <div className="Container">
@@ -46,11 +62,19 @@ const Banner = () => {
           </div>
 
           <div className="relative md:flex justify-end hidden">
-            <img
-              src={bannerThumb}
-              draggable="false"
-              className="md:w-11/12 xl:w-[inherit] 2xl:max-w-[inherit] relative 2xl:left-[124px]"
-            />
+            <div className="relative md:flex justify-end hidden w-full h-[500px]">
+              {banners.map((src, index) => (
+                <img
+                  key={index}
+                  src={src}
+                  className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+                    index === currentIndex
+                      ? 'opacity-100 z-10'
+                      : 'opacity-0 z-0'
+                  }`}
+                />
+              ))}
+            </div>
             <div className="absolute top-[54%] -left-[58px] md:left-0 xl:-left-[58px] 2xl:-left-[42px] -translate-y-1/2">
               <button className="button-play-banner size-14 sm:size-[90px] lg:size-[70px] xl:size-[90px] rounded-full bg-PrimaryColor-0 flex justify-center items-center relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-PrimaryColor-0 before:opacity-50 before:-z-10 before:rounded-full before:animate-ping">
                 <IoPlayOutline
