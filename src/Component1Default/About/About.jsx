@@ -1,22 +1,45 @@
-import aboutThumb from '/images/about_thumb4.png';
+import { useState, useEffect } from 'react';
 import aboutShape from '/images/about_shape.png';
 import { FaCheck } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
 
+const banners = [
+  '/images/about_thumb4.png',
+  '/images/about_thumb5.png',
+  '/images/about_thumb6.png',
+];
+
 const About = () => {
   const { t } = useTranslation();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % banners.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="mx-2 xl:mx-5 mt-5 rounded-[40px] py-[120px] bg-BodyBg-0 relative">
       <div className="Container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 lg:gap-10 2xl:gap-28 items-center">
-          <div className="relative z-10">
-            <img
-              src={aboutThumb}
-              draggable="false"
-              className="w-full 2xl:w-[inherit]"
-            />
-            <div className="absolute top-0 right-0 2xl:right-[36px] size-[74px] sm:size-[142px] lg:size-[120px] xl:size-[142px] bg-PrimaryColor-0 rounded-full flex items-center justify-center">
+          <div className="relative z-10 w-full h-full aspect-[4/3] overflow-hidden">
+            {banners.map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt={`about-thumb-${index}`}
+                draggable="false"
+                className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                  index === currentIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+              />
+            ))}
+
+            {/* SVG rotating text tetap di atas foto */}
+            <div className="absolute top-0 right-0 size-[74px] sm:size-[142px] lg:size-[120px] xl:size-[142px] bg-PrimaryColor-0 rounded-full flex items-center justify-center">
               <div className="text-inner size-14 sm:size-24 lg:size-20 xl:size-24 animate-rotational relative before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:size-[15px] before:rounded-full before:bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -27,10 +50,9 @@ const About = () => {
                     d="M.25,125.25a125,125,0,1,1,125,125,125,125,0,0,1-125-125"
                     id="e-path-35ee1b2"
                     className="fill-transparent"
-                  ></path>
+                  />
                   <text className="font-FiraSans text-[38px]">
                     <textPath
-                      id="e-text-path-35ee1b2"
                       href="#e-path-35ee1b2"
                       startOffset="0%"
                       className="fill-white"
