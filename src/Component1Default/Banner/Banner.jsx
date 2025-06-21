@@ -11,6 +11,7 @@ const banners = [
   '/images/banner-thumb.png',
   '/images/banner-thumb-2.png',
   '/images/banner-thumb-3.png',
+  '/images/banner-thumb-4.png',
 ];
 
 const Banner = () => {
