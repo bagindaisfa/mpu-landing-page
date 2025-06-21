@@ -14,8 +14,10 @@ import { MdLightMode, MdLocationPin } from 'react-icons/md';
 import { IoMdPaperPlane } from 'react-icons/io';
 import { LuMoveRight } from 'react-icons/lu';
 import LanguageSwitcher from '../../Component1Default/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   //sticky
 
   useEffect(() => {
@@ -175,12 +177,12 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="offcanvas_title">
-            <p>Developing Agile Talent for Sustainable Growth.</p>
+            <p>{t('banner.title')}.</p>
           </div>
           <div className="main-menu-mobile lg:none"></div>
           <div className="offcanvas_contact-info">
             <div className="offcanvas_contact-title">
-              <h5>Contact Us</h5>
+              <h5>{t('banner.contactUs')}</h5>
             </div>
             <ul>
               <li>
