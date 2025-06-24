@@ -64,7 +64,7 @@ const Banner = () => {
 
           <div className="relative w-full flex justify-center items-center">
             {/* Banner image (desktop only) */}
-            <div className="relative hidden md:flex w-full h-[500px] md:h-[350px] justify-end">
+            <div className="banner-image relative hidden md:flex w-full h-[500px] justify-end">
               {banners.map((src, index) => (
                 <img
                   key={index}
@@ -81,16 +81,17 @@ const Banner = () => {
             {/* Play button - always visible */}
             <div
               className="
-      absolute
-      top-1/2
-      left-4
-      -translate-y-1/2
-      z-20
-      md:top-[187px]
-      md:-left-[65px]
-      xl:-left-[58px]
-      2xl:-left-[42px]
-    "
+              play-button
+              absolute
+              top-1/2
+              left-4
+              -translate-y-1/2
+              z-20
+              md:top-[187px]
+              md:-left-[65px]
+              xl:-left-[58px]
+              2xl:-left-[42px]
+            "
             >
               <button
                 className="

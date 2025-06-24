@@ -659,3 +659,15 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::before {
     display: none !important;
   }
 }
+
+@media (max-width: 1399px) {
+  .banner-image {
+    height: 350px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .play-button {
+    top: 270px !important;
+  }
+}
