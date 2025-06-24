@@ -62,8 +62,9 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="relative md:flex justify-end hidden">
-            <div className="relative md:flex justify-end hidden w-full h-[500px]">
+          <div className="relative w-full flex justify-center items-center">
+            {/* Banner image (desktop only) */}
+            <div className="relative hidden md:flex w-full h-[500px] md:h-[350px] justify-end">
               {banners.map((src, index) => (
                 <img
                   key={index}
@@ -76,13 +77,39 @@ const Banner = () => {
                 />
               ))}
             </div>
-            <div className="absolute top-[54%] -left-[58px] md:left-0 xl:-left-[58px] 2xl:-left-[42px] -translate-y-1/2">
-              <button className="button-play-banner size-14 sm:size-[90px] lg:size-[70px] xl:size-[90px] rounded-full bg-PrimaryColor-0 flex justify-center items-center relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-PrimaryColor-0 before:opacity-50 before:-z-10 before:rounded-full before:animate-ping">
-                <IoPlayOutline
-                  size={'30'}
-                  className="text-white"
-                  onClick={() => setToggler(!toggler)}
-                />
+
+            {/* Play button - always visible */}
+            <div
+              className="
+      absolute
+      top-1/2
+      left-4
+      -translate-y-1/2
+      z-20
+      md:top-[187px]
+      md:-left-[65px]
+      xl:-left-[58px]
+      2xl:-left-[42px]
+    "
+            >
+              <button
+                className="
+        button-play-banner
+        w-[56px] h-[56px]        /* mobile */
+        sm:w-[80px] sm:h-[80px]
+        lg:w-[70px] lg:h-[70px]
+        xl:w-[90px] xl:h-[90px]
+        rounded-full
+        bg-PrimaryColor-0
+        flex justify-center items-center
+        relative z-10
+        before:absolute before:top-0 before:left-0 before:w-full before:h-full
+        before:bg-PrimaryColor-0 before:opacity-50 before:-z-10 before:rounded-full
+        before:animate-ping
+      "
+                onClick={() => setToggler(!toggler)}
+              >
+                <IoPlayOutline size={30} className="text-white" />
               </button>
             </div>
           </div>
