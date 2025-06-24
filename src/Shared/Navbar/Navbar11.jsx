@@ -253,13 +253,8 @@ const Navbar11 = () => {
             <div className="header-main-menu text-center">
               <nav className="main-menu-content">
                 <ul>
-                  <li className="has-dropdown">
-                    <Link to={'/'}>
-                      Home
-                      <span>
-                        <FaChevronDown />
-                      </span>
-                    </Link>
+                  <li>
+                    <Link to={'/'}>Home</Link>
                     {/* <ul className='submenu'>
                       <li className='has-dropdown'>
                         <Link to={'/'}>
@@ -336,13 +331,8 @@ const Navbar11 = () => {
                   <li>
                     <Link to={'/about'}>About</Link>
                   </li>
-                  <li className="has-dropdown">
-                    <Link to={'/service'}>
-                      Service
-                      <span>
-                        <FaChevronDown />
-                      </span>
-                    </Link>
+                  <li>
+                    <Link to={'/service'}>Service</Link>
                     {/* <ul className='submenu'>
                       <li>
                         <Link to={'/service'}>service</Link>
@@ -352,7 +342,7 @@ const Navbar11 = () => {
                       </li>
                     </ul> */}
                   </li>
-                  {/* <li className="has-dropdown">
+                  {/* <li >
                     <Link to={'/'}>
                       Pages
                       <span>
@@ -386,7 +376,7 @@ const Navbar11 = () => {
                       </li>
                     </ul>
                   </li> */}
-                  {/* <li className="has-dropdown">
+                  {/* <li >
                     <Link to={'/'}>
                       Portfolio
                       <span>
@@ -402,13 +392,8 @@ const Navbar11 = () => {
                       </li>
                     </ul>
                   </li> */}
-                  <li className="has-dropdown">
-                    <Link to={'/blog_grid'}>
-                      Blog
-                      <span>
-                        <FaChevronDown />
-                      </span>
-                    </Link>
+                  <li>
+                    <Link to={'/blog_grid'}>Blog</Link>
                     {/* <ul className="submenu">
                       <li>
                         <Link to={'/blog_grid'}>blog grid</Link>

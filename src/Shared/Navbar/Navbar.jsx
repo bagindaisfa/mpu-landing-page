@@ -248,24 +248,14 @@ const Navbar = () => {
                   style={{ position: 'relative', top: '-10px' }}
                 >
                   <ul>
-                    <li className="has-dropdown">
-                      <Link to={'/'}>
-                        Home
-                        <span>
-                          <FaChevronDown />
-                        </span>
-                      </Link>
+                    <li>
+                      <Link to={'/'}>Home</Link>
                     </li>
                     <li>
                       <Link to={'/about'}>About</Link>
                     </li>
-                    <li className="has-dropdown">
-                      <Link to={'/service'}>
-                        Service
-                        <span>
-                          <FaChevronDown />
-                        </span>
-                      </Link>
+                    <li>
+                      <Link to={'/service'}>Service</Link>
                       {/* <ul className="submenu">
                         <li>
                           <Link to={'/service'}>service</Link>
@@ -276,7 +266,7 @@ const Navbar = () => {
                       </ul> */}
                     </li>
 
-                    {/* <li className="has-dropdown">
+                    {/* <li >
                       <Link to={'/'}>
                         Portfolio
                         <span>
@@ -294,13 +284,8 @@ const Navbar = () => {
                         </li>
                       </ul>
                     </li> */}
-                    <li className="has-dropdown">
-                      <Link to={'/blog_grid'}>
-                        Blog
-                        <span>
-                          <FaChevronDown />
-                        </span>
-                      </Link>
+                    <li>
+                      <Link to={'/blog_grid'}>Blog</Link>
                       {/* <ul className="submenu">
                         <li>
                           <Link to={'/blog_grid'}>blog grid</Link>
